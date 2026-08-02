@@ -1,6 +1,6 @@
 import os
 import re
-import sys
+import json
 import logging
 from datetime import datetime, timezone
 import feedparser
@@ -8,19 +8,13 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from dateutil import parser
-from supabase import create_client, Client
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
-
-if not SUPABASE_URL or not SUPABASE_KEY:
-    logging.error("Missing SUPABASE_URL or SUPABASE_SERVICE_KEY environment variables.")
-    sys.exit(1)
-
-supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+OUTPUT_DIR = "public"
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "news.json")
+MAX_NEWS_ITEMS = 200  # Keeps file lightweight for mobile app
 
 RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
@@ -56,7 +50,7 @@ def get_resilient_session():
     return session
 
 def parse_date(date_string):
-    """Converts RSS dates into PostgreSQL-compatible ISO timestamps."""
+    """Converts RSS dates into standard ISO timestamps."""
     if not date_string:
         return datetime.now(timezone.utc).isoformat()
     try:
@@ -96,9 +90,16 @@ def extract_image(entry, raw_description):
 
     return None
 
+def safe_parse_dt(iso_str):
+    """Safely converts ISO string to datetime for sorting."""
+    try:
+        return parser.parse(iso_str)
+    except Exception:
+        return datetime.min.replace(tzinfo=timezone.utc)
+
 def fetch_and_store_news():
     session = get_resilient_session()
-    all_news_items = []
+    fetched_items = []
 
     for feed in RSS_FEEDS:
         logging.info(f"Fetching feed: {feed['name']}")
@@ -123,7 +124,7 @@ def fetch_and_store_news():
                 image_url = extract_image(entry, raw_description)
                 clean_desc = clean_html(raw_description)
 
-                all_news_items.append({
+                fetched_items.append({
                     "link": link.strip(),
                     "title": title.strip(),
                     "description": clean_desc,
@@ -138,18 +139,40 @@ def fetch_and_store_news():
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
 
-    if all_news_items:
-        logging.info(f"Upserting {len(all_news_items)} total items into Supabase...")
-        batch_size = 50
-        for i in range(0, len(all_news_items), batch_size):
-            batch = all_news_items[i:i + batch_size]
-            try:
-                supabase.table("news").upsert(batch, on_conflict="link").execute()
-            except Exception as db_err:
-                logging.error(f"Database batch upsert failed at index {i}: {db_err}")
-        logging.info("Database sync finished.")
-    else:
-        logging.warning("No news items retrieved from any source.")
+    # Read existing news.json if available to prevent dropping older articles
+    existing_items = []
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+                existing_items = json.load(f)
+        except Exception as err:
+            logging.warning(f"Could not read existing news file: {err}")
+
+    # Merge newly fetched and existing news, deduplicating by 'link'
+    seen_links = set()
+    combined_items = []
+
+    # Process fetched items first, then existing
+    for item in fetched_items + existing_items:
+        link = item.get("link")
+        if link and link not in seen_links:
+            seen_links.add(link)
+            combined_items.append(item)
+
+    # Sort items by date (newest first)
+    combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date", "")), reverse=True)
+
+    # Keep only the latest MAX_NEWS_ITEMS articles
+    final_news = combined_items[:MAX_NEWS_ITEMS]
+
+    # Ensure output directory exists
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    # Save to public/news.json
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(final_news, f, ensure_ascii=False, indent=2)
+
+    logging.info(f"Successfully generated {OUTPUT_FILE} with {len(final_news)} news items.")
 
 if __name__ == "__main__":
     fetch_and_store_news()
