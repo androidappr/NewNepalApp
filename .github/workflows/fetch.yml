@@ -1,0 +1,30 @@
+name: News Fetcher Cron Job
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # Runs automatically every 30 minutes
+  workflow_dispatch:      # Allows manual trigger button from GitHub
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install feedparser supabase python-dateutil requests
+
+      - name: Run Fetcher Script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: python fetch_news.py
