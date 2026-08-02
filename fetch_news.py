@@ -9,12 +9,11 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from dateutil import parser
 
-# Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 OUTPUT_DIR = "public"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "news.json")
-MAX_NEWS_ITEMS = 200  # Keeps file lightweight for mobile app
+MAX_NEWS_ITEMS = 200
 
 RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
@@ -36,7 +35,6 @@ RSS_FEEDS = [
 ]
 
 def get_resilient_session():
-    """Configures a request session with retries and realistic browser headers."""
     session = requests.Session()
     retries = Retry(total=3, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
     session.mount("https://", HTTPAdapter(max_retries=retries))
@@ -50,7 +48,6 @@ def get_resilient_session():
     return session
 
 def parse_date(date_string):
-    """Converts RSS dates into standard ISO timestamps."""
     if not date_string:
         return datetime.now(timezone.utc).isoformat()
     try:
@@ -62,14 +59,12 @@ def parse_date(date_string):
         return datetime.now(timezone.utc).isoformat()
 
 def clean_html(text):
-    """Strips HTML tags from text content."""
     if not text:
         return ""
     clean = re.sub(r'<[^>]+>', '', text)
     return clean.strip()
 
 def extract_image(entry, raw_description):
-    """Extracts thumbnail images safely."""
     if 'media_content' in entry and entry.media_content:
         for media in entry.media_content:
             if media.get('url'):
@@ -91,11 +86,64 @@ def extract_image(entry, raw_description):
     return None
 
 def safe_parse_dt(iso_str):
-    """Safely converts ISO string to datetime for sorting."""
     try:
         return parser.parse(iso_str)
     except Exception:
         return datetime.min.replace(tzinfo=timezone.utc)
+
+def determine_category(entry, title, link, clean_desc, source_name):
+    feed_cats = []
+    if 'tags' in entry:
+        for t in entry.tags:
+            if isinstance(t, dict) and 'term' in t:
+                feed_cats.append(str(t['term']).lower())
+            elif hasattr(t, 'term'):
+                feed_cats.append(str(t.term).lower())
+    if 'category' in entry and entry.category:
+        feed_cats.append(str(entry.category).lower())
+
+    feed_cat_str = " ".join(feed_cats)
+    full_text = f"{feed_cat_str} {link.lower()} {title.lower()} {clean_desc.lower()}"
+
+    if source_name == "Swasthya Khabar":
+        return "Health News"
+    if source_name == "TechPana":
+        return "Technology News"
+
+    if any(k in full_text for k in ['share-market', 'sharemarket', 'nepse', 'शेयर', 'सेयर', 'नेप्से', 'लाभांश', 'आइपिओ', 'ipo', 'म्युचुअल फन्ड', 'राइट सेयर', 'share market', 'share-bazar']):
+        return "Share Market News"
+
+    if any(k in full_text for k in ['sports', 'khelkud', 'खेलकुद', 'क्रिकेट', 'फुटबल', 'मेस्सी', 'रोनाल्डो', 'क्यान', 'आइपिएल', 'ipl', 'cricket', 'football', 'साफ', 'ओलम्पिक', 'खेल']):
+        return "Sports News"
+
+    if any(k in full_text for k in ['entertainment', 'manoranjan', 'मनोरञ्जन', 'कला', 'सिनेमा', 'फिल्म', 'नायक', 'नायिका', 'मोडल', 'हलिउड', 'बलिवुड', 'कलिउड', 'movie', 'cinema', 'गीत', 'संगीत', 'अभिनेता', 'अभिनेत्री']):
+        return "Entertainment News"
+
+    if any(k in full_text for k in ['health', 'swasthya', 'स्वास्थ्य', 'कोरोना', 'अस्पताल', 'चिकित्सा', 'डाक्टर', 'औषधि', 'रोग', 'संक्रमण']):
+        return "Health News"
+
+    if any(k in full_text for k in ['tech', 'technology', 'prabidhi', 'प्रविधि', 'टेक', 'आइटी', 'सफ्टवेयर', 'इन्टरनेट', 'डिजिटल', 'ai', 'स्मार्टफोन', 'साइबर', 'gadget']):
+        return "Technology News"
+
+    if any(k in full_text for k in ['politics', 'rajneeti', 'राजनीति', 'नेता', 'पार्टी', 'निर्वाचन', 'चुनाव', 'संसद', 'मन्त्री', 'प्रधानमन्त्री', 'सरकार', 'सांसद', 'कांग्रेस', 'एमाले', 'माओवादी', 'रास्वपा', 'प्रतिनिधिसभा', 'प्रदेशसभा']):
+        return "Political News"
+
+    if any(k in full_text for k in ['economy', 'economic', 'arthik', 'आर्थिक', 'अर्थतन्त्र', 'बजेट', 'राजस्व', 'मौद्रिक', 'अर्थशास्त्र', 'मुद्रास्फीति']):
+        return "Economic News"
+
+    if any(k in full_text for k in ['business', 'wyapar', 'व्यापार', 'वाणिज्य', 'उद्योग', 'व्यापारी', 'कर्पोरेट', 'उद्योगी', 'वाणिज्य बैंक', 'वित्तीय']):
+        return "Business News"
+
+    if any(k in full_text for k in ['international', 'videsh', 'bidesh', 'विश्व', 'विदेश', 'अन्तर्राष्ट्रिय', 'world', 'global', 'अमेरिका', 'चीन', 'भारत', 'रुस', 'युक्रेन']):
+        return "International News"
+
+    if any(k in full_text for k in ['breaking', 'taaza', 'ताजा', 'ब्रेकिंग', 'अति जरुरी', 'भर्खरै', 'breaking news']):
+        return "Breaking News"
+
+    if any(k in full_text for k in ['popular', 'trending', 'लोकप्रिय', 'चर्चित', 'भाइरल', 'viral']):
+        return "Popular News"
+
+    return "National News"
 
 def fetch_and_store_news():
     session = get_resilient_session()
@@ -123,11 +171,13 @@ def fetch_and_store_news():
                 pub_date = parse_date(entry.get('published', entry.get('updated', '')))
                 image_url = extract_image(entry, raw_description)
                 clean_desc = clean_html(raw_description)
+                category = determine_category(entry, title, link, clean_desc, feed['name'])
 
                 fetched_items.append({
                     "link": link.strip(),
                     "title": title.strip(),
                     "description": clean_desc,
+                    "category": category,
                     "pub_date": pub_date,
                     "image_url": image_url,
                     "source_name": feed['name']
@@ -139,7 +189,6 @@ def fetch_and_store_news():
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
 
-    # Read existing news.json if available to prevent dropping older articles
     existing_items = []
     if os.path.exists(OUTPUT_FILE):
         try:
@@ -148,27 +197,21 @@ def fetch_and_store_news():
         except Exception as err:
             logging.warning(f"Could not read existing news file: {err}")
 
-    # Merge newly fetched and existing news, deduplicating by 'link'
     seen_links = set()
     combined_items = []
 
-    # Process fetched items first, then existing
     for item in fetched_items + existing_items:
         link = item.get("link")
         if link and link not in seen_links:
             seen_links.add(link)
             combined_items.append(item)
 
-    # Sort items by date (newest first)
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date", "")), reverse=True)
 
-    # Keep only the latest MAX_NEWS_ITEMS articles
     final_news = combined_items[:MAX_NEWS_ITEMS]
 
-    # Ensure output directory exists
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # Save to public/news.json
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(final_news, f, ensure_ascii=False, indent=2)
 
