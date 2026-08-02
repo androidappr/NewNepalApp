@@ -209,7 +209,6 @@ def fetch_and_store_news():
                 image_url = extract_image(entry, raw_description)
                 clean_desc = clean_html(raw_description)
 
-                # Skip entries with fewer than 10 words in description
                 if len(clean_desc.split()) < 10:
                     continue
 
@@ -263,7 +262,6 @@ def fetch_and_store_news():
         link = item.get("link")
         desc = item.get("description", "")
 
-        # Skip any existing or incoming item with fewer than 10 words
         if len(desc.split()) < 10:
             continue
 
