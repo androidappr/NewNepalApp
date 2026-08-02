@@ -47,7 +47,7 @@ def parse_date(date_string):
     try:
         dt = parser.parse(date_string)
         if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
+            dt = dt.replace(tzinfo=timezone.gmt)
         return dt.isoformat()
     except Exception:
         return datetime.now(timezone.utc).isoformat()
