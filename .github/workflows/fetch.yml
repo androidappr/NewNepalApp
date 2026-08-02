@@ -2,10 +2,13 @@ name: News Fetcher Workflow
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Internal fallback
-  workflow_dispatch:       # Allows manual execution in GitHub UI
-  repository_dispatch:     # Allows external triggering via Webhook API
+    - cron: '*/15 * * * *'  # Runs every 15 minutes
+  workflow_dispatch:        # Allows manual execution in GitHub UI
+  repository_dispatch:      # Allows external triggering via Webhook API
     types: [trigger-news-fetch]
+
+permissions:
+  contents: write  # Grants workflow permission to push to gh-pages branch
 
 jobs:
   run-script:
@@ -23,10 +26,14 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install feedparser supabase python-dateutil requests urllib3
+          pip install feedparser python-dateutil requests urllib3
 
       - name: Run Fetcher Script
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python fetch_news.py
+
+      - name: Deploy static JSON to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
