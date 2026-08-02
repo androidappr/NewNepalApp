@@ -2,7 +2,7 @@ name: News Fetcher Cron Job
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # Runs automatically every 30 minutes
+    - cron: '*/7 * * * *' # Runs automatically every 30 minutes
   workflow_dispatch:      # Allows manual trigger button from GitHub
 
 jobs:
