@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 from datetime import datetime, timezone
 import feedparser
 import requests
@@ -36,7 +37,7 @@ RSS_FEEDS = [
 ]
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 }
 
 def parse_date(date_string):
@@ -83,16 +84,14 @@ def fetch_and_store_news():
     for feed in RSS_FEEDS:
         print(f"Fetching: {feed['name']}...")
         try:
-            # Use requests to bypass server 403 Forbidden headers
-            response = requests.get(feed['url'], headers=HEADERS, timeout=12)
+            response = requests.get(feed['url'], headers=HEADERS, timeout=10)
             if response.status_code != 200:
-                print(f"  Failed (Status code: {response.status_code})")
+                print(f"  Skipped (HTTP Status: {response.status_code})")
                 continue
 
             parsed_feed = feedparser.parse(response.content)
 
             count = 0
-            # Take top 15 items per feed
             for entry in parsed_feed.entries[:15]:
                 link = entry.get('link')
                 title = entry.get('title')
@@ -114,22 +113,21 @@ def fetch_and_store_news():
                 })
                 count += 1
 
-            print(f"  Fetched {count} items from {feed['name']}")
+            print(f"  Fetched {count} items")
 
         except Exception as e:
             print(f"  Error fetching {feed['name']}: {e}")
 
     if all_news_items:
         print(f"\nUpserting {len(all_news_items)} total items into Supabase...")
-        try:
-            # Upsert in batches of 50
-            batch_size = 50
-            for i in range(0, len(all_news_items), batch_size):
-                batch = all_news_items[i:i + batch_size]
-                supabase.table("news").upsert(batch, on_conflict="link").execute()
-            print("Successfully updated database!")
-        except Exception as e:
-            print(f"Error upserting data to Supabase: {e}")
+        batch_size = 50
+        for i in range(0, len(all_news_items), batch_size):
+            batch = all_news_items[i:i + batch_size]
+            # Uncaught database exceptions will rightly trigger workflow step failures
+            supabase.table("news").upsert(batch, on_conflict="link").execute()
+        print("Successfully updated database!")
+    else:
+        print("No items fetched from any feed.")
 
 if __name__ == "__main__":
     fetch_and_store_news()
