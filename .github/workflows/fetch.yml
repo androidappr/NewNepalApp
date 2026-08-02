@@ -2,13 +2,13 @@ name: News Fetcher Workflow
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Runs every 15 minutes
-  workflow_dispatch:        # Allows manual execution in GitHub UI
-  repository_dispatch:      # Allows external triggering via Webhook API
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
     types: [trigger-news-fetch]
 
 permissions:
-  contents: write  # Grants workflow permission to push to gh-pages branch
+  contents: write
 
 jobs:
   run-script:
@@ -27,6 +27,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install feedparser python-dateutil requests urllib3
+
+      - name: Fetch Existing Live JSON
+        run: |
+          mkdir -p public
+          curl -s https://androidappr.github.io/NewNepalApp/news.json -o public/news.json || true
 
       - name: Run Fetcher Script
         run: python fetch_news.py
