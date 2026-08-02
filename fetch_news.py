@@ -91,7 +91,29 @@ def safe_parse_dt(iso_str):
     except Exception:
         return datetime.min.replace(tzinfo=timezone.utc)
 
-def determine_category(entry, title, link, clean_desc, source_name):
+def find_trending_keywords(raw_entries):
+    stopwords = {
+        'र', 'मा', 'को', 'का', 'की', 'ले', 'लाई', 'बाट', 'तथा', 'नेपाल', 'नेपाली', 
+        'काठमाडौं', 'गरेको', 'गर्ने', 'भने', 'गर्न', 'भयो', 'भए', 'गरे', 'छ', 'छन्', 
+        'हो', 'हुन्', 'भन्ने', 'लागि', 'नागरिक', 'समाचार', 'नयाँ', 'जारी', 'पुगे', 
+        'बने', 'बनेको', 'गरेका', 'आज', 'भोलि', 'थप', 'विभिन्न', 'बारे', 'अन्य', 
+        'अनुसार', 'सम्बन्धी', 'प्रति', 'बिच', 'बीच', 'पछि', 'पहिले', 'आफ्नो', 'आफ्ना',
+        'the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 
+        'and', 'or', 'is', 'are', 'was', 'were', 'be', 'been', 'nepal', 'nepali', 
+        'kathmandu', 'news', 'new', 'after', 'over', 'more', 'about'
+    }
+    word_sources = {}
+    for item in raw_entries:
+        source = item['source_name']
+        words = set(re.findall(r'\w+', item['title'].lower()))
+        for w in words:
+            if len(w) > 2 and w not in stopwords and not w.isdigit():
+                if w not in word_sources:
+                    word_sources[w] = set()
+                word_sources[w].add(source)
+    return {w for w, sources in word_sources.items() if len(sources) >= 3}
+
+def determine_category(entry, title, link, clean_desc, source_name, trending_keywords):
     feed_cats = []
     if 'tags' in entry:
         for t in entry.tags:
@@ -103,7 +125,10 @@ def determine_category(entry, title, link, clean_desc, source_name):
         feed_cats.append(str(entry.category).lower())
 
     feed_cat_str = " ".join(feed_cats)
-    full_text = f"{feed_cat_str} {link.lower()} {title.lower()} {clean_desc.lower()}"
+    link_lower = link.lower()
+    title_lower = title.lower()
+    desc_lower = clean_desc.lower()
+    full_text = f"{feed_cat_str} {link_lower} {title_lower} {desc_lower}"
 
     if source_name == "Swasthya Khabar":
         return "Health News"
@@ -140,14 +165,15 @@ def determine_category(entry, title, link, clean_desc, source_name):
     if any(k in full_text for k in ['breaking', 'taaza', 'ताजा', 'ब्रेकिंग', 'अति जरुरी', 'भर्खरै', 'breaking news']):
         return "Breaking News"
 
-    if any(k in full_text for k in ['popular', 'trending', 'लोकप्रिय', 'चर्चित', 'भाइरल', 'viral']):
+    title_words = set(re.findall(r'\w+', title_lower))
+    if any(w in trending_keywords for w in title_words):
         return "Popular News"
 
     return "National News"
 
 def fetch_and_store_news():
     session = get_resilient_session()
-    fetched_items = []
+    raw_entries = []
 
     for feed in RSS_FEEDS:
         logging.info(f"Fetching feed: {feed['name']}")
@@ -158,7 +184,6 @@ def fetch_and_store_news():
                 continue
 
             parsed_feed = feedparser.parse(response.content)
-            count = 0
 
             for entry in parsed_feed.entries[:15]:
                 link = entry.get('link')
@@ -171,23 +196,41 @@ def fetch_and_store_news():
                 pub_date = parse_date(entry.get('published', entry.get('updated', '')))
                 image_url = extract_image(entry, raw_description)
                 clean_desc = clean_html(raw_description)
-                category = determine_category(entry, title, link, clean_desc, feed['name'])
 
-                fetched_items.append({
+                raw_entries.append({
+                    "entry": entry,
                     "link": link.strip(),
                     "title": title.strip(),
                     "description": clean_desc,
-                    "category": category,
                     "pub_date": pub_date,
                     "image_url": image_url,
                     "source_name": feed['name']
                 })
-                count += 1
-
-            logging.info(f"Successfully processed {count} items from {feed['name']}")
 
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
+
+    trending_keywords = find_trending_keywords(raw_entries)
+    fetched_items = []
+
+    for item in raw_entries:
+        category = determine_category(
+            item['entry'], 
+            item['title'], 
+            item['link'], 
+            item['description'], 
+            item['source_name'], 
+            trending_keywords
+        )
+        fetched_items.append({
+            "link": item['link'],
+            "title": item['title'],
+            "description": item['description'],
+            "category": category,
+            "pub_date": item['pub_date'],
+            "image_url": item['image_url'],
+            "source_name": item['source_name']
+        })
 
     existing_items = []
     if os.path.exists(OUTPUT_FILE):
