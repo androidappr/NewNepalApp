@@ -2,8 +2,9 @@ name: News Fetcher Cron Job
 
 on:
   schedule:
-    - cron: '*/7 * * * *' # Runs automatically every 7 minutes
-  workflow_dispatch:      # Allows manual trigger button from GitHub
+    # GitHub Actions cron schedules perform reliably at 15+ minute intervals
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # Allows manual triggering from GitHub UI
 
 jobs:
   run-script:
@@ -18,7 +19,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Python Dependencies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install feedparser supabase python-dateutil requests
