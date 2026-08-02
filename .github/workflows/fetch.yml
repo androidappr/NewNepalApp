@@ -2,7 +2,7 @@ name: News Fetcher Workflow
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Internal fallback
+    - cron: '*/5 * * * *'  # Internal fallback
   workflow_dispatch:       # Allows manual execution in GitHub UI
   repository_dispatch:     # Allows external triggering via Webhook API
     types: [trigger-news-fetch]
