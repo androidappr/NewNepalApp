@@ -2,7 +2,7 @@ import os
 import re
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import feedparser
 import requests
 from requests.adapters import HTTPAdapter
@@ -14,6 +14,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 OUTPUT_DIR = "public"
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "news.json")
 MAX_NEWS_ITEMS = 200
+
+NEPAL_TZ = timezone(timedelta(hours=5, minutes=45))
 
 RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
@@ -49,14 +51,16 @@ def get_resilient_session():
 
 def parse_date(date_string):
     if not date_string:
-        return datetime.now(timezone.utc).isoformat()
+        return datetime.now(NEPAL_TZ).isoformat()
     try:
         dt = parser.parse(date_string)
         if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
+            dt = dt.replace(tzinfo=NEPAL_TZ)
+        else:
+            dt = dt.astimezone(NEPAL_TZ)
         return dt.isoformat()
     except Exception:
-        return datetime.now(timezone.utc).isoformat()
+        return datetime.now(NEPAL_TZ).isoformat()
 
 def clean_html(text):
     if not text:
@@ -87,9 +91,12 @@ def extract_image(entry, raw_description):
 
 def safe_parse_dt(iso_str):
     try:
-        return parser.parse(iso_str)
+        dt = parser.parse(iso_str)
+        if dt.tzinfo is None:
+            return dt.replace(tzinfo=NEPAL_TZ)
+        return dt.astimezone(NEPAL_TZ)
     except Exception:
-        return datetime.min.replace(tzinfo=timezone.utc)
+        return datetime.min.replace(tzinfo=NEPAL_TZ)
 
 def find_trending_keywords(raw_entries):
     stopwords = {
