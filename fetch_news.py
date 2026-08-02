@@ -209,6 +209,10 @@ def fetch_and_store_news():
                 image_url = extract_image(entry, raw_description)
                 clean_desc = clean_html(raw_description)
 
+                # Skip entries with fewer than 10 words in description
+                if len(clean_desc.split()) < 10:
+                    continue
+
                 raw_entries.append({
                     "entry": entry,
                     "link": link.strip(),
@@ -257,6 +261,12 @@ def fetch_and_store_news():
 
     for item in fetched_items + existing_items:
         link = item.get("link")
+        desc = item.get("description", "")
+
+        # Skip any existing or incoming item with fewer than 10 words
+        if len(desc.split()) < 10:
+            continue
+
         if link and link not in seen_links:
             seen_links.add(link)
             if "category" in item and "categories" not in item:
