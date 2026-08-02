@@ -113,7 +113,7 @@ def find_trending_keywords(raw_entries):
                 word_sources[w].add(source)
     return {w for w, sources in word_sources.items() if len(sources) >= 3}
 
-def determine_category(entry, title, link, clean_desc, source_name, trending_keywords):
+def determine_categories(entry, title, link, clean_desc, source_name, trending_keywords):
     feed_cats = []
     if 'tags' in entry:
         for t in entry.tags:
@@ -130,46 +130,51 @@ def determine_category(entry, title, link, clean_desc, source_name, trending_key
     desc_lower = clean_desc.lower()
     full_text = f"{feed_cat_str} {link_lower} {title_lower} {desc_lower}"
 
+    categories = set()
+
     if source_name == "Swasthya Khabar":
-        return "Health News"
+        categories.add("Health News")
     if source_name == "TechPana":
-        return "Technology News"
+        categories.add("Technology News")
 
     if any(k in full_text for k in ['share-market', 'sharemarket', 'nepse', 'शेयर', 'सेयर', 'नेप्से', 'लाभांश', 'आइपिओ', 'ipo', 'म्युचुअल फन्ड', 'राइट सेयर', 'share market', 'share-bazar']):
-        return "Share Market News"
+        categories.add("Share Market News")
 
     if any(k in full_text for k in ['sports', 'khelkud', 'खेलकुद', 'क्रिकेट', 'फुटबल', 'मेस्सी', 'रोनाल्डो', 'क्यान', 'आइपिएल', 'ipl', 'cricket', 'football', 'साफ', 'ओलम्पिक', 'खेल']):
-        return "Sports News"
+        categories.add("Sports News")
 
     if any(k in full_text for k in ['entertainment', 'manoranjan', 'मनोरञ्जन', 'कला', 'सिनेमा', 'फिल्म', 'नायक', 'नायिका', 'मोडल', 'हलिउड', 'बलिवुड', 'कलिउड', 'movie', 'cinema', 'गीत', 'संगीत', 'अभिनेता', 'अभिनेत्री']):
-        return "Entertainment News"
+        categories.add("Entertainment News")
 
     if any(k in full_text for k in ['health', 'swasthya', 'स्वास्थ्य', 'कोरोना', 'अस्पताल', 'चिकित्सा', 'डाक्टर', 'औषधि', 'रोग', 'संक्रमण']):
-        return "Health News"
+        categories.add("Health News")
 
     if any(k in full_text for k in ['tech', 'technology', 'prabidhi', 'प्रविधि', 'टेक', 'आइटी', 'सफ्टवेयर', 'इन्टरनेट', 'डिजिटल', 'ai', 'स्मार्टफोन', 'साइबर', 'gadget']):
-        return "Technology News"
+        categories.add("Technology News")
 
     if any(k in full_text for k in ['politics', 'rajneeti', 'राजनीति', 'नेता', 'पार्टी', 'निर्वाचन', 'चुनाव', 'संसद', 'मन्त्री', 'प्रधानमन्त्री', 'सरकार', 'सांसद', 'कांग्रेस', 'एमाले', 'माओवादी', 'रास्वपा', 'प्रतिनिधिसभा', 'प्रदेशसभा']):
-        return "Political News"
+        categories.add("Political News")
 
     if any(k in full_text for k in ['economy', 'economic', 'arthik', 'आर्थिक', 'अर्थतन्त्र', 'बजेट', 'राजस्व', 'मौद्रिक', 'अर्थशास्त्र', 'मुद्रास्फीति']):
-        return "Economic News"
+        categories.add("Economic News")
 
     if any(k in full_text for k in ['business', 'wyapar', 'व्यापार', 'वाणिज्य', 'उद्योग', 'व्यापारी', 'कर्पोरेट', 'उद्योगी', 'वाणिज्य बैंक', 'वित्तीय']):
-        return "Business News"
+        categories.add("Business News")
 
     if any(k in full_text for k in ['international', 'videsh', 'bidesh', 'विश्व', 'विदेश', 'अन्तर्राष्ट्रिय', 'world', 'global', 'अमेरिका', 'चीन', 'भारत', 'रुस', 'युक्रेन']):
-        return "International News"
+        categories.add("International News")
 
     if any(k in full_text for k in ['breaking', 'taaza', 'ताजा', 'ब्रेकिंग', 'अति जरुरी', 'भर्खरै', 'breaking news']):
-        return "Breaking News"
+        categories.add("Breaking News")
 
     title_words = set(re.findall(r'\w+', title_lower))
     if any(w in trending_keywords for w in title_words):
-        return "Popular News"
+        categories.add("Popular News")
 
-    return "National News"
+    if not categories:
+        categories.add("National News")
+
+    return sorted(list(categories))
 
 def fetch_and_store_news():
     session = get_resilient_session()
@@ -214,7 +219,7 @@ def fetch_and_store_news():
     fetched_items = []
 
     for item in raw_entries:
-        category = determine_category(
+        categories = determine_categories(
             item['entry'], 
             item['title'], 
             item['link'], 
@@ -226,7 +231,7 @@ def fetch_and_store_news():
             "link": item['link'],
             "title": item['title'],
             "description": item['description'],
-            "category": category,
+            "categories": categories,
             "pub_date": item['pub_date'],
             "image_url": item['image_url'],
             "source_name": item['source_name']
@@ -247,6 +252,9 @@ def fetch_and_store_news():
         link = item.get("link")
         if link and link not in seen_links:
             seen_links.add(link)
+            if "category" in item and "categories" not in item:
+                cat_val = item.pop("category")
+                item["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
             combined_items.append(item)
 
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date", "")), reverse=True)
