@@ -20,7 +20,7 @@ MAX_NEWS_ITEMS = 200
 
 NEPAL_TZ = timezone(timedelta(hours=5, minutes=45))
 
-EXCLUDED_CATEGORIES = {"Breaking News", "Popular News"}
+EXCLUDED_CATEGORIES = {"Popular News"}
 
 RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
@@ -218,7 +218,7 @@ def safe_parse_dt(iso_str):
     except Exception:
         return datetime.min.replace(tzinfo=NEPAL_TZ)
 
-def determine_categories(entry, title, link, clean_desc, source_name):
+def determine_categories(entry, title, link, clean_desc, source_name, pub_date=None):
     feed_cats = []
     if 'tags' in entry:
         for t in entry.tags:
@@ -277,6 +277,22 @@ def determine_categories(entry, title, link, clean_desc, source_name):
 
     if any(k in full_text for k in intl_keywords) or any(slug in link_lower for slug in intl_url_slugs):
         categories.add("International News")
+
+    is_recent = False
+    if pub_date:
+        parsed_dt = safe_parse_dt(pub_date)
+        now_dt = datetime.now(NEPAL_TZ)
+        if parsed_dt != datetime.min.replace(tzinfo=NEPAL_TZ):
+            diff = now_dt - parsed_dt
+            if timedelta(hours=-1) <= diff <= timedelta(hours=4):
+                is_recent = True
+
+    has_breaking_kw = any(k in title_lower for k in ['ब्रेकिङ', 'breaking', 'flash news', 'ताजा खबर', 'ताजा न्युज', 'भर्खरै']) or \
+                       any(k in feed_cat_str for k in ['breaking', 'ब्रेकिङ', 'flash']) or \
+                       any(slug in link_lower for slug in ['/breaking/', '/breaking-news/'])
+
+    if is_recent and has_breaking_kw:
+        categories.add("Breaking News")
 
     if not categories:
         categories.add("National News")
@@ -350,7 +366,8 @@ def fetch_and_store_news():
             item['title'], 
             item['link'], 
             item['description'], 
-            item['source_name']
+            item['source_name'],
+            item['pub_date']
         )
         fetched_items.append({
             "link": item['link'],
