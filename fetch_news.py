@@ -253,123 +253,175 @@ def check_keywords(full_text, keywords):
 
     return False
 
-def determine_categories(entry, title, link, clean_desc, source_name, pub_date=None):
-    feed_cats = []
+def get_explicit_category(entry, link, source_name):
+    feed_tags = []
     if 'tags' in entry:
         for t in entry.tags:
             if isinstance(t, dict) and 'term' in t:
-                feed_cats.append(str(t['term']).lower())
+                feed_tags.append(str(t['term']).lower())
             elif hasattr(t, 'term'):
-                feed_cats.append(str(t.term).lower())
+                feed_tags.append(str(t.term).lower())
     if 'category' in entry and entry.category:
-        feed_cats.append(str(entry.category).lower())
+        feed_tags.append(str(entry.category).lower())
 
-    feed_cat_str = " ".join(feed_cats)
-    link_lower = link.lower()
-    title_lower = title.lower()
-    desc_lower = clean_desc.lower()
-    full_text = f"{feed_cat_str} {link_lower} {title_lower} {desc_lower}"
-
-    categories = set()
+    url_path = urlparse(link).path.lower()
 
     if "swasthyakhabar" in source_name.lower():
-        categories.add("Health News")
+        return "Health News"
     if "techpana" in source_name.lower():
-        categories.add("Technology News")
+        return "Technology News"
 
-    share_market_kw = [
-        "share", "stock", "nepse", "ipo", "trading", "broker", "secondary market", 
-        "dividend", "sebon", "share market", "share-market", "share-bazar", 
-        "शेयर", "सेयर", "नेप्से", "आइपिओ", "लाभांश", "धितोपत्र", "म्युचुअल फन्ड", "राइट सेयर"
+    mappings = [
+        ("Share Market News", ["/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "शेयर", "सेयर"]),
+        ("Sports News", ["/sports/", "/khelkud/", "/khel/", "sports", "khelkud", "खेलकुद", "खेल"]),
+        ("Entertainment News", ["/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", "मनोरञ्जन", "चलचित्र"]),
+        ("Health News", ["/health/", "/swasthya/", "health", "swasthya", "स्वास्थ्य"]),
+        ("Technology News", ["/technology/", "/tech/", "/prabidhi/", "technology", "tech", "prabidhi", "प्रविधि", "ग्याजेट"]),
+        ("Political News", ["/politics/", "/rajniti/", "/rajneeti/", "politics", "political", "rajniti", "rajneeti", "राजनीति"]),
+        ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "अर्थतन्त्र"]),
+        ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "व्यापार", "उद्योग"]),
+        ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश"]),
+        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश"])
     ]
-    if check_keywords(full_text, share_market_kw):
-        categories.add("Share Market News")
 
-    sports_kw = [
-        "sport", "sports", "cricket", "football", "soccer", "match", "cup", "league", "goal", 
-        "wicket", "stadium", "tournament", "messi", "ronaldo", "fifa", "icc", "ipl", "olympic", 
-        "athletics", "champion", "trophy", "can", "khel", "khelkud", "खेल", "क्रिकेट", "फुटबल", 
-        "गोल", "म्याच", "कप", "लिग", "विकेट", "रंगशाला", "रङ्गशाला", "च्याम्पियन", "क्यान", 
-        "ओलम्पिक", "ओलिम्पिक", "खेलाडी", "प्रतियोगिता", "टूर्नामेंट", "खेलकुद", "साफ", "मेस्सी", "रोनाल्डो"
-    ]
-    if check_keywords(full_text, sports_kw):
-        categories.add("Sports News")
+    for cat_name, patterns in mappings:
+        for pat in patterns:
+            if pat.startswith("/") and pat.endswith("/"):
+                if pat in url_path:
+                    return cat_name
 
-    entertainment_kw = [
-        "entertainment", "movie", "film", "actor", "actress", "cinema", "music", "song", "award", 
-        "bollywood", "hollywood", "celebrity", "theater", "show", "artist", "album", "manoranjan", 
-        "kala", "मनोरञ्जन", "चलचित्र", "फिल्म", "नायक", "नायिका", "सिनेमा", "संगीत", "सङ्गीत", 
-        "गीत", "अवार्ड", "कलाकार", "गायक", "गायिका", "शो", "थिएटर", "कला", "मोडल", "हलिउड", 
-        "बलिवुड", "कलिउड", "अभिनेता", "अभिनेत्री"
-    ]
-    if check_keywords(full_text, entertainment_kw):
-        categories.add("Entertainment News")
+    for cat_name, patterns in mappings:
+        for tag in feed_tags:
+            clean_tag = tag.strip().lower()
+            for pat in patterns:
+                if not pat.startswith("/") and clean_tag == pat:
+                    return cat_name
 
-    health_kw = [
-        "health", "hospital", "doctor", "disease", "virus", "vaccine", "lifestyle", "food", 
-        "fitness", "medicine", "patient", "epidemic", "wellness", "diet", "swasthya", "स्वास्थ्य", 
-        "अस्पताल", "डाक्टर", "रोग", "भाइरस", "खोप", "जीवनशैली", "औषधि", "बिरामी", "उपचार", 
-        "महामारी", "खाद्यान्न", "स्वास्थ्यकर्मी", "कोरोना", "चिकित्सा", "संक्रमण"
-    ]
-    if check_keywords(full_text, health_kw):
-        categories.add("Health News")
+    return None
 
-    tech_kw = [
-        "tech", "technology", "ai", "app", "digital", "software", "mobile", "internet", "cyber", 
-        "google", "apple", "meta", "starlink", "computer", "gadget", "smartphone", "data", "robot", 
-        "prabidhi", "प्रविधि", "एप्लिकेसन", "एप", "डिजिटल", "सफ्टवेयर", "मोबाइल", "इन्टरनेट", 
-        "साइबर", "डेटा", "कम्प्युटर", "ग्याजेट", "एआई", "स्मार्टफोन", "आर्टिफिसियल", "ग्याजेट्स", 
-        "टेक", "आइटी"
-    ]
-    if check_keywords(full_text, tech_kw):
-        categories.add("Technology News")
+def determine_categories(entry, title, link, clean_desc, source_name, pub_date=None):
+    categories = set()
+    explicit_cat = get_explicit_category(entry, link, source_name)
 
-    politics_kw = [
-        "politic", "politics", "political", "minister", "prime minister", "government", "parliament", 
-        "election", "party", "policy", "supreme court", "president", "congress", "uml", "maoist", 
-        "politician", "cabinet", "constitution", "mp", "rajniti", "sarkar", "pradhanmantri", "rajneeti", 
-        "राजनीति", "मन्त्री", "प्रधानमन्त्री", "सरकार", "संसद", "संसद्", "निर्वाचन", "चुनाव", "दल", 
-        "पार्टी", "अदालत", "सर्वोच्च", "राष्ट्रपति", "कांग्रेस", "एमाले", "माओवादी", "सांसद", 
-        "संविधान", "मन्त्रिपरिषद्", "नेता", "रास्वपा", "प्रतिनिधिसभा", "प्रदेशसभा"
-    ]
-    if check_keywords(full_text, politics_kw):
-        categories.add("Political News")
+    if explicit_cat:
+        categories.add(explicit_cat)
+    else:
+        link_lower = link.lower()
+        title_lower = title.lower()
+        desc_lower = clean_desc.lower()
+        full_text = f"{link_lower} {title_lower} {desc_lower}"
 
-    economic_kw = [
-        "economy", "economic", "inflation", "revenue", "bhansa", "kinmel", "budget", "gdp", "growth", 
-        "remittance", "debt", "nrb", "central bank", "fiscal", "arthik", "अर्थतन्त्र", "बजेट", 
-        "राजस्व", "विप्रेषण", "रेमिट्यान्स", "राष्ट्र बैंक", "जिडिपी", "मौद्रिक", "आर्थिक", "अर्थशास्त्र", "मुद्रास्फीति"
-    ]
-    if check_keywords(full_text, economic_kw):
-        categories.add("Economic News")
+        share_market_kw = [
+            "share", "stock", "nepse", "ipo", "trading", "broker", "secondary market", 
+            "dividend", "sebon", "share market", "share-market", "share-bazar", 
+            "शेयर", "सेयर", "नेप्से", "आइपिओ", "लाभांश", "धितोपत्र", "म्युचुअल फन्ड", "राइट सेयर"
+        ]
+        if check_keywords(full_text, share_market_kw):
+            categories.add("Share Market News")
 
-    business_kw = [
-        "business", "market", "bank", "banking", "corporate", "tax", "investment", "trade", 
-        "dollar", "finance", "export", "import", "profit", "bazar", "company", "wyapar", 
-        "उद्योग", "व्यापार", "बैंक", "लगानी", "नाफा", "घाटा", "बजार", "वित्त", "कारोबार", "बिजनेस", 
-        "वाणिज्य", "व्यापारी", "कर्पोरेट", "उद्योगी", "वाणिज्य बैंक", "वित्तीय"
-    ]
-    if check_keywords(full_text, business_kw):
-        categories.add("Business News")
+        sports_kw = [
+            "sport", "sports", "cricket", "football", "soccer", "match", "cup", "league", "goal", 
+            "wicket", "stadium", "tournament", "messi", "ronaldo", "fifa", "icc", "ipl", "olympic", 
+            "athletics", "champion", "trophy", "can", "khel", "khelkud", "खेल", "क्रिकेट", "फुटबल", 
+            "गोल", "म्याच", "कप", "लिग", "विकेट", "रंगशाला", "रङ्गशाला", "च्याम्पियन", "क्यान", 
+            "ओलम्पिक", "ओलिम्पिक", "खेलाडी", "प्रतियोगिता", "टूर्नामेंट", "खेलकुद", "साफ", "मेस्सी", "रोनाल्डो", "गोल्ड कप"
+        ]
+        if check_keywords(full_text, sports_kw):
+            categories.add("Sports News")
 
-    intl_kw = [
-        "world", "international", "global", "foreign", "us", "china", "india", "uk", "russia", 
-        "america", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "अन्तरराष्ट्रिय", "विदेश", 
-        "परराष्ट्र", "भारत", "चीन", "अमेरिका", "रसिया", "रुस", "युक्रेन", "इन्डोनेसिया", "जापान", 
-        "कोरिया", "बेलायत", "अस्ट्रेलिया", "क्यानडा", "इजरायल", "गाजा", "प्यालेस्टाइन", "पाकिस्तान", 
-        "बंगलादेश", "श्रीलंका", "इरान", "इराक", "टर्की", "सउदी", "कतार", "युएई"
-    ]
-    intl_url_slugs = ['/world/', '/international/', '/bidesh/', '/videsh/']
-    if check_keywords(full_text, intl_kw) or any(slug in link_lower for slug in intl_url_slugs):
-        categories.add("International News")
+        entertainment_kw = [
+            "entertainment", "movie", "film", "actor", "actress", "cinema", "music", "song", "award", 
+            "bollywood", "hollywood", "celebrity", "theater", "show", "artist", "album", "manoranjan", 
+            "kala", "मनोरञ्जन", "चलचित्र", "फिल्म", "नायक", "नायिका", "सिनेमा", "संगीत", "सङ्गीत", 
+            "गीत", "अवार्ड", "कलाकार", "गायक", "गायिका", "शो", "थिएटर", "कला", "मोडल", "हलिउड", 
+            "बलिवुड", "कलिउड", "अभिनेता", "अभिनेत्री"
+        ]
+        if check_keywords(full_text, entertainment_kw):
+            categories.add("Entertainment News")
 
-    national_kw = [
-        "nepal", "kathmandu", "pokhara", "district", "province", "local", "palika", "pradesh", 
-        "national", "national news", "नेपाल", "काठमाडौँ", "काठमाडौं", "पोखरा", "जिल्ला", 
-        "प्रदेश", "स्थानीय", "पालिका", "राष्ट्रिय", "राष्ट्रिय समाचार"
-    ]
-    if check_keywords(full_text, national_kw):
-        categories.add("National News")
+        health_kw = [
+            "health", "hospital", "doctor", "disease", "virus", "vaccine", "lifestyle", "food", 
+            "fitness", "medicine", "patient", "epidemic", "wellness", "diet", "swasthya", "स्वास्थ्य", 
+            "अस्पताल", "डाक्टर", "रोग", "भाइरस", "खोप", "जीवनशैली", "औषधि", "बिरामी", "उपचार", 
+            "महामारी", "खाद्यान्न", "स्वास्थ्यकर्मी", "कोरोना", "चिकित्सा", "संक्रमण"
+        ]
+        if check_keywords(full_text, health_kw):
+            categories.add("Health News")
+
+        tech_kw = [
+            "tech", "technology", "ai", "app", "digital", "software", "mobile", "internet", "cyber", 
+            "google", "apple", "meta", "starlink", "computer", "gadget", "smartphone", "data", "robot", 
+            "prabidhi", "प्रविधि", "एप्लिकेसन", "एप", "डिजिटल", "सफ्टवेयर", "मोबाइल", "इन्टरनेट", 
+            "साइबर", "डेटा", "कम्प्युटर", "ग्याजेट", "एआई", "स्मार्टफोन", "आर्टिफिसियल", "ग्याजेट्स", 
+            "टेक", "आइटी"
+        ]
+        if check_keywords(full_text, tech_kw):
+            categories.add("Technology News")
+
+        politics_kw = [
+            "politic", "politics", "political", "minister", "prime minister", "government", "parliament", 
+            "election", "party", "policy", "supreme court", "president", "congress", "uml", "maoist", 
+            "politician", "cabinet", "constitution", "mp", "rajniti", "sarkar", "pradhanmantri", "rajneeti", 
+            "राजनीति", "मन्त्री", "प्रधानमन्त्री", "सरकार", "संसद", "संसद्", "निर्वाचन", "चुनाव", "दल", 
+            "पार्टी", "अदालत", "सर्वोच्च", "राष्ट्रपति", "कांग्रेस", "एमाले", "माओवादी", "सांसद", 
+            "संविधान", "मन्त्रिपरिषद्", "नेता", "रास्वपा", "प्रतिनिधिसभा", "प्रदेशसभा"
+        ]
+        if check_keywords(full_text, politics_kw):
+            categories.add("Political News")
+
+        economic_kw = [
+            "economy", "economic", "inflation", "revenue", "bhansa", "kinmel", "budget", "gdp", "growth", 
+            "remittance", "debt", "nrb", "central bank", "fiscal", "arthik", "अर्थतन्त्र", "बजेट", 
+            "राजस्व", "विप्रेषण", "रेमिट्यान्स", "राष्ट्र बैंक", "जिडिपी", "मौद्रिक", "आर्थिक", "अर्थशास्त्र", "मुद्रास्फीति"
+        ]
+        if check_keywords(full_text, economic_kw):
+            categories.add("Economic News")
+
+        business_kw = [
+            "business", "market", "bank", "banking", "corporate", "tax", "investment", "trade", 
+            "dollar", "finance", "export", "import", "profit", "bazar", "company", "wyapar", 
+            "उद्योग", "व्यापार", "बैंक", "लगानी", "नाफा", "घाटा", "बजार", "वित्त", "कारोबार", "बिजनेस", 
+            "वाणिज्य", "व्यापारी", "कर्पोरेट", "उद्योगी", "वाणिज्य बैंक", "वित्तीय"
+        ]
+        if check_keywords(full_text, business_kw):
+            categories.add("Business News")
+
+        crime_kw = ["प्रहरी", "पक्राउ", "इलाका प्रहरी", "गाँजा", "लागूऔषध", "चोरी", "हत्या", "अनुसन्धान"]
+        is_domestic_crime = check_keywords(full_text, crime_kw)
+
+        text_for_intl = full_text.replace("अन्तर्राष्ट्रिय आमन्त्रण", "").replace("अन्तर्राष्ट्रिय विमानस्थल", "")
+        intl_kw = [
+            "world", "international", "global", "foreign", "us", "china", "uk", "russia", 
+            "america", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "अन्तरराष्ट्रिय", "विदेश", 
+            "परराष्ट्र", "चीन", "अमेरिका", "रसिया", "रुस", "युक्रेन", "इन्डोनेसिया", "जापान", 
+            "कोरिया", "बेलायत", "अस्ट्रेलिया", "क्यानडा", "इजरायल", "गाजा", "प्यालेस्टाइन", "पाकिस्तान", 
+            "बंगलादेश", "श्रीलंका", "इरान", "इराक", "टर्की", "सउदी", "कतार", "युएई", "क्युबा", "हाभाना"
+        ]
+        
+        if not is_domestic_crime:
+            intl_kw.append("भारत")
+
+        intl_url_slugs = ['/world/', '/international/', '/bidesh/', '/videsh/']
+        
+        if (check_keywords(text_for_intl, intl_kw) or any(slug in link_lower for slug in intl_url_slugs)) and not is_domestic_crime:
+            categories.add("International News")
+
+        national_kw = [
+            "nepal", "kathmandu", "pokhara", "district", "province", "local", "palika", "pradesh", 
+            "national news", "नेपाल", "काठमाडौँ", "काठमाडौं", "पोखरा", "जिल्ला", 
+            "प्रदेश", "स्थानीय", "पालिका", "राष्ट्रिय समाचार"
+        ]
+        if check_keywords(full_text, national_kw) or is_domestic_crime:
+            categories.add("National News")
+
+        if "International News" in categories and "National News" in categories:
+            if any(slug in link_lower for slug in intl_url_slugs) or "क्युबा" in title_lower or "हाभाना" in title_lower:
+                categories.remove("National News")
+            else:
+                categories.remove("International News")
+
+        if not categories:
+            categories.add("National News")
 
     is_recent = False
     if pub_date:
@@ -386,15 +438,16 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
         "मुख्य समाचार", "ताजा खबर", "ताजा न्युज", "भर्खरै", "flash news", "ताजा समाचार"
     ]
 
+    link_lower = link.lower()
+    title_lower = title.lower()
+    feed_cat_str = " ".join([t.term.lower() for t in getattr(entry, 'tags', []) if hasattr(t, 'term')])
+
     has_breaking_kw = check_keywords(title_lower, breaking_kw) or \
                       check_keywords(feed_cat_str, breaking_kw) or \
                       any(slug in link_lower for slug in ['/breaking/', '/breaking-news/'])
 
     if is_recent and has_breaking_kw:
         categories.add("Breaking News")
-
-    if not categories:
-        categories.add("National News")
 
     return sorted(list(categories))
 
