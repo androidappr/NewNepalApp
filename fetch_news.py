@@ -49,6 +49,12 @@ RSS_FEEDS = [
     {"name": "Thaha Khabar", "url": "https://www.thahakhabar.com/feed"},
     {"name": "News of Nepal", "url": "https://newsofnepal.com/feed/"},
     {"name": "Kathmandu Post", "url": "https://kathmandupost.com/rss"},
+    {"name": "Rajdhani Daily", "url": "https://rajdhanidaily.com/feed/"},
+    {"name": "Lokpath", "url": "https://www.lokpath.com/feed/"},
+    {"name": "Pahilopost", "url": "https://pahilopost.com/feed"},
+    {"name": "Image Khabar", "url": "https://www.imagekhabar.com/feed/"},
+    {"name": "Bizmandu", "url": "https://bizmandu.com/feed"},
+    {"name": "Clickmandu", "url": "https://clickmandu.com/feed"},
 ]
 
 def normalize_digits(text):
