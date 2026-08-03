@@ -20,7 +20,6 @@ MAX_NEWS_ITEMS = 200
 
 NEPAL_TZ = timezone(timedelta(hours=5, minutes=45))
 
-# Categories to explicitly exclude from output
 EXCLUDED_CATEGORIES = {"Breaking News", "Popular News"}
 
 RSS_FEEDS = [
@@ -267,7 +266,16 @@ def determine_categories(entry, title, link, clean_desc, source_name):
     if any(k in full_text for k in ['business', 'wyapar', 'व्यापार', 'वाणिज्य', 'उद्योग', 'व्यापारी', 'कर्पोरेट', 'उद्योगी', 'वाणिज्य बैंक', 'वित्तीय']):
         categories.add("Business News")
 
-    if any(k in full_text for k in ['international', 'videsh', 'bidesh', 'विश्व', 'विदेश', 'अन्तर्राष्ट्रिय', 'world', 'global', 'अमेरिका', 'चीन', 'भारत', 'रुस', 'युक्रेन']):
+    intl_keywords = [
+        'international', 'videsh', 'bidesh', 'world', 'global', 'foreign',
+        'विश्व', 'विदेश', 'अन्तर्राष्ट्रिय', 'परराष्ट्र',
+        'अमेरिका', 'चीन', 'भारत', 'रुस', 'युक्रेन', 'इन्डोनेसिया', 'जापान', 'कोरिया',
+        'बेलायत', 'अस्ट्रेलिया', 'क्यानडा', 'इजरायल', 'गाजा', 'प्यालेस्टाइन', 'पाकिस्तान',
+        'बंगलादेश', 'श्रीलंका', 'इरान', 'इराक', 'टर्की', 'सउदी', 'कतार', 'युएई'
+    ]
+    intl_url_slugs = ['/world/', '/international/', '/bidesh/', '/videsh/']
+
+    if any(k in full_text for k in intl_keywords) or any(slug in link_lower for slug in intl_url_slugs):
         categories.add("International News")
 
     if not categories:
@@ -378,7 +386,6 @@ def fetch_and_store_news():
 
         seen_links.add(link)
 
-        # Merge cached pub_date ONLY if newly scraped pub_date is missing
         if link in existing_map:
             ex_date = existing_map[link].get("pub_date")
             if ex_date and not item.get("pub_date"):
@@ -392,14 +399,12 @@ def fetch_and_store_news():
         if link and link not in seen_links and len(desc.split()) >= 10:
             seen_links.add(link)
             
-            # Format source name for cached items to uppercase domain
             ex["source_name"] = extract_domain_name(link)
 
             if "category" in ex and "categories" not in ex:
                 cat_val = ex.pop("category")
                 ex["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
             
-            # Clean up excluded categories from cached JSON items
             if "categories" in ex:
                 ex["categories"] = [c for c in ex["categories"] if c not in EXCLUDED_CATEGORIES]
                 if not ex["categories"]:
@@ -407,7 +412,6 @@ def fetch_and_store_news():
 
             combined_items.append(ex)
 
-    # Sort descending. Dateless items (None) map to datetime.min and fall to the bottom.
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date")), reverse=True)
 
     final_news = combined_items[:MAX_NEWS_ITEMS]
