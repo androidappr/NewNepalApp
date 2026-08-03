@@ -4,6 +4,8 @@ import json
 import html
 import logging
 from datetime import datetime, timezone, timedelta
+from urllib.parse import urljoin
+from concurrent.futures import ThreadPoolExecutor
 import feedparser
 import requests
 from requests.adapters import HTTPAdapter
@@ -44,7 +46,7 @@ def get_resilient_session():
     session.mount("http://", HTTPAdapter(max_retries=retries))
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Accept": "application/rss+xml, application/xml, text/xml, text/html, */*",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
         "Cache-Control": "no-cache",
     })
@@ -52,16 +54,34 @@ def get_resilient_session():
 
 def parse_date(date_string):
     if not date_string:
-        return datetime.now(NEPAL_TZ).isoformat()
+        return None
     try:
-        dt = parser.parse(date_string)
+        dt = parser.parse(str(date_string))
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=NEPAL_TZ)
         else:
             dt = dt.astimezone(NEPAL_TZ)
         return dt.isoformat()
     except Exception:
-        return datetime.now(NEPAL_TZ).isoformat()
+        return None
+
+def extract_entry_date(entry):
+    for field in ['published', 'updated', 'created', 'pubDate', 'dc_date', 'date']:
+        val = entry.get(field)
+        if val:
+            parsed = parse_date(val)
+            if parsed:
+                return parsed
+
+    for parsed_field in ['published_parsed', 'updated_parsed', 'created_parsed']:
+        tp = entry.get(parsed_field)
+        if tp:
+            try:
+                dt = datetime(*tp[:6], tzinfo=timezone.utc).astimezone(NEPAL_TZ)
+                return dt.isoformat()
+            except Exception:
+                pass
+    return None
 
 def clean_html(text):
     if not text:
@@ -69,147 +89,106 @@ def clean_html(text):
     clean = re.sub(r'<[^>]+>', '', text)
     return html.unescape(clean).strip()
 
-def find_img_in_html(html_str):
-    if not html_str:
+def extract_image_from_text(text, base_url):
+    if not text:
         return None
-    html_str = html.unescape(str(html_str))
-    
-    img_tags = re.findall(r'<img[^>]+>', html_str, re.IGNORECASE)
-    for tag in img_tags:
-        for attr in ['data-src', 'data-original', 'data-lazy-src', 'data-orig-file', 'data-large-file', 'src', 'srcset']:
-            match = re.search(r'\b' + attr + r'=["\'](.*?)["\']', tag, re.IGNORECASE)
-            if match:
-                val = match.group(1).strip()
-                if attr == 'srcset':
-                    parts = [p.strip().split()[0] for p in val.split(',') if p.strip()]
-                    for p in reversed(parts):
-                        if p.startswith('http') and not p.startswith('data:'):
-                            return p
-                elif val.startswith('http') and not val.startswith('data:'):
-                    return val
-
-    source_tags = re.findall(r'<source[^>]+>', html_str, re.IGNORECASE)
-    for tag in source_tags:
-        match = re.search(r'\bsrcset=["\'](.*?)["\']', tag, re.IGNORECASE)
-        if match:
-            val = match.group(1).strip()
-            parts = [p.strip().split()[0] for p in val.split(',') if p.strip()]
-            for p in reversed(parts):
-                if p.startswith('http') and not p.startswith('data:'):
-                    return p
-
+    text = html.unescape(text)
+    img_match = re.search(r'<img[^>]+src=["\'](.*?)["\']', text, re.IGNORECASE)
+    if img_match:
+        img_src = img_match.group(1).strip()
+        if img_src and not img_src.startswith("data:"):
+            return urljoin(base_url, img_src)
     return None
 
-def extract_image(entry, session=None):
-    candidates = []
-
+def extract_image_from_entry(entry, base_url):
     if 'media_content' in entry and entry.media_content:
         for media in entry.media_content:
             if isinstance(media, dict) and media.get('url'):
-                candidates.append(media.get('url'))
+                return urljoin(base_url, media.get('url'))
 
     if 'media_thumbnail' in entry and entry.media_thumbnail:
-        thumbnails = entry.media_thumbnail if isinstance(entry.media_thumbnail, list) else [entry.media_thumbnail]
-        for thumb in thumbnails:
+        for thumb in entry.media_thumbnail:
             if isinstance(thumb, dict) and thumb.get('url'):
-                candidates.append(thumb.get('url'))
-
-    if 'media_group' in entry and entry.media_group:
-        groups = entry.media_group if isinstance(entry.media_group, list) else [entry.media_group]
-        for g in groups:
-            if isinstance(g, dict):
-                if 'media_content' in g:
-                    for mc in g['media_content']:
-                        if isinstance(mc, dict) and mc.get('url'):
-                            candidates.append(mc.get('url'))
-                if 'media_thumbnail' in g:
-                    for mt in g['media_thumbnail']:
-                        if isinstance(mt, dict) and mt.get('url'):
-                            candidates.append(mt.get('url'))
+                return urljoin(base_url, thumb.get('url'))
 
     if 'enclosures' in entry and entry.enclosures:
         for enc in entry.enclosures:
-            if isinstance(enc, dict):
-                href = enc.get('href') or enc.get('url')
-                enc_type = enc.get('type', '')
-                if href:
-                    if enc_type.startswith('image/') or any(href.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg', '.avif']):
-                        candidates.append(href)
+            if enc.get('type', '').startswith('image/') and enc.get('href'):
+                return urljoin(base_url, enc.get('href'))
 
-    if 'links' in entry and entry.links:
-        for link_obj in entry.links:
-            if isinstance(link_obj, dict):
-                href = link_obj.get('href')
-                link_type = link_obj.get('type', '')
-                rel = link_obj.get('rel', '')
-                if href and (link_type.startswith('image/') or rel == 'enclosure' or any(href.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg'])):
-                    candidates.append(href)
+    if 'image' in entry and isinstance(entry.image, dict) and entry.image.get('href'):
+        return urljoin(base_url, entry.image.get('href'))
 
-    for field in ['image', 'featured_image', 'featured_image_src', 'post_thumbnail', 'thumbnail', 'cover', 'poster']:
-        val = entry.get(field)
-        if val:
-            if isinstance(val, str):
-                candidates.append(val)
-            elif isinstance(val, dict):
-                url = val.get('href') or val.get('url') or val.get('src')
-                if url:
-                    candidates.append(url)
+    for field in ['content', 'summary_detail', 'description_detail']:
+        if field in entry:
+            val = entry[field]
+            if isinstance(val, list):
+                for v in val:
+                    if isinstance(v, dict) and v.get('value'):
+                        img = extract_image_from_text(v.get('value'), base_url)
+                        if img:
+                            return img
+            elif isinstance(val, dict) and val.get('value'):
+                img = extract_image_from_text(val.get('value'), base_url)
+                if img:
+                    return img
 
-    html_texts = []
-    if entry.get('summary'):
-        html_texts.append(str(entry.get('summary')))
-    if entry.get('description'):
-        html_texts.append(str(entry.get('description')))
-    if entry.get('content'):
-        content_val = entry.get('content')
-        if isinstance(content_val, list):
-            for c in content_val:
-                if isinstance(c, dict) and c.get('value'):
-                    html_texts.append(str(c.get('value')))
-                elif isinstance(c, str):
-                    html_texts.append(c)
-        elif isinstance(content_val, str):
-            html_texts.append(content_val)
-    if entry.get('content_encoded'):
-        html_texts.append(str(entry.get('content_encoded')))
-    if entry.get('encoded'):
-        html_texts.append(str(entry.get('encoded')))
-
-    full_html = " ".join(html_texts)
-    if full_html:
-        extracted = find_img_in_html(full_html)
-        if extracted:
-            candidates.append(extracted)
-
-    for cand in candidates:
-        if isinstance(cand, str):
-            cand = cand.strip()
-            if cand.startswith('//'):
-                cand = 'https:' + cand
-            if cand.startswith('http://') or cand.startswith('https://'):
-                if not any(ignored in cand.lower() for ignored in ['data:image', '1x1', 'blank.gif', 'pixel.gif', 'avatar']):
-                    return cand
-
-    article_url = entry.get('link')
-    if session and article_url and (article_url.startswith('http://') or article_url.startswith('https://')):
-        try:
-            resp = session.get(article_url, timeout=3)
-            if resp.status_code == 200:
-                page_html = resp.text
-                og_match = re.search(r'<meta[^>]+property=["\']og:image["\']\s+content=["\'](.*?)["\']', page_html, re.IGNORECASE) or \
-                           re.search(r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']og:image["\']', page_html, re.IGNORECASE) or \
-                           re.search(r'<meta[^>]+name=["\']twitter:image["\']\s+content=["\'](.*?)["\']', page_html, re.IGNORECASE) or \
-                           re.search(r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']twitter:image["\']', page_html, re.IGNORECASE)
-                if og_match:
-                    img_url = html.unescape(og_match.group(1).strip())
-                    if img_url.startswith('//'):
-                        img_url = 'https:' + img_url
-                    if img_url.startswith('http://') or img_url.startswith('https://'):
-                        return img_url
-        except Exception:
-            pass
+    for field in ['summary', 'description', 'story']:
+        if field in entry and entry[field]:
+            img = extract_image_from_text(entry[field], base_url)
+            if img:
+                return img
 
     return None
+
+def fetch_article_metadata(session, url):
+    img_url = None
+    pub_date = None
+    if not url:
+        return img_url, pub_date
+    try:
+        resp = session.get(url, timeout=6)
+        if resp.status_code == 200:
+            text = resp.text
+
+            img_patterns = [
+                r'<meta[^>]+property=["\']og:image["\']\s+content=["\'](.*?)["\']',
+                r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']og:image["\']',
+                r'<meta[^>]+name=["\']twitter:image["\']\s+content=["\'](.*?)["\']',
+                r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']twitter:image["\']',
+                r'<meta[^>]+property=["\']twitter:image["\']\s+content=["\'](.*?)["\']',
+                r'<link[^>]+rel=["\']image_src["\']\s+href=["\'](.*?)["\']',
+            ]
+            for pat in img_patterns:
+                m = re.search(pat, text, re.IGNORECASE)
+                if m:
+                    found_img = html.unescape(m.group(1).strip())
+                    if found_img and not found_img.startswith('data:'):
+                        img_url = urljoin(url, found_img)
+                        break
+
+            date_patterns = [
+                r'<meta[^>]+property=["\']article:published_time["\']\s+content=["\'](.*?)["\']',
+                r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']article:published_time["\']',
+                r'<meta[^>]+name=["\']pubdate["\']\s+content=["\'](.*?)["\']',
+                r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']pubdate["\']',
+                r'<meta[^>]+name=["\']publishdate["\']\s+content=["\'](.*?)["\']',
+                r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']publishdate["\']',
+                r'<meta[^>]+property=["\']og:published_time["\']\s+content=["\'](.*?)["\']',
+                r'"datePublished"\s*:\s*"([^"]+)"',
+                r'"dateCreated"\s*:\s*"([^"]+)"',
+            ]
+            for pat in date_patterns:
+                m = re.search(pat, text, re.IGNORECASE)
+                if m:
+                    raw_d = html.unescape(m.group(1).strip())
+                    parsed_d = parse_date(raw_d)
+                    if parsed_d:
+                        pub_date = parsed_d
+                        break
+    except Exception:
+        pass
+    return img_url, pub_date
 
 def safe_parse_dt(iso_str):
     try:
@@ -326,18 +305,21 @@ def fetch_and_store_news():
                 if not link or not title:
                     continue
 
+                link = link.strip()
+                title = title.strip()
                 raw_description = entry.get('summary', entry.get('description', ''))
-                pub_date = parse_date(entry.get('published', entry.get('updated', '')))
-                image_url = extract_image(entry, session)
                 clean_desc = clean_html(raw_description)
 
                 if len(clean_desc.split()) < 10:
                     continue
 
+                pub_date = extract_entry_date(entry)
+                image_url = extract_image_from_entry(entry, link)
+
                 raw_entries.append({
                     "entry": entry,
-                    "link": link.strip(),
-                    "title": title.strip(),
+                    "link": link,
+                    "title": title,
                     "description": clean_desc,
                     "pub_date": pub_date,
                     "image_url": image_url,
@@ -346,6 +328,19 @@ def fetch_and_store_news():
 
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
+
+    missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
+    if missing_meta_items:
+        logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
+        def scrape_item(item):
+            img, d = fetch_article_metadata(session, item["link"])
+            if not item["image_url"] and img:
+                item["image_url"] = img
+            if not item["pub_date"] and d:
+                item["pub_date"] = d
+
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            executor.map(scrape_item, missing_meta_items)
 
     trending_keywords = find_trending_keywords(raw_entries)
     fetched_items = []
@@ -370,29 +365,50 @@ def fetch_and_store_news():
         })
 
     existing_items = []
+    existing_map = {}
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
                 existing_items = json.load(f)
+                for ex in existing_items:
+                    if ex.get("link"):
+                        existing_map[ex["link"]] = ex
         except Exception as err:
             logging.warning(f"Could not read existing news file: {err}")
 
     seen_links = set()
     combined_items = []
 
-    for item in fetched_items + existing_items:
+    for item in fetched_items:
         link = item.get("link")
         desc = item.get("description", "")
 
-        if len(desc.split()) < 10:
+        if len(desc.split()) < 10 or not link or link in seen_links:
             continue
 
-        if link and link not in seen_links:
+        seen_links.add(link)
+
+        if link in existing_map:
+            ex_date = existing_map[link].get("pub_date")
+            if ex_date and not item.get("pub_date"):
+                item["pub_date"] = ex_date
+            elif ex_date and item.get("pub_date"):
+                item["pub_date"] = ex_date
+
+        if not item.get("pub_date"):
+            item["pub_date"] = datetime.now(NEPAL_TZ).isoformat()
+
+        combined_items.append(item)
+
+    for ex in existing_items:
+        link = ex.get("link")
+        desc = ex.get("description", "")
+        if link and link not in seen_links and len(desc.split()) >= 10:
             seen_links.add(link)
-            if "category" in item and "categories" not in item:
-                cat_val = item.pop("category")
-                item["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
-            combined_items.append(item)
+            if "category" in ex and "categories" not in ex:
+                cat_val = ex.pop("category")
+                ex["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
+            combined_items.append(ex)
 
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date", "")), reverse=True)
 
