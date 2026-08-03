@@ -313,8 +313,6 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
 
     if explicit_cat:
         categories.add(explicit_cat)
-    else:
-        categories.add("National News")
 
     is_recent = False
     if pub_date:
@@ -573,8 +571,6 @@ def fetch_and_store_news():
             
             if "categories" in ex:
                 ex["categories"] = [c for c in ex["categories"] if c not in EXCLUDED_CATEGORIES]
-                if not ex["categories"]:
-                    ex["categories"] = ["National News"]
 
             combined_items.append(ex)
 
