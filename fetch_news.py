@@ -47,6 +47,8 @@ RSS_FEEDS = [
     {"name": "Baahrakhari", "url": "https://baahrakhari.com/feed"},
     {"name": "Gorkhapatra", "url": "https://gorkhapatraonline.com/rss"},
     {"name": "Thaha Khabar", "url": "https://www.thahakhabar.com/feed"},
+    {"name": "News of Nepal", "url": "https://newsofnepal.com/feed/"},
+    {"name": "Kathmandu Post", "url": "https://kathmandupost.com/rss"},
 ]
 
 def normalize_digits(text):
