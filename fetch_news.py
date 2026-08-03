@@ -34,7 +34,7 @@ RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
     {"name": "Sidhakura", "url": "https://www.sidhakura.com/feed"},
     {"name": "Artha Sarokar", "url": "https://arthasarokar.com/feed"},
-    {"name": "TechPana", "url": "https://techpana.com/feed"},
+    {"name": "TechPana", "url": "https://techpana.com/feed/"},
     {"name": "Nagarik News", "url": "https://nagariknews.nagariknetwork.com/feed"},
     {"name": "Setopati", "url": "https://www.setopati.com/feed"},
     {"name": "Annapurna Post", "url": "https://annapurnapost.com/rss/"},
@@ -80,9 +80,16 @@ def get_resilient_session():
     session.mount("http://", HTTPAdapter(max_retries=retries))
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
-        "Cache-Control": "no-cache",
+        "Referer": "https://www.google.com/",
+        "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124"',
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform": '"Windows"',
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "cross-site",
+        "Cache-Control": "max-age=0",
     })
     return session
 
@@ -121,16 +128,14 @@ def extract_entry_date(entry):
 def clean_html(text):
     if not text:
         return ""
-    text = re.sub(r'The post\s+.*?\s+appeared first on\s+.*$', '', text, flags=re.DOTALL | re.IGNORECASE)
-    clean = re.sub(r'<[^>]+>', '', text)
-    clean = html.unescape(clean).strip()
-    clean = re.sub(r'(\[…\]|\[\.\.\.\]|\[&#8230;\]|\[&hellip;\]).*$', '', clean, flags=re.DOTALL)
+    clean = html.unescape(html.unescape(text))
+    clean = re.sub(r'<[^>]+>', '', clean)
     return clean.strip()
 
 def extract_image_from_text(text, base_url):
     if not text:
         return None
-    text = html.unescape(text)
+    text = html.unescape(html.unescape(text))
     img_match = re.search(r'<img[^>]+src=["\'](.*?)["\']', text, re.IGNORECASE)
     if img_match:
         img_src = img_match.group(1).strip()
