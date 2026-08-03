@@ -314,122 +314,7 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
     if explicit_cat:
         categories.add(explicit_cat)
     else:
-        link_lower = link.lower()
-        title_lower = title.lower()
-        desc_lower = clean_desc.lower()
-        full_text = f"{link_lower} {title_lower} {desc_lower}"
-
-        share_market_kw = [
-            "share", "stock", "nepse", "ipo", "trading", "broker", "secondary market", 
-            "dividend", "sebon", "share market", "share-market", "share-bazar", 
-            "शेयर", "सेयर", "नेप्से", "आइपिओ", "लाभांश", "धितोपत्र", "म्युचुअल फन्ड", "राइट सेयर"
-        ]
-        if check_keywords(full_text, share_market_kw):
-            categories.add("Share Market News")
-
-        sports_kw = [
-            "sport", "sports", "cricket", "football", "soccer", "match", "cup", "league", "goal", 
-            "wicket", "stadium", "tournament", "messi", "ronaldo", "fifa", "icc", "ipl", "olympic", 
-            "athletics", "champion", "trophy", "can", "khel", "khelkud", "खेल", "क्रिकेट", "फुटबल", 
-            "गोल", "म्याच", "कप", "लिग", "विकेट", "रंगशाला", "रङ्गशाला", "च्याम्पियन", "क्यान", 
-            "ओलम्पिक", "ओलिम्पिक", "खेलाडी", "प्रतियोगिता", "टूर्नामेंट", "खेलकुद", "साफ", "मेस्सी", "रोनाल्डो", "गोल्ड कप"
-        ]
-        if check_keywords(full_text, sports_kw):
-            categories.add("Sports News")
-
-        entertainment_kw = [
-            "entertainment", "movie", "film", "actor", "actress", "cinema", "music", "song", "award", 
-            "bollywood", "hollywood", "celebrity", "theater", "show", "artist", "album", "manoranjan", 
-            "kala", "मनोरञ्जन", "चलचित्र", "फिल्म", "नायक", "नायिका", "सिनेमा", "संगीत", "सङ्गीत", 
-            "गीत", "अवार्ड", "कलाकार", "गायक", "गायिका", "शो", "थिएटर", "कला", "मोडल", "हलिउड", 
-            "बलिवुड", "कलिउड", "अभिनेता", "अभिनेत्री"
-        ]
-        if check_keywords(full_text, entertainment_kw):
-            categories.add("Entertainment News")
-
-        health_kw = [
-            "health", "hospital", "doctor", "disease", "virus", "vaccine", "lifestyle", "food", 
-            "fitness", "medicine", "patient", "epidemic", "wellness", "diet", "swasthya", "स्वास्थ्य", 
-            "अस्पताल", "डाक्टर", "रोग", "भाइरस", "खोप", "जीवनशैली", "औषधि", "बिरामी", "उपचार", 
-            "महामारी", "खाद्यान्न", "स्वास्थ्यकर्मी", "कोरोना", "चिकित्सा", "संक्रमण"
-        ]
-        if check_keywords(full_text, health_kw):
-            categories.add("Health News")
-
-        tech_kw = [
-            "tech", "technology", "ai", "app", "digital", "software", "mobile", "internet", "cyber", 
-            "google", "apple", "meta", "starlink", "computer", "gadget", "smartphone", "data", "robot", 
-            "prabidhi", "प्रविधि", "एप्लिकेसन", "एप", "डिजिटल", "सफ्टवेयर", "मोबाइल", "इन्टरनेट", 
-            "साइबर", "डेटा", "कम्प्युटर", "ग्याजेट", "एआई", "स्मार्टफोन", "आर्टिफिसियल", "ग्याजेट्स", 
-            "टेक", "आइटी"
-        ]
-        if check_keywords(full_text, tech_kw):
-            categories.add("Technology News")
-
-        politics_kw = [
-            "politic", "politics", "political", "minister", "prime minister", "government", "parliament", 
-            "election", "party", "policy", "supreme court", "president", "congress", "uml", "maoist", 
-            "politician", "cabinet", "constitution", "mp", "rajniti", "sarkar", "pradhanmantri", "rajneeti", 
-            "राजनीति", "मन्त्री", "प्रधानमन्त्री", "सरकार", "संसद", "संसद्", "निर्वाचन", "चुनाव", "दल", 
-            "पार्टी", "अदालत", "सर्वोच्च", "राष्ट्रपति", "कांग्रेस", "एमाले", "माओवादी", "सांसद", 
-            "संविधान", "मन्त्रिपरिषद्", "नेता", "रास्वपा", "प्रतिनिधिसभा", "प्रदेशसभा"
-        ]
-        if check_keywords(full_text, politics_kw):
-            categories.add("Political News")
-
-        economic_kw = [
-            "economy", "economic", "inflation", "revenue", "bhansa", "kinmel", "budget", "gdp", "growth", 
-            "remittance", "debt", "nrb", "central bank", "fiscal", "arthik", "अर्थतन्त्र", "बजेट", 
-            "राजस्व", "विप्रेषण", "रेमिट्यान्स", "राष्ट्र बैंक", "जिडिपी", "मौद्रिक", "आर्थिक", "अर्थशास्त्र", "मुद्रास्फीति"
-        ]
-        if check_keywords(full_text, economic_kw):
-            categories.add("Economic News")
-
-        business_kw = [
-            "business", "market", "bank", "banking", "corporate", "tax", "investment", "trade", 
-            "dollar", "finance", "export", "import", "profit", "bazar", "company", "wyapar", 
-            "उद्योग", "व्यापार", "बैंक", "लगानी", "नाफा", "घाटा", "बजार", "वित्त", "कारोबार", "बिजनेस", 
-            "वाणिज्य", "व्यापारी", "कर्पोरेट", "उद्योगी", "वाणिज्य बैंक", "वित्तीय"
-        ]
-        if check_keywords(full_text, business_kw):
-            categories.add("Business News")
-
-        crime_kw = ["प्रहरी", "पक्राउ", "इलाका प्रहरी", "गाँजा", "लागूऔषध", "चोरी", "हत्या", "अनुसन्धान"]
-        is_domestic_crime = check_keywords(full_text, crime_kw)
-
-        text_for_intl = full_text.replace("अन्तर्राष्ट्रिय आमन्त्रण", "").replace("अन्तर्राष्ट्रिय विमानस्थल", "")
-        intl_kw = [
-            "world", "international", "global", "foreign", "us", "china", "uk", "russia", 
-            "america", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "अन्तरराष्ट्रिय", "विदेश", 
-            "परराष्ट्र", "चीन", "अमेरिका", "रसिया", "रुस", "युक्रेन", "इन्डोनेसिया", "जापान", 
-            "कोरिया", "बेलायत", "अस्ट्रेलिया", "क्यानडा", "इजरायल", "गाजा", "प्यालेस्टाइन", "पाकिस्तान", 
-            "बंगलादेश", "श्रीलंका", "इरान", "इराक", "टर्की", "सउदी", "कतार", "युएई", "क्युबा", "हाभाना"
-        ]
-        
-        if not is_domestic_crime:
-            intl_kw.append("भारत")
-
-        intl_url_slugs = ['/world/', '/international/', '/bidesh/', '/videsh/']
-        
-        if (check_keywords(text_for_intl, intl_kw) or any(slug in link_lower for slug in intl_url_slugs)) and not is_domestic_crime:
-            categories.add("International News")
-
-        national_kw = [
-            "nepal", "kathmandu", "pokhara", "district", "province", "local", "palika", "pradesh", 
-            "national news", "नेपाल", "काठमाडौँ", "काठमाडौं", "पोखरा", "जिल्ला", 
-            "प्रदेश", "स्थानीय", "पालिका", "राष्ट्रिय समाचार"
-        ]
-        if check_keywords(full_text, national_kw) or is_domestic_crime:
-            categories.add("National News")
-
-        if "International News" in categories and "National News" in categories:
-            if any(slug in link_lower for slug in intl_url_slugs) or "क्युबा" in title_lower or "हाभाना" in title_lower:
-                categories.remove("National News")
-            else:
-                categories.remove("International News")
-
-        if not categories:
-            categories.add("National News")
+        categories.add("National News")
 
     is_recent = False
     if pub_date:
@@ -448,9 +333,11 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
 
     link_lower = link.lower()
     title_lower = title.lower()
+    desc_lower = clean_desc.lower()
     feed_cat_str = " ".join([t.term.lower() for t in getattr(entry, 'tags', []) if hasattr(t, 'term')])
 
     has_breaking_kw = check_keywords(title_lower, breaking_kw) or \
+                      check_keywords(desc_lower, breaking_kw) or \
                       check_keywords(feed_cat_str, breaking_kw) or \
                       any(slug in link_lower for slug in ['/breaking/', '/breaking-news/'])
 
@@ -510,7 +397,6 @@ def detect_multi_source_breaking_news(items):
                 item["categories"].sort()
 
 def titles_are_duplicate(title1, title2):
-    """Compares two titles for exact or high similarity overlap."""
     if not title1 or not title2:
         return False
 
@@ -532,7 +418,6 @@ def titles_are_duplicate(title1, title2):
     return jaccard >= 0.70
 
 def deduplicate_cross_source(items):
-    """Filters out cross-publisher duplicate news items based on title similarity."""
     unique_items = []
 
     for item in items:
@@ -542,7 +427,6 @@ def deduplicate_cross_source(items):
         for u_item in unique_items:
             dt_u = safe_parse_dt(u_item.get("pub_date"))
 
-            # Only compare articles published within a 48-hour window
             if dt_item != datetime.min.replace(tzinfo=NEPAL_TZ) and dt_u != datetime.min.replace(tzinfo=NEPAL_TZ):
                 if abs((dt_item - dt_u).total_seconds()) > 172800:
                     continue
@@ -550,12 +434,10 @@ def deduplicate_cross_source(items):
             if titles_are_duplicate(item.get("title", ""), u_item.get("title", "")):
                 is_dup = True
 
-                # Preserve 'Breaking News' tag if the duplicate had it
                 if "Breaking News" in item.get("categories", []) and "Breaking News" not in u_item.get("categories", []):
                     u_item["categories"].append("Breaking News")
                     u_item["categories"].sort()
 
-                # Preserve image if the retained item lacks one
                 if not u_item.get("image_url") and item.get("image_url"):
                     u_item["image_url"] = item["image_url"]
 
@@ -696,13 +578,10 @@ def fetch_and_store_news():
 
             combined_items.append(ex)
 
-    # 1. Detect breaking news across multiple sources
     detect_multi_source_breaking_news(combined_items)
 
-    # 2. Sort by date first so newest entries take priority during deduplication
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date")), reverse=True)
 
-    # 3. Filter cross-source duplicate news items
     deduplicated_items = deduplicate_cross_source(combined_items)
 
     final_news = deduplicated_items[:MAX_NEWS_ITEMS]
