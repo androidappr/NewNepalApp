@@ -370,8 +370,8 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
                 is_recent = True
 
     breaking_kw = [
-        'breaking', 'urgent', 'update', 'live', 'alert', 'flash', 'latest', 'special', 'main',
-        'ब्रेकिङ', 'अपडेट', 'लाइभ', 'अध्यावधिक', 'तत्काल', 'प्रमुख समाचार', 'विशेष', 'मुख्य', 
+        'breaking', 'urgent', 'update', 'live', 'alert', 'flash', 'latest', 'special', 
+        'ब्रेकिङ', 'अपडेट', 'लाइभ', 'अध्यावधिक', 'तत्काल', 'प्रमुख समाचार', 'विशेष', 
         'मुख्य समाचार', 'ताजा खबर', 'ताजा न्युज', 'भर्खरै', 'flash news', 'ताजा समाचार'
     ]
 
