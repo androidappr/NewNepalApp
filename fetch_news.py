@@ -66,7 +66,7 @@ def parse_date(date_string):
         return None
 
 def extract_entry_date(entry):
-    for field in ['published', 'updated', 'created', 'pubDate', 'dc_date', 'date']:
+    for field in ['published', 'updated', 'created', 'pubDate', 'dc_date', 'date', 'post_date']:
         val = entry.get(field)
         if val:
             parsed = parse_date(val)
@@ -147,7 +147,7 @@ def fetch_article_metadata(session, url):
     if not url:
         return img_url, pub_date
     try:
-        resp = session.get(url, timeout=6)
+        resp = session.get(url, timeout=8, allow_redirects=True)
         if resp.status_code == 200:
             text = resp.text
 
@@ -177,6 +177,10 @@ def fetch_article_metadata(session, url):
                 r'<meta[^>]+property=["\']og:published_time["\']\s+content=["\'](.*?)["\']',
                 r'"datePublished"\s*:\s*"([^"]+)"',
                 r'"dateCreated"\s*:\s*"([^"]+)"',
+                r'"published_at"\s*:\s*"([^"]+)"',
+                r'"created_at"\s*:\s*"([^"]+)"',
+                r'"published_date"\s*:\s*"([^"]+)"',
+                r'"publish_date"\s*:\s*"([^"]+)"',
             ]
             for pat in date_patterns:
                 m = re.search(pat, text, re.IGNORECASE)
@@ -191,6 +195,8 @@ def fetch_article_metadata(session, url):
     return img_url, pub_date
 
 def safe_parse_dt(iso_str):
+    if not iso_str:
+        return datetime.min.replace(tzinfo=NEPAL_TZ)
     try:
         dt = parser.parse(iso_str)
         if dt.tzinfo is None:
@@ -388,15 +394,11 @@ def fetch_and_store_news():
 
         seen_links.add(link)
 
+        # Merge cached pub_date ONLY if newly scraped pub_date is missing
         if link in existing_map:
             ex_date = existing_map[link].get("pub_date")
             if ex_date and not item.get("pub_date"):
                 item["pub_date"] = ex_date
-            elif ex_date and item.get("pub_date"):
-                item["pub_date"] = ex_date
-
-        if not item.get("pub_date"):
-            item["pub_date"] = datetime.now(NEPAL_TZ).isoformat()
 
         combined_items.append(item)
 
@@ -410,7 +412,8 @@ def fetch_and_store_news():
                 ex["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
             combined_items.append(ex)
 
-    combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date", "")), reverse=True)
+    # Sort descending. Dateless items (None) map to datetime.min and fall to the bottom.
+    combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date")), reverse=True)
 
     final_news = combined_items[:MAX_NEWS_ITEMS]
 
