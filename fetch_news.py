@@ -501,6 +501,63 @@ def detect_multi_source_breaking_news(items):
                 item["categories"].append("Breaking News")
                 item["categories"].sort()
 
+def titles_are_duplicate(title1, title2):
+    """Compares two titles for exact or high similarity overlap."""
+    if not title1 or not title2:
+        return False
+
+    norm1 = re.sub(r'[^\u0900-\u097F\w]', '', title1.lower())
+    norm2 = re.sub(r'[^\u0900-\u097F\w]', '', title2.lower())
+    if norm1 == norm2:
+        return True
+
+    tokens1 = set(re.findall(r'[\u0900-\u097F\w]{2,}', title1.lower())) - NEP_STOP_WORDS
+    tokens2 = set(re.findall(r'[\u0900-\u097F\w]{2,}', title2.lower())) - NEP_STOP_WORDS
+
+    if not tokens1 or not tokens2:
+        return False
+
+    intersection = tokens1.intersection(tokens2)
+    union = tokens1.union(tokens2)
+    
+    jaccard = len(intersection) / len(union)
+    return jaccard >= 0.70
+
+def deduplicate_cross_source(items):
+    """Filters out cross-publisher duplicate news items based on title similarity."""
+    unique_items = []
+
+    for item in items:
+        is_dup = False
+        dt_item = safe_parse_dt(item.get("pub_date"))
+
+        for u_item in unique_items:
+            dt_u = safe_parse_dt(u_item.get("pub_date"))
+
+            # Only compare articles published within a 48-hour window
+            if dt_item != datetime.min.replace(tzinfo=NEPAL_TZ) and dt_u != datetime.min.replace(tzinfo=NEPAL_TZ):
+                if abs((dt_item - dt_u).total_seconds()) > 172800:
+                    continue
+
+            if titles_are_duplicate(item.get("title", ""), u_item.get("title", "")):
+                is_dup = True
+
+                # Preserve 'Breaking News' tag if the duplicate had it
+                if "Breaking News" in item.get("categories", []) and "Breaking News" not in u_item.get("categories", []):
+                    u_item["categories"].append("Breaking News")
+                    u_item["categories"].sort()
+
+                # Preserve image if the retained item lacks one
+                if not u_item.get("image_url") and item.get("image_url"):
+                    u_item["image_url"] = item["image_url"]
+
+                break
+
+        if not is_dup:
+            unique_items.append(item)
+
+    return unique_items
+
 def fetch_and_store_news():
     session = get_resilient_session()
     raw_entries = []
@@ -631,11 +688,16 @@ def fetch_and_store_news():
 
             combined_items.append(ex)
 
+    # 1. Detect breaking news across multiple sources
     detect_multi_source_breaking_news(combined_items)
 
+    # 2. Sort by date first so newest entries take priority during deduplication
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date")), reverse=True)
 
-    final_news = combined_items[:MAX_NEWS_ITEMS]
+    # 3. Filter cross-source duplicate news items
+    deduplicated_items = deduplicate_cross_source(combined_items)
+
+    final_news = deduplicated_items[:MAX_NEWS_ITEMS]
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     temp_file = OUTPUT_FILE + ".tmp"
