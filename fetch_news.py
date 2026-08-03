@@ -4,7 +4,7 @@ import json
 import html
 import logging
 from datetime import datetime, timezone, timedelta
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from concurrent.futures import ThreadPoolExecutor
 import feedparser
 import requests
@@ -41,6 +41,17 @@ RSS_FEEDS = [
     {"name": "Gorkhapatra", "url": "https://gorkhapatraonline.com/rss"},
     {"name": "Thaha Khabar", "url": "https://www.thahakhabar.com/feed"},
 ]
+
+def extract_domain_name(url):
+    if not url:
+        return ""
+    try:
+        netloc = urlparse(url).netloc.split(':')[0].lower()
+        if netloc.startswith("www."):
+            netloc = netloc[4:]
+        return netloc.upper()
+    except Exception:
+        return ""
 
 def get_resilient_session():
     session = requests.Session()
@@ -227,9 +238,9 @@ def determine_categories(entry, title, link, clean_desc, source_name):
 
     categories = set()
 
-    if source_name == "Swasthya Khabar":
+    if "swasthyakhabar" in source_name.lower():
         categories.add("Health News")
-    if source_name == "TechPana":
+    if "techpana" in source_name.lower():
         categories.add("Technology News")
 
     if any(k in full_text for k in ['share-market', 'sharemarket', 'nepse', 'शेयर', 'सेयर', 'नेप्से', 'लाभांश', 'आइपिओ', 'ipo', 'म्युचुअल फन्ड', 'राइट सेयर', 'share market', 'share-bazar']):
@@ -295,6 +306,7 @@ def fetch_and_store_news():
 
                 pub_date = extract_entry_date(entry)
                 image_url = extract_image_from_entry(entry, link)
+                source_domain = extract_domain_name(link) or extract_domain_name(feed['url'])
 
                 raw_entries.append({
                     "entry": entry,
@@ -303,7 +315,7 @@ def fetch_and_store_news():
                     "description": clean_desc,
                     "pub_date": pub_date,
                     "image_url": image_url,
-                    "source_name": feed['name']
+                    "source_name": source_domain
                 })
 
         except Exception as e:
@@ -379,6 +391,10 @@ def fetch_and_store_news():
         desc = ex.get("description", "")
         if link and link not in seen_links and len(desc.split()) >= 10:
             seen_links.add(link)
+            
+            # Format source name for cached items to uppercase domain
+            ex["source_name"] = extract_domain_name(link)
+
             if "category" in ex and "categories" not in ex:
                 cat_val = ex.pop("category")
                 ex["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
