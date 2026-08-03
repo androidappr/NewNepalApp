@@ -20,6 +20,9 @@ MAX_NEWS_ITEMS = 200
 
 NEPAL_TZ = timezone(timedelta(hours=5, minutes=45))
 
+# Categories to explicitly exclude from output
+EXCLUDED_CATEGORIES = {"Breaking News", "Popular News"}
+
 RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
     {"name": "Sidhakura", "url": "https://www.sidhakura.com/feed"},
@@ -205,29 +208,7 @@ def safe_parse_dt(iso_str):
     except Exception:
         return datetime.min.replace(tzinfo=NEPAL_TZ)
 
-def find_trending_keywords(raw_entries):
-    stopwords = {
-        'र', 'मा', 'को', 'का', 'की', 'ले', 'लाई', 'बाट', 'तथा', 'नेपाल', 'नेपाली', 
-        'काठमाडौं', 'गरेको', 'गर्ने', 'भने', 'गर्न', 'भयो', 'भए', 'गरे', 'छ', 'छन्', 
-        'हो', 'हुन्', 'भन्ने', 'लागि', 'नागरिक', 'समाचार', 'नयाँ', 'जारी', 'पुगे', 
-        'बने', 'बनेको', 'गरेका', 'आज', 'भोलि', 'थप', 'विभिन्न', 'बारे', 'अन्य', 
-        'अनुसार', 'सम्बन्धी', 'प्रति', 'बिच', 'बीच', 'पछि', 'पहिले', 'आफ्नो', 'आफ्ना',
-        'the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 
-        'and', 'or', 'is', 'are', 'was', 'were', 'be', 'been', 'nepal', 'nepali', 
-        'kathmandu', 'news', 'new', 'after', 'over', 'more', 'about'
-    }
-    word_sources = {}
-    for item in raw_entries:
-        source = item['source_name']
-        words = set(re.findall(r'\w+', item['title'].lower()))
-        for w in words:
-            if len(w) > 2 and w not in stopwords and not w.isdigit():
-                if w not in word_sources:
-                    word_sources[w] = set()
-                word_sources[w].add(source)
-    return {w for w, sources in word_sources.items() if len(sources) >= 3}
-
-def determine_categories(entry, title, link, clean_desc, source_name, trending_keywords):
+def determine_categories(entry, title, link, clean_desc, source_name):
     feed_cats = []
     if 'tags' in entry:
         for t in entry.tags:
@@ -277,13 +258,6 @@ def determine_categories(entry, title, link, clean_desc, source_name, trending_k
 
     if any(k in full_text for k in ['international', 'videsh', 'bidesh', 'विश्व', 'विदेश', 'अन्तर्राष्ट्रिय', 'world', 'global', 'अमेरिका', 'चीन', 'भारत', 'रुस', 'युक्रेन']):
         categories.add("International News")
-
-    if any(k in full_text for k in ['breaking', 'taaza', 'ताजा', 'ब्रेकिंग', 'अति जरुरी', 'भर्खरै', 'breaking news']):
-        categories.add("Breaking News")
-
-    title_words = set(re.findall(r'\w+', title_lower))
-    if any(w in trending_keywords for w in title_words):
-        categories.add("Popular News")
 
     if not categories:
         categories.add("National News")
@@ -348,7 +322,6 @@ def fetch_and_store_news():
         with ThreadPoolExecutor(max_workers=10) as executor:
             executor.map(scrape_item, missing_meta_items)
 
-    trending_keywords = find_trending_keywords(raw_entries)
     fetched_items = []
 
     for item in raw_entries:
@@ -357,8 +330,7 @@ def fetch_and_store_news():
             item['title'], 
             item['link'], 
             item['description'], 
-            item['source_name'], 
-            trending_keywords
+            item['source_name']
         )
         fetched_items.append({
             "link": item['link'],
@@ -410,6 +382,13 @@ def fetch_and_store_news():
             if "category" in ex and "categories" not in ex:
                 cat_val = ex.pop("category")
                 ex["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
+            
+            # Clean up excluded categories from cached JSON items
+            if "categories" in ex:
+                ex["categories"] = [c for c in ex["categories"] if c not in EXCLUDED_CATEGORIES]
+                if not ex["categories"]:
+                    ex["categories"] = ["National News"]
+
             combined_items.append(ex)
 
     # Sort descending. Dateless items (None) map to datetime.min and fall to the bottom.
