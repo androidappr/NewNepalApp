@@ -121,8 +121,11 @@ def extract_entry_date(entry):
 def clean_html(text):
     if not text:
         return ""
+    text = re.sub(r'The post\s+.*?\s+appeared first on\s+.*$', '', text, flags=re.DOTALL | re.IGNORECASE)
     clean = re.sub(r'<[^>]+>', '', text)
-    return html.unescape(clean).strip()
+    clean = html.unescape(clean).strip()
+    clean = re.sub(r'(\[…\]|\[\.\.\.\]|\[&#8230;\]|\[&hellip;\]).*$', '', clean, flags=re.DOTALL)
+    return clean.strip()
 
 def extract_image_from_text(text, base_url):
     if not text:
@@ -411,7 +414,7 @@ def titles_are_duplicate(title1, title2):
 
     intersection = tokens1.intersection(tokens2)
     union = tokens1.union(tokens2)
-    
+
     jaccard = len(intersection) / len(union)
     return jaccard >= 0.70
 
@@ -562,13 +565,13 @@ def fetch_and_store_news():
         desc = ex.get("description", "")
         if link and link not in seen_links and len(desc.split()) >= 10:
             seen_links.add(link)
-            
+
             ex["source_name"] = extract_domain_name(link)
 
             if "category" in ex and "categories" not in ex:
                 cat_val = ex.pop("category")
                 ex["categories"] = cat_val if isinstance(cat_val, list) else [cat_val]
-            
+
             if "categories" in ex:
                 ex["categories"] = [c for c in ex["categories"] if c not in EXCLUDED_CATEGORIES]
 
