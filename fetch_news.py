@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import html
 import logging
 from datetime import datetime, timezone, timedelta
 import feedparser
@@ -43,7 +44,7 @@ def get_resilient_session():
     session.mount("http://", HTTPAdapter(max_retries=retries))
     session.headers.update({
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-        "Accept": "application/rss+xml, application/xml, text/xml, */*",
+        "Accept": "application/rss+xml, application/xml, text/xml, text/html, */*",
         "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
         "Cache-Control": "no-cache",
     })
@@ -66,26 +67,147 @@ def clean_html(text):
     if not text:
         return ""
     clean = re.sub(r'<[^>]+>', '', text)
-    return clean.strip()
+    return html.unescape(clean).strip()
 
-def extract_image(entry, raw_description):
+def find_img_in_html(html_str):
+    if not html_str:
+        return None
+    html_str = html.unescape(str(html_str))
+    
+    img_tags = re.findall(r'<img[^>]+>', html_str, re.IGNORECASE)
+    for tag in img_tags:
+        for attr in ['data-src', 'data-original', 'data-lazy-src', 'data-orig-file', 'data-large-file', 'src', 'srcset']:
+            match = re.search(r'\b' + attr + r'=["\'](.*?)["\']', tag, re.IGNORECASE)
+            if match:
+                val = match.group(1).strip()
+                if attr == 'srcset':
+                    parts = [p.strip().split()[0] for p in val.split(',') if p.strip()]
+                    for p in reversed(parts):
+                        if p.startswith('http') and not p.startswith('data:'):
+                            return p
+                elif val.startswith('http') and not val.startswith('data:'):
+                    return val
+
+    source_tags = re.findall(r'<source[^>]+>', html_str, re.IGNORECASE)
+    for tag in source_tags:
+        match = re.search(r'\bsrcset=["\'](.*?)["\']', tag, re.IGNORECASE)
+        if match:
+            val = match.group(1).strip()
+            parts = [p.strip().split()[0] for p in val.split(',') if p.strip()]
+            for p in reversed(parts):
+                if p.startswith('http') and not p.startswith('data:'):
+                    return p
+
+    return None
+
+def extract_image(entry, session=None):
+    candidates = []
+
     if 'media_content' in entry and entry.media_content:
         for media in entry.media_content:
-            if media.get('url'):
-                return media.get('url')
+            if isinstance(media, dict) and media.get('url'):
+                candidates.append(media.get('url'))
 
     if 'media_thumbnail' in entry and entry.media_thumbnail:
-        return entry.media_thumbnail[0].get('url')
+        thumbnails = entry.media_thumbnail if isinstance(entry.media_thumbnail, list) else [entry.media_thumbnail]
+        for thumb in thumbnails:
+            if isinstance(thumb, dict) and thumb.get('url'):
+                candidates.append(thumb.get('url'))
+
+    if 'media_group' in entry and entry.media_group:
+        groups = entry.media_group if isinstance(entry.media_group, list) else [entry.media_group]
+        for g in groups:
+            if isinstance(g, dict):
+                if 'media_content' in g:
+                    for mc in g['media_content']:
+                        if isinstance(mc, dict) and mc.get('url'):
+                            candidates.append(mc.get('url'))
+                if 'media_thumbnail' in g:
+                    for mt in g['media_thumbnail']:
+                        if isinstance(mt, dict) and mt.get('url'):
+                            candidates.append(mt.get('url'))
 
     if 'enclosures' in entry and entry.enclosures:
         for enc in entry.enclosures:
-            if enc.get('type', '').startswith('image/'):
-                return enc.get('href')
+            if isinstance(enc, dict):
+                href = enc.get('href') or enc.get('url')
+                enc_type = enc.get('type', '')
+                if href:
+                    if enc_type.startswith('image/') or any(href.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg', '.avif']):
+                        candidates.append(href)
 
-    if raw_description:
-        img_match = re.search(r'<img[^>]+src=["\'](.*?)["\']', raw_description, re.IGNORECASE)
-        if img_match:
-            return img_match.group(1)
+    if 'links' in entry and entry.links:
+        for link_obj in entry.links:
+            if isinstance(link_obj, dict):
+                href = link_obj.get('href')
+                link_type = link_obj.get('type', '')
+                rel = link_obj.get('rel', '')
+                if href and (link_type.startswith('image/') or rel == 'enclosure' or any(href.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp', '.gif', '.svg'])):
+                    candidates.append(href)
+
+    for field in ['image', 'featured_image', 'featured_image_src', 'post_thumbnail', 'thumbnail', 'cover', 'poster']:
+        val = entry.get(field)
+        if val:
+            if isinstance(val, str):
+                candidates.append(val)
+            elif isinstance(val, dict):
+                url = val.get('href') or val.get('url') or val.get('src')
+                if url:
+                    candidates.append(url)
+
+    html_texts = []
+    if entry.get('summary'):
+        html_texts.append(str(entry.get('summary')))
+    if entry.get('description'):
+        html_texts.append(str(entry.get('description')))
+    if entry.get('content'):
+        content_val = entry.get('content')
+        if isinstance(content_val, list):
+            for c in content_val:
+                if isinstance(c, dict) and c.get('value'):
+                    html_texts.append(str(c.get('value')))
+                elif isinstance(c, str):
+                    html_texts.append(c)
+        elif isinstance(content_val, str):
+            html_texts.append(content_val)
+    if entry.get('content_encoded'):
+        html_texts.append(str(entry.get('content_encoded')))
+    if entry.get('encoded'):
+        html_texts.append(str(entry.get('encoded')))
+
+    full_html = " ".join(html_texts)
+    if full_html:
+        extracted = find_img_in_html(full_html)
+        if extracted:
+            candidates.append(extracted)
+
+    for cand in candidates:
+        if isinstance(cand, str):
+            cand = cand.strip()
+            if cand.startswith('//'):
+                cand = 'https:' + cand
+            if cand.startswith('http://') or cand.startswith('https://'):
+                if not any(ignored in cand.lower() for ignored in ['data:image', '1x1', 'blank.gif', 'pixel.gif', 'avatar']):
+                    return cand
+
+    article_url = entry.get('link')
+    if session and article_url and (article_url.startswith('http://') or article_url.startswith('https://')):
+        try:
+            resp = session.get(article_url, timeout=3)
+            if resp.status_code == 200:
+                page_html = resp.text
+                og_match = re.search(r'<meta[^>]+property=["\']og:image["\']\s+content=["\'](.*?)["\']', page_html, re.IGNORECASE) or \
+                           re.search(r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']og:image["\']', page_html, re.IGNORECASE) or \
+                           re.search(r'<meta[^>]+name=["\']twitter:image["\']\s+content=["\'](.*?)["\']', page_html, re.IGNORECASE) or \
+                           re.search(r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']twitter:image["\']', page_html, re.IGNORECASE)
+                if og_match:
+                    img_url = html.unescape(og_match.group(1).strip())
+                    if img_url.startswith('//'):
+                        img_url = 'https:' + img_url
+                    if img_url.startswith('http://') or img_url.startswith('https://'):
+                        return img_url
+        except Exception:
+            pass
 
     return None
 
@@ -206,7 +328,7 @@ def fetch_and_store_news():
 
                 raw_description = entry.get('summary', entry.get('description', ''))
                 pub_date = parse_date(entry.get('published', entry.get('updated', '')))
-                image_url = extract_image(entry, raw_description)
+                image_url = extract_image(entry, session)
                 clean_desc = clean_html(raw_description)
 
                 if len(clean_desc.split()) < 10:
