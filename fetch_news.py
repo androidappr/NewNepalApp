@@ -317,7 +317,7 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
 
     breaking_kw = [
         "breaking", "urgent", "update", "live", "alert", "flash", "latest",
-        "ब्रेकिङ", "अपडेट", "लाइभ", "तत्काल", "ताजा खबर", "भर्खरै"
+        "ब्रेकिङ", "अपडेट", "लाइभ", "तत्काल", "ताजा खबर", "भर्खरै","विशेष"
     ]
 
     link_lower = link.lower()
