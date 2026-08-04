@@ -34,7 +34,7 @@ RSS_FEEDS = [
     {"name": "Onlinekhabar", "url": "https://www.onlinekhabar.com/feed"},
     {"name": "Sidhakura", "url": "https://www.sidhakura.com/feed"},
     {"name": "Artha Sarokar", "url": "https://arthasarokar.com/feed"},
-    {"name": "TechPana", "url": "https://techpana.com/feed/"},
+    {"name": "TechPana", "url": "https://techpana.com/feed"},
     {"name": "Nagarik News", "url": "https://nagariknews.nagariknetwork.com/feed"},
     {"name": "Setopati", "url": "https://www.setopati.com/feed"},
     {"name": "Annapurna Post", "url": "https://annapurnapost.com/rss/"},
