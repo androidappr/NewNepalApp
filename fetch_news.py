@@ -289,7 +289,7 @@ def get_explicit_category(entry, link, source_name):
     if "techpana" in source_name.lower():
         return "Technology News"
 
- mappings = [
+    mappings = [
         ("Share Market News", ["/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "शेयर", "सेयर", "ipo", "trading", "broker", "secondary market", "dividend", "sebon","share market","नेप्से", "आइपिओ", "लाभांश", "धितोपत्र"]),
         ("Sports News", ["/sports/", "/khelkud/", "/khel/", "sports", "khelkud", "खेलकुद", "खेल"]),
         ("Entertainment News", ["/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", "मनोरञ्जन", "चलचित्र"]),
