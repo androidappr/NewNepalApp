@@ -7,9 +7,7 @@ from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin, urlparse
 from concurrent.futures import ThreadPoolExecutor
 import feedparser
-import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+import cloudscraper
 from dateutil import parser
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -74,18 +72,21 @@ def extract_domain_name(url):
         return ""
 
 def get_resilient_session():
-    session = requests.Session()
-    retries = Retry(total=3, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
-    session.mount("https://", HTTPAdapter(max_retries=retries))
-    session.mount("http://", HTTPAdapter(max_retries=retries))
-    session.headers.update({
+    scraper = cloudscraper.create_scraper(
+        browser={
+            'browser': 'chrome',
+            'platform': 'windows',
+            'desktop': True
+        }
+    )
+    scraper.headers.update({
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
         "Referer": "https://www.google.com/",
         "Cache-Control": "max-age=0",
     })
-    return session
+    return scraper
 
 def parse_date(date_string):
     if not date_string:
@@ -184,7 +185,7 @@ def fetch_article_metadata(session, url):
     if not url:
         return img_url, pub_date
     try:
-        resp = session.get(url, timeout=8, allow_redirects=True, verify=False)
+        resp = session.get(url, timeout=8, allow_redirects=True)
         if resp.status_code == 200:
             text = resp.text
 
@@ -507,7 +508,7 @@ def fetch_and_store_news():
     for feed in RSS_FEEDS:
         logging.info(f"Fetching feed: {feed['name']}")
         try:
-            response = session.get(feed['url'], timeout=12, verify=False)
+            response = session.get(feed['url'], timeout=12)
             if response.status_code != 200:
                 logging.warning(f"Skipped {feed['name']} (HTTP Status: {response.status_code})")
                 continue
@@ -539,14 +540,13 @@ def fetch_and_store_news():
                     "title": title,
                     "description": clean_desc,
                     "pub_date": pub_date,
-                    "image_url": image_url,  # Explicitly set to None if missing
+                    "image_url": image_url,
                     "source_name": source_domain
                 })
 
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
 
-    # Fetch webpage metadata if pub_date or image_url is missing
     missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
     if missing_meta_items:
         logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
@@ -572,14 +572,13 @@ def fetch_and_store_news():
             item['pub_date']
         )
         
-        # Every parsed item (including TechPana with/without image) is kept here
         fetched_items.append({
             "link": item['link'],
             "title": item['title'],
             "description": item['description'],
             "categories": categories,
             "pub_date": item['pub_date'],
-            "image_url": item['image_url'],  # Will preserve None if no image is present
+            "image_url": item['image_url'],
             "source_name": item['source_name']
         })
 
