@@ -281,7 +281,7 @@ def get_explicit_category(entry, link, source_name):
         ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "budget", "अर्थतन्त्र", "बजेट"]),
         ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "bank", "व्यापार", "बैंक", "बजार"]),
         ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश"]),
-        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "nepal", "kathmandu", "राष्ट्रिय", "प्रदेश", "नेपाल", "काठमाडौँ"])
+        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश"])
     ]
 
     for cat_name, patterns in mappings:
@@ -483,7 +483,6 @@ def fetch_and_store_news():
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
 
-    # Scrape web metadata for missing image or missing pub_date
     missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
     if missing_meta_items:
         logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
@@ -513,7 +512,7 @@ def fetch_and_store_news():
             "title": item['title'],
             "description": item['description'],
             "categories": categories,
-            "pub_date": item['pub_date'],  # Remains None if no date exists
+            "pub_date": item['pub_date'],
             "image_url": item['image_url'],
             "source_name": item['source_name']
         })
@@ -568,7 +567,6 @@ def fetch_and_store_news():
 
     detect_multi_source_breaking_news(combined_items)
 
-    # Sorts items with pub_date at the top and dateless items at the bottom
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date")), reverse=True)
 
     deduplicated_items = deduplicate_cross_source(combined_items)
