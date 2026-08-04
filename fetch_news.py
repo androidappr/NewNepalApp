@@ -299,7 +299,7 @@ def get_explicit_category(entry, link, source_name):
         ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "अर्थतन्त्र"]),
         ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "व्यापार", "उद्योग"]),
         ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश"]),
-        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश"])
+        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश","राष्ट्रिय समाचार"])
     ]
 
     for cat_name, patterns in mappings:
