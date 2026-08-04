@@ -40,8 +40,6 @@ RSS_FEEDS = [
     {"name": "Annapurna Post", "url": "https://annapurnapost.com/rss/"},
     {"name": "BBC Nepali", "url": "https://feeds.bbci.co.uk/nepali/rss.xml"},
     {"name": "Shilapatra", "url": "https://shilapatra.com/feed"},
-    {"name": "News 24 Nepal", "url": "https://www.news24nepal.com/feed"},
-    {"name": "Ujyaalo Online", "url": "https://ujyaaloonline.com/feed/"},
     {"name": "Ratopati", "url": "https://www.ratopati.com/feed"},
     {"name": "Swasthya Khabar", "url": "https://swasthyakhabar.com/feed"},
     {"name": "Baahrakhari", "url": "https://baahrakhari.com/feed"},
@@ -85,12 +83,6 @@ def get_resilient_session():
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
         "Referer": "https://www.google.com/",
-        "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124"',
-        "Sec-Ch-Ua-Mobile": "?0",
-        "Sec-Ch-Ua-Platform": '"Windows"',
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "cross-site",
         "Cache-Control": "max-age=0",
     })
     return session
@@ -201,8 +193,6 @@ def fetch_article_metadata(session, url):
                 r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']og:image["\']',
                 r'<meta[^>]+name=["\']twitter:image["\']\s+content=["\'](.*?)["\']',
                 r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']twitter:image["\']',
-                r'<meta[^>]+property=["\']twitter:image["\']\s+content=["\'](.*?)["\']',
-                r'<link[^>]+rel=["\']image_src["\']\s+href=["\'](.*?)["\']',
             ]
             for pat in img_patterns:
                 m = re.search(pat, text, re.IGNORECASE)
@@ -217,15 +207,8 @@ def fetch_article_metadata(session, url):
                 r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']article:published_time["\']',
                 r'<meta[^>]+name=["\']pubdate["\']\s+content=["\'](.*?)["\']',
                 r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']pubdate["\']',
-                r'<meta[^>]+name=["\']publishdate["\']\s+content=["\'](.*?)["\']',
-                r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']publishdate["\']',
-                r'<meta[^>]+property=["\']og:published_time["\']\s+content=["\'](.*?)["\']',
                 r'"datePublished"\s*:\s*"([^"]+)"',
-                r'"dateCreated"\s*:\s*"([^"]+)"',
                 r'"published_at"\s*:\s*"([^"]+)"',
-                r'"created_at"\s*:\s*"([^"]+)"',
-                r'"published_date"\s*:\s*"([^"]+)"',
-                r'"publish_date"\s*:\s*"([^"]+)"',
             ]
             for pat in date_patterns:
                 m = re.search(pat, text, re.IGNORECASE)
@@ -261,7 +244,6 @@ def check_keywords(full_text, keywords):
         k_clean = k.strip().lower()
         if not k_clean:
             continue
-
         if ' ' in k_clean or '-' in k_clean:
             if k_clean in full_text_lower:
                 return True
@@ -290,16 +272,16 @@ def get_explicit_category(entry, link, source_name):
         return "Technology News"
 
     mappings = [
-        ("Share Market News", ["/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "ipo", "trading", "broker", "secondary market", "dividend", "sebon", "share market", "शेयर", "सेयर", "नेप्से", "आइपिओ", "लाभांश", "धितोपत्र"]),
-        ("Sports News", ["/sports/", "/khelkud/", "/khel/", "sport", "sports", "cricket", "football", "soccer", "match", "cup", "league", "goal", "wicket", "stadium", "tournament", "messi", "ronaldo", "fifa", "icc", "ipl", "olympic", "athletics", "champion", "trophy", "can", "khel", "khelkud", "खेल", "क्रिकेट", "फुटबल", "गोल", "म्याच", "कप", "लिग", "विकेट", "रंगशाला", "रङ्गशाला", "च्याम्पियन", "क्यान", "ओलिम्पिक", "खेलाडी", "प्रतियोगिता", "टूर्नामेंट", "खेलकुद"]),
-        ("Entertainment News", ["/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", "movie", "film", "actor", "actress", "cinema", "music", "song", "award", "bollywood", "hollywood", "celebrity", "theater", "show", "artist", "album", "kala", "मनोरञ्जन", "चलचित्र", "फिल्म", "नायक", "नायिका", "सिनेमा", "संगीत", "सङ्गीत", "गीत", "अवार्ड", "कलाकार", "गायक", "गायिका", "शो", "थिएटर", "कला"]),
-        ("Health News", ["/health/", "/swasthya/", "health", "swasthya", "hospital", "doctor", "disease", "virus", "vaccine", "lifestyle", "food", "fitness", "medicine", "patient", "epidemic", "wellness", "diet", "स्वास्थ्य", "हेल्थ", "अस्पताल", "डाक्टर", "रोग", "भाइरस", "खोप", "जीवनशैली", "औषधि", "बिरामी", "उपचार", "महामारी", "खाद्यान्न", "स्वास्थ्यकर्मी"]),
-        ("Technology News", ["/technology/", "/tech/", "/prabidhi/", "technology", "tech", "prabidhi", "ai", "app", "digital", "software", "mobile", "internet", "cyber", "google", "apple", "meta", "starlink", "computer", "gadget", "smartphone", "data", "robot", "प्रविधि", "ग्याजेट", "एप्लिकेसन", "एप", "डिजिटल", "सफ्टवेयर", "मोबाइल", "इन्टरनेट", "साइबर", "डेटा", "कम्प्युटर", "एआई", "स्मार्टफोन", "आर्टिफिसियल", "ग्याजेट्स"]),
-        ("Political News", ["/politics/", "/rajniti/", "/rajneeti/", "politics", "political", "politic", "rajniti", "rajneeti", "minister", "prime minister", "government", "parliament", "election", "party", "policy", "supreme court", "president", "congress", "uml", "maoist", "politician", "cabinet", "constitution", "mp", "sarkar", "pradhanmantri", "राजनीति", "मन्त्री", "प्रधानमन्त्री", "सरकार", "संसद", "संसद्", "निर्वाचन", "चुनाव", "दल", "पार्टी", "अदालत", "सर्वोच्च", "राष्ट्रपति", "कांग्रेस", "एमाले", "माओवादी", "सांसद", "संविधान", "मन्त्रिपरिषद्", "नेता"]),
-        ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "inflation", "revenue", "bhansa", "kinmel", "budget", "gdp", "growth", "remittance", "debt", "nrb", "central bank", "fiscal", "अर्थतन्त्र", "बजेट", "राजस्व", "विप्रेषण", "रेमिट्यान्स", "राष्ट्र बैंक", "जिडिपी", "मौद्रिक"]),
-        ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "market", "bank", "banking", "corporate", "tax", "investment", "trade", "dollar", "finance", "export", "import", "profit", "company", "उद्योग", "व्यापार", "बैंक", "लगानी", "नाफा", "घाटा", "बजार", "वित्त", "कारोबार", "बिजनेस"]),
-        ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "global", "foreign", "us", "china", "india", "uk", "russia", "america", "विश्व", "अन्तर्राष्ट्रिय", "विदेश समाचार", "विदेश", "भारत", "चीन", "अमेरिका", "रसिया", "अन्तरराष्ट्रिय"]),
-        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "nepal", "kathmandu", "pokhara", "district", "province", "local", "palika", "राष्ट्रिय", "प्रदेश", "राष्ट्रिय समाचार", "प्रदेश समाचार", "नेपाल", "काठमाडौँ", "काठमाडौं", "पोखरा", "जिल्ला", "स्थानीय", "पालिका"])
+        ("Share Market News", ["/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "ipo", " trading", "sebon", "शेयर", "सेयर", "नेप्से", "आइपिओ"]),
+        ("Sports News", ["/sports/", "/khelkud/", "/khel/", "sport", "sports", "cricket", "football", "khel", "khelkud", "खेल", "क्रिकेट", "फुटबल"]),
+        ("Entertainment News", ["/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", "movie", "film", "मनोरञ्जन", "चलचित्र", "फिल्म"]),
+        ("Health News", ["/health/", "/swasthya/", "health", "swasthya", "hospital", "doctor", "स्वास्थ्य", "हेल्थ", "अस्पताल", "डाक्टर"]),
+        ("Technology News", ["/technology/", "/tech/", "/prabidhi/", "technology", "tech", "prabidhi", "ai", "app", "mobile", "प्रविधि", "एप्लिकेसन", "एप"]),
+        ("Political News", ["/politics/", "/rajniti/", "/rajneeti/", "politics", "political", "rajniti", "rajneeti", "minister", "politics", "राजनीति", "मन्त्री"]),
+        ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "budget", "अर्थतन्त्र", "बजेट"]),
+        ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "bank", "व्यापार", "बैंक", "बजार"]),
+        ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश"]),
+        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "nepal", "kathmandu", "राष्ट्रिय", "प्रदेश", "नेपाल", "काठमाडौँ"])
     ]
 
     for cat_name, patterns in mappings:
@@ -334,9 +316,8 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
                 is_recent = True
 
     breaking_kw = [
-        "breaking", "urgent", "update", "live", "alert", "flash", "latest", "special", "main",
-        "ब्रेकिङ", "अपडेट", "लाइभ", "अध्यावधिक", "तत्काल", "प्रमुख समाचार", "विशेष", "मुख्य", "प्रमुख",
-        "मुख्य समाचार", "ताजा खबर", "ताजा न्युज", "भर्खरै", "flash news", "ताजा समाचार"
+        "breaking", "urgent", "update", "live", "alert", "flash", "latest",
+        "ब्रेकिङ", "अपडेट", "लाइभ", "तत्काल", "ताजा खबर", "भर्खरै"
     ]
 
     link_lower = link.lower()
@@ -502,6 +483,7 @@ def fetch_and_store_news():
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
 
+    # Scrape web metadata for missing image or missing pub_date
     missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
     if missing_meta_items:
         logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
@@ -531,7 +513,7 @@ def fetch_and_store_news():
             "title": item['title'],
             "description": item['description'],
             "categories": categories,
-            "pub_date": item['pub_date'],
+            "pub_date": item['pub_date'],  # Remains None if no date exists
             "image_url": item['image_url'],
             "source_name": item['source_name']
         })
@@ -586,6 +568,7 @@ def fetch_and_store_news():
 
     detect_multi_source_breaking_news(combined_items)
 
+    # Sorts items with pub_date at the top and dateless items at the bottom
     combined_items.sort(key=lambda x: safe_parse_dt(x.get("pub_date")), reverse=True)
 
     deduplicated_items = deduplicate_cross_source(combined_items)
