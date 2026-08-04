@@ -539,13 +539,14 @@ def fetch_and_store_news():
                     "title": title,
                     "description": clean_desc,
                     "pub_date": pub_date,
-                    "image_url": image_url,
+                    "image_url": image_url,  # Explicitly set to None if missing
                     "source_name": source_domain
                 })
 
         except Exception as e:
             logging.error(f"Failed to fetch {feed['name']}: {e}")
 
+    # Fetch webpage metadata if pub_date or image_url is missing
     missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
     if missing_meta_items:
         logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
@@ -570,13 +571,15 @@ def fetch_and_store_news():
             item['source_name'],
             item['pub_date']
         )
+        
+        # Every parsed item (including TechPana with/without image) is kept here
         fetched_items.append({
             "link": item['link'],
             "title": item['title'],
             "description": item['description'],
             "categories": categories,
             "pub_date": item['pub_date'],
-            "image_url": item['image_url'],
+            "image_url": item['image_url'],  # Will preserve None if no image is present
             "source_name": item['source_name']
         })
 
