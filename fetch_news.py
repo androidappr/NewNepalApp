@@ -293,13 +293,13 @@ def get_explicit_category(entry, link, source_name):
         ("Share Market News", ["/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "शेयर", "सेयर"]),
         ("Sports News", ["/sports/", "/khelkud/", "/khel/", "sports", "khelkud", "खेलकुद", "खेल"]),
         ("Entertainment News", ["/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", "मनोरञ्जन", "चलचित्र"]),
-        ("Health News", ["/health/", "/swasthya/", "health", "swasthya", "स्वास्थ्य"]),
+        ("Health News", ["/health/", "/swasthya/", "health", "swasthya", "स्वास्थ्य", "हेल्थ"]),
         ("Technology News", ["/technology/", "/tech/", "/prabidhi/", "technology", "tech", "prabidhi", "प्रविधि", "ग्याजेट"]),
         ("Political News", ["/politics/", "/rajniti/", "/rajneeti/", "politics", "political", "rajniti", "rajneeti", "राजनीति"]),
         ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "अर्थतन्त्र"]),
-        ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "व्यापार", "उद्योग"]),
-        ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश"]),
-        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश","राष्ट्रिय समाचार"])
+        ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "व्यापार", "उद्योग","बिजनेस"]),
+        ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश समाचार"]),
+        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश","राष्ट्रिय समाचार", "प्रदेश समाचार"])
     ]
 
     for cat_name, patterns in mappings:
@@ -335,7 +335,7 @@ def determine_categories(entry, title, link, clean_desc, source_name, pub_date=N
 
     breaking_kw = [
         "breaking", "urgent", "update", "live", "alert", "flash", "latest", "special", "main",
-        "ब्रेकिङ", "अपडेट", "लाइभ", "अध्यावधिक", "तत्काल", "प्रमुख समाचार", "विशेष", "मुख्य", 
+        "ब्रेकिङ", "अपडेट", "लाइभ", "अध्यावधिक", "तत्काल", "प्रमुख समाचार", "विशेष", "मुख्य", "प्रमुख",
         "मुख्य समाचार", "ताजा खबर", "ताजा न्युज", "भर्खरै", "flash news", "ताजा समाचार"
     ]
 
