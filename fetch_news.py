@@ -289,108 +289,18 @@ def get_explicit_category(entry, link, source_name):
     if "techpana" in source_name.lower():
         return "Technology News"
 
-mappings = [
-    (
-        "Share Market News",
-        [
-            "/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "शेयर", "सेयर", 
-            "ipo", "trading", "broker", "secondary market", "dividend", "sebon", 
-            "share market", "नेप्से", "आइपिओ", "लाभांश", "धितोपत्र"
-        ]
-    ),
-    (
-        "Sports News",
-        [
-            "/sports/", "/khelkud/", "/khel/", "sports", "khelkud", "खेलकुद", "खेल", 
-            "sport", "cricket", "football", "soccer", "match", "cup", "league", 
-            "goal", "wicket", "stadium", "tournament", "messi", "ronaldo", "fifa", 
-            "icc", "ipl", "olympic", "athletics", "champion", "trophy", "can", 
-            "क्रिकेट", "फुटबल", "गोल", "म्याच", "कप", "लिग", "विकेट", "रंगशाला", 
-            "रङ्गशाला", "च्याम्पियन", "क्यान", "ओलिम्पिक", "खेलाडी", "प्रतियोगिता", "टूर्नामेंट"
-        ]
-    ),
-    (
-        "Entertainment News",
-        [
-            "/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", 
-            "मनोरञ्जन", "चलचित्र", "movie", "film", "actor", "actress", "cinema", 
-            "music", "song", "award", "bollywood", "hollywood", "celebrity", "theater", 
-            "show", "artist", "album", "kala", "फिल्म", "नायक", "नायिका", "सिनेमा", 
-            "संगीत", "सङ्गीत", "गीत", "अवार्ड", "कलाकार", "गायक", "गायिका", "शो", 
-            "थिएटर", "कला"
-        ]
-    ),
-    (
-        "Health News",
-        [
-            "/health/", "/swasthya/", "health", "swasthya", "स्वास्थ्य", "हेल्थ", 
-            "hospital", "doctor", "disease", "virus", "vaccine", "lifestyle", 
-            "food", "fitness", "medicine", "patient", "epidemic", "wellness", "diet", 
-            "अस्पताल", "डाक्टर", "रोग", "भाइरस", "खोप", "जीवनशैली", "औषधि", "बिरामी", 
-            "उपचार", "महामारी", "खाद्यान्न", "स्वास्थ्यकर्मी"
-        ]
-    ),
-    (
-        "Technology News",
-        [
-            "/technology/", "/tech/", "/prabidhi/", "technology", "tech", "prabidhi", 
-            "प्रविधि", "ग्याजेट", "ai", "app", "digital", "software", "mobile", 
-            "internet", "cyber", "google", "apple", "meta", "starlink", "computer", 
-            "gadget", "smartphone", "data", "robot", "एप्लिकेसन", "एप", "डिजिटल", 
-            "सफ्टवेयर", "मोबाइल", "इन्टरनेट", "साइबर", "डेटा", "कम्प्युटर", "एआई", 
-            "स्मार्टफोन", "आर्टिफिसियल", "ग्याजेट्स"
-        ]
-    ),
-    (
-        "Political News",
-        [
-            "/politics/", "/rajniti/", "/rajneeti/", "politics", "political", 
-            "rajniti", "rajneeti", "राजनीति", "politic", "minister", "prime minister", 
-            "government", "parliament", "election", "party", "policy", "supreme court", 
-            "president", "congress", "uml", "maoist", "politician", "cabinet", 
-            "constitution", "mp", "sarkar", "pradhanmantri", "मन्त्री", "प्रधानमन्त्री", 
-            "सरकार", "संसद", "संसद्", "निर्वाचन", "चुनाव", "दल", "पार्टी", "अदालत", 
-            "सर्वोच्च", "राष्ट्रपति", "कांग्रेस", "एमाले", "माओवादी", "सांसद", 
-            "संविधान", "मन्त्रिपरिषद्", "नेता"
-        ]
-    ),
-    (
-        "Economic News",
-        [
-            "/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", 
-            "अर्थतन्त्र", "inflation", "revenue", "bhansa", "kinmel", "budget", 
-            "gdp", "growth", "remittance", "debt", "nrb", "central bank", "fiscal", 
-            "बजेट", "राजस्व", "विप्रेषण", "रेमिट्यान्स", "राष्ट्र बैंक", "जिडिपी", "मौद्रिक"
-        ]
-    ),
-    (
-        "Business News",
-        [
-            "/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", 
-            "व्यापार", "उद्योग", "बिजनेस", "market", "bank", "banking", "corporate", 
-            "tax", "investment", "trade", "dollar", "finance", "export", "import", 
-            "profit", "company", "बैंक", "लगानी", "नाफा", "घाटा", "बजार", "वित्त", "कारोबार"
-        ]
-    ),
-    (
-        "International News",
-        [
-            "/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", 
-            "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश समाचार", "global", 
-            "foreign", "us", "china", "india", "uk", "russia", "america", "विदेश", 
-            "भारत", "चीन", "अमेरिका", "रसिया", "अन्तरराष्ट्रिय"
-        ]
-    ),
-    (
-        "National News",
-        [
-            "/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", 
-            "राष्ट्रिय", "प्रदेश", "राष्ट्रिय समाचार", "प्रदेश समाचार", "nepal", 
-            "kathmandu", "pokhara", "district", "province", "local", "palika", 
-            "नेपाल", "काठमाडौँ", "काठमाडौं", "पोखरा", "जिल्ला", "स्थानीय", "पालिका"
-        ]
-    )
-]
+ mappings = [
+        ("Share Market News", ["/share/", "/stock/", "/nepse/", "share", "stock", "nepse", "शेयर", "सेयर", "ipo", "trading", "broker", "secondary market", "dividend", "sebon","share market","नेप्से", "आइपिओ", "लाभांश", "धितोपत्र"]),
+        ("Sports News", ["/sports/", "/khelkud/", "/khel/", "sports", "khelkud", "खेलकुद", "खेल"]),
+        ("Entertainment News", ["/entertainment/", "/manoranjan/", "/cinema/", "entertainment", "manoranjan", "मनोरञ्जन", "चलचित्र"]),
+        ("Health News", ["/health/", "/swasthya/", "health", "swasthya", "स्वास्थ्य", "हेल्थ"]),
+        ("Technology News", ["/technology/", "/tech/", "/prabidhi/", "technology", "tech", "prabidhi", "प्रविधि", "ग्याजेट"]),
+        ("Political News", ["/politics/", "/rajniti/", "/rajneeti/", "politics", "political", "rajniti", "rajneeti", "राजनीति"]),
+        ("Economic News", ["/economy/", "/economic/", "/arthik/", "economy", "economic", "arthik", "अर्थतन्त्र"]),
+        ("Business News", ["/business/", "/wyapar/", "/bazar/", "business", "wyapar", "bazar", "व्यापार", "उद्योग","बिजनेस"]),
+        ("International News", ["/world/", "/international/", "/bidesh/", "/videsh/", "world", "international", "bidesh", "videsh", "विश्व", "अन्तर्राष्ट्रिय", "विदेश समाचार"]),
+        ("National News", ["/national/", "/pradesh/", "/desh/", "national", "pradesh", "desh", "राष्ट्रिय", "प्रदेश","राष्ट्रिय समाचार", "प्रदेश समाचार"])
+    ]
 
     for cat_name, patterns in mappings:
         for pat in patterns:
