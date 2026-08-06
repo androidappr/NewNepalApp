@@ -1,16 +1,72 @@
 [
   {
     "date": "2026-08-06",
-    "title": "Hydration Reminder",
-    "description": "Drink at least 2.5 liters of water daily to maintain energy levels.",
-    "image_url": "https://your-host.com/images/hydration.webp",
-    "tags": ["Health", "Water", "Wellness"]
+    "title": "Daily Tip 1",
+    "description": "Write your tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/1.webp",
+    "tags": ["Health", "Lifestyle"]
   },
   {
-    "date": "2026-08-07",
-    "title": "Take a Micro-Break",
-    "description": "Look away from screens every 20 minutes for 20 seconds.",
-    "image_url": "https://your-host.com/images/break.webp",
-    "tags": ["Productivity", "Eye Care", "Work"]
+    "date": "2026-08-05",
+    "title": "Daily Tip 2",
+    "description": "Write your second tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/2.webp",
+    "tags": ["Productivity"]
+  },
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/3.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/4.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/5.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/6.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/7.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/8.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/9.webp",
+    "tags": ["Wellness"]
+  }
+  {
+    "date": "2026-08-04",
+    "title": "Daily Tip 3",
+    "description": "Write your third tip description here.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/10.webp",
+    "tags": ["Wellness"]
   }
 ]
