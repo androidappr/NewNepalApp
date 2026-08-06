@@ -22,51 +22,51 @@
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 4",
+    "description": "Write your fourth tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/4.webp",
     "tags": ["Wellness"]
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 5",
+    "description": "Write your fifth tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/5.webp",
     "tags": ["Wellness"]
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 6",
+    "description": "Write your sixth tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/6.webp",
     "tags": ["Wellness"]
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 7",
+    "description": "Write your seventh tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/7.webp",
     "tags": ["Wellness"]
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 8",
+    "description": "Write your eighth tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/8.webp",
     "tags": ["Wellness"]
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 9",
+    "description": "Write your ninth tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/9.webp",
     "tags": ["Wellness"]
   },
   {
     "date": "2026-08-04",
-    "title": "Daily Tip 3",
-    "description": "Write your third tip description here.",
+    "title": "Daily Tip 10",
+    "description": "Write your tenth tip description here.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/10.webp",
     "tags": ["Wellness"]
-  },
+  }
 ]
