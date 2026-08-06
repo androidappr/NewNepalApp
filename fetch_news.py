@@ -6,7 +6,7 @@ import logging
 import socket
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin, urlparse
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import feedparser
 import cloudscraper
 from dateutil import parser
@@ -185,7 +185,7 @@ def fetch_article_metadata(session, url):
     if not url:
         return img_url, pub_date
     try:
-        resp = session.get(url, timeout=8, allow_redirects=True)
+        resp = session.get(url, timeout=6, allow_redirects=True)
         if resp.status_code == 200:
             text = resp.text
 
@@ -501,52 +501,60 @@ def deduplicate_cross_source(items):
 
     return unique_items
 
+def fetch_single_feed(feed, session):
+    entries = []
+    logging.info(f"Fetching feed: {feed['name']}")
+    try:
+        response = session.get(feed['url'], timeout=8)
+        if response.status_code != 200:
+            logging.warning(f"Skipped {feed['name']} (HTTP Status: {response.status_code})")
+            return entries
+
+        parsed_feed = feedparser.parse(response.content)
+
+        for entry in parsed_feed.entries[:15]:
+            link = entry.get('link')
+            title = entry.get('title')
+
+            if not link or not title:
+                continue
+
+            link = link.strip()
+            title = title.strip()
+            raw_description = entry.get('summary', entry.get('description', ''))
+            clean_desc = clean_html(raw_description)
+
+            if len(clean_desc.split()) < 10:
+                continue
+
+            pub_date = extract_entry_date(entry)
+            image_url = extract_image_from_entry(entry, link)
+            source_domain = extract_domain_name(link) or extract_domain_name(feed['url'])
+
+            entries.append({
+                "entry": entry,
+                "link": link,
+                "title": title,
+                "description": clean_desc,
+                "pub_date": pub_date,
+                "image_url": image_url,
+                "source_name": source_domain
+            })
+    except Exception as e:
+        logging.error(f"Failed to fetch {feed['name']}: {e}")
+    return entries
+
 def fetch_and_store_news():
     session = get_resilient_session()
     raw_entries = []
 
-    for feed in RSS_FEEDS:
-        logging.info(f"Fetching feed: {feed['name']}")
-        try:
-            response = session.get(feed['url'], timeout=12)
-            if response.status_code != 200:
-                logging.warning(f"Skipped {feed['name']} (HTTP Status: {response.status_code})")
-                continue
+    # Parallel RSS fetching
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_single_feed, feed, session) for feed in RSS_FEEDS]
+        for future in as_completed(futures):
+            raw_entries.extend(future.result())
 
-            parsed_feed = feedparser.parse(response.content)
-
-            for entry in parsed_feed.entries[:15]:
-                link = entry.get('link')
-                title = entry.get('title')
-
-                if not link or not title:
-                    continue
-
-                link = link.strip()
-                title = title.strip()
-                raw_description = entry.get('summary', entry.get('description', ''))
-                clean_desc = clean_html(raw_description)
-
-                if len(clean_desc.split()) < 10:
-                    continue
-
-                pub_date = extract_entry_date(entry)
-                image_url = extract_image_from_entry(entry, link)
-                source_domain = extract_domain_name(link) or extract_domain_name(feed['url'])
-
-                raw_entries.append({
-                    "entry": entry,
-                    "link": link,
-                    "title": title,
-                    "description": clean_desc,
-                    "pub_date": pub_date,
-                    "image_url": image_url,
-                    "source_name": source_domain
-                })
-
-        except Exception as e:
-            logging.error(f"Failed to fetch {feed['name']}: {e}")
-
+    # Parallel Webpage Scraping for missing metadata
     missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
     if missing_meta_items:
         logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
