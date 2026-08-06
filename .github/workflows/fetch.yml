@@ -1,57 +1,42 @@
 name: News Fetcher Workflow
 
 on:
-  workflow_dispatch:
-  repository_dispatch:
-    types: [trigger-news-fetch]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [trigger-news-fetch]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  contents: write
 
 jobs:
-  run-and-deploy:
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  run-script:
+    runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-          cache: 'pip'
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install feedparser python-dateutil requests urllib3 cloudscraper
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install feedparser python-dateutil requests urllib3 cloudscraper
 
-      - name: Fetch Existing Live JSON
-        run: |
-          mkdir -p public
-          curl -s https://androidappr.github.io/NewNepalApp/news.json -o public/news.json || true
+      - name: Fetch Existing Live JSON
+        run: |
+          mkdir -p public
+          curl -s https://androidappr.github.io/NewNepalApp/news.json -o public/news.json || true
 
-      - name: Run Fetcher Script
-        run: python fetch_news.py
+      - name: Run Fetcher Script
+        run: python fetch_news.py
 
-      - name: Disable Jekyll
-        run: touch public/.nojekyll
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './public'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy static JSON to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
