@@ -641,6 +641,10 @@ def fetch_and_store_news():
     final_news = deduplicated_items[:MAX_NEWS_ITEMS]
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    
+    with open(os.path.join(OUTPUT_DIR, ".nojekyll"), "w") as f:
+        pass
+
     temp_file = OUTPUT_FILE + ".tmp"
     with open(temp_file, "w", encoding="utf-8") as f:
         json.dump(final_news, f, ensure_ascii=False, indent=2)
