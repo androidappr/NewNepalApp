@@ -3,12 +3,15 @@ import re
 import json
 import html
 import logging
+import socket
 from datetime import datetime, timezone, timedelta
 from urllib.parse import urljoin, urlparse
 from concurrent.futures import ThreadPoolExecutor
 import feedparser
 import cloudscraper
 from dateutil import parser
+
+socket.setdefaulttimeout(15)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
