@@ -34,7 +34,7 @@ jobs:
       - name: Run Fetcher Script
         run: python fetch_news.py
 
-      - name: Prevent Jekyll Processing
+      - name: Disable Jekyll
         run: touch public/.nojekyll
 
       - name: Deploy static JSON to GitHub Pages
