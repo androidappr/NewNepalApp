@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-08-06",
+    "title": "Hydration Reminder",
+    "description": "Drink at least 2.5 liters of water daily to maintain energy levels.",
+    "image_url": "https://your-host.com/images/hydration.webp",
+    "tags": ["Health", "Water", "Wellness"]
+  },
+  {
+    "date": "2026-08-07",
+    "title": "Take a Micro-Break",
+    "description": "Look away from screens every 20 minutes for 20 seconds.",
+    "image_url": "https://your-host.com/images/break.webp",
+    "tags": ["Productivity", "Eye Care", "Work"]
+  }
+]
