@@ -288,7 +288,7 @@ def get_explicit_categories(entry, link, source_name):
         ]),
         ("Health News", [
             "/health/", "/swasthya/",
-            "health", "swasthya", "hospital", "doctor", "स्वास्थ्य", "हेल्थ", "अस्पताल", "डाक्टर"
+            "health", "swasthya", "hospital", "doctor", "स्वास्थ्य", "हेल्थ", "अस्पताल", "डाक्टर","हेल्थ फिचर", "हेल्थ मेन स्टोरी", "प्रसूति","शल्यक्रिया",
         ]),
         ("Technology News", [
             "/technology/", "/tech/", "/prabidhi/",
