@@ -1,8 +1,6 @@
 name: News Fetcher Workflow
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'
   workflow_dispatch:
   repository_dispatch:
     types: [trigger-news-fetch]
