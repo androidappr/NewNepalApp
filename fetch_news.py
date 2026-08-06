@@ -513,8 +513,9 @@ def fetch_and_store_news():
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-                existing_items = json.load(f)
-                if isinstance(existing_items, list):
+                data = json.load(f)
+                if isinstance(data, list):
+                    existing_items = data
                     for ex in existing_items:
                         if isinstance(ex, dict) and ex.get("link"):
                             existing_map[ex["link"]] = ex
