@@ -6,20 +6,12 @@ on:
     types: [trigger-news-fetch]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  contents: write
 
 jobs:
   run-script:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -42,14 +34,12 @@ jobs:
       - name: Run Fetcher Script
         run: python fetch_news.py
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Prevent Jekyll Processing
+        run: touch public/.nojekyll
 
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy static JSON to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: './public'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
