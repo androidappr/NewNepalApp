@@ -179,50 +179,6 @@ def extract_image_from_entry(entry, base_url):
 
     return None
 
-def fetch_article_metadata(session, url):
-    img_url = None
-    pub_date = None
-    if not url:
-        return img_url, pub_date
-    try:
-        resp = session.get(url, timeout=6, allow_redirects=True)
-        if resp.status_code == 200:
-            text = resp.text
-
-            img_patterns = [
-                r'<meta[^>]+property=["\']og:image["\']\s+content=["\'](.*?)["\']',
-                r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']og:image["\']',
-                r'<meta[^>]+name=["\']twitter:image["\']\s+content=["\'](.*?)["\']',
-                r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']twitter:image["\']',
-            ]
-            for pat in img_patterns:
-                m = re.search(pat, text, re.IGNORECASE)
-                if m:
-                    found_img = html.unescape(m.group(1).strip())
-                    if found_img and not found_img.startswith('data:'):
-                        img_url = urljoin(url, found_img)
-                        break
-
-            date_patterns = [
-                r'<meta[^>]+property=["\']article:published_time["\']\s+content=["\'](.*?)["\']',
-                r'<meta[^>]+content=["\'](.*?)["\']\s+property=["\']article:published_time["\']',
-                r'<meta[^>]+name=["\']pubdate["\']\s+content=["\'](.*?)["\']',
-                r'<meta[^>]+content=["\'](.*?)["\']\s+name=["\']pubdate["\']',
-                r'"datePublished"\s*:\s*"([^"]+)"',
-                r'"published_at"\s*:\s*"([^"]+)"',
-            ]
-            for pat in date_patterns:
-                m = re.search(pat, text, re.IGNORECASE)
-                if m:
-                    raw_d = html.unescape(m.group(1).strip())
-                    parsed_d = parse_date(raw_d)
-                    if parsed_d:
-                        pub_date = parsed_d
-                        break
-    except Exception:
-        pass
-    return img_url, pub_date
-
 def safe_parse_dt(iso_str):
     if not iso_str:
         return datetime.min.replace(tzinfo=NEPAL_TZ)
@@ -470,11 +426,14 @@ def deduplicate_cross_source(items):
     unique_items = []
 
     for item in items:
+        item["_parsed_dt"] = safe_parse_dt(item.get("pub_date"))
+
+    for item in items:
         is_dup = False
-        dt_item = safe_parse_dt(item.get("pub_date"))
+        dt_item = item["_parsed_dt"]
 
         for u_item in unique_items:
-            dt_u = safe_parse_dt(u_item.get("pub_date"))
+            dt_u = u_item["_parsed_dt"]
 
             if dt_item != datetime.min.replace(tzinfo=NEPAL_TZ) and dt_u != datetime.min.replace(tzinfo=NEPAL_TZ):
                 if abs((dt_item - dt_u).total_seconds()) > 172800:
@@ -498,6 +457,9 @@ def deduplicate_cross_source(items):
 
         if not is_dup:
             unique_items.append(item)
+
+    for item in items:
+        item.pop("_parsed_dt", None)
 
     return unique_items
 
@@ -548,25 +510,10 @@ def fetch_and_store_news():
     session = get_resilient_session()
     raw_entries = []
 
-    # Parallel RSS fetching
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=15) as executor:
         futures = [executor.submit(fetch_single_feed, feed, session) for feed in RSS_FEEDS]
         for future in as_completed(futures):
             raw_entries.extend(future.result())
-
-    # Parallel Webpage Scraping for missing metadata
-    missing_meta_items = [item for item in raw_entries if not item["image_url"] or not item["pub_date"]]
-    if missing_meta_items:
-        logging.info(f"Scraping webpage metadata for {len(missing_meta_items)} items...")
-        def scrape_item(item):
-            img, d = fetch_article_metadata(session, item["link"])
-            if not item["image_url"] and img:
-                item["image_url"] = img
-            if not item["pub_date"] and d:
-                item["pub_date"] = d
-
-        with ThreadPoolExecutor(max_workers=10) as executor:
-            executor.map(scrape_item, missing_meta_items)
 
     fetched_items = []
 
