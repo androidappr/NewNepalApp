@@ -127,31 +127,57 @@ def extract_image_from_text(text, base_url):
     if not text:
         return None
     text = html.unescape(html.unescape(text))
-    img_match = re.search(r'<img[^>]+src=["\'](.*?)["\']', text, re.IGNORECASE)
-    if img_match:
-        img_src = img_match.group(1).strip()
-        if img_src and not img_src.startswith("data:"):
-            return urljoin(base_url, img_src)
+
+    img_tags = re.findall(r'<img[^>]+>', text, re.IGNORECASE)
+    for img_tag in img_tags:
+        src = None
+        for attr in ['data-src', 'data-lazy-src', 'data-original', 'src']:
+            match = re.search(rf'{attr}=["\'](.*?)["\']', img_tag, re.IGNORECASE)
+            if match and match.group(1).strip():
+                src = match.group(1).strip()
+                break
+
+        if not src or any(p in src.lower() for p in ["data:image", "1x1", "blank.gif", "placeholder"]):
+            srcset_match = re.search(r'srcset=["\'](.*?)["\']', img_tag, re.IGNORECASE)
+            if srcset_match:
+                first_part = srcset_match.group(1).split(',')[0].strip()
+                if first_part:
+                    src = first_part.split(' ')[0].strip()
+
+        if src and not src.startswith("data:") and not any(p in src.lower() for p in ["1x1", "blank.gif", "placeholder"]):
+            clean_url = html.unescape(src)
+            return urljoin(base_url, clean_url)
+
     return None
 
 def extract_image_from_entry(entry, base_url):
     if 'media_content' in entry and entry.media_content:
         for media in entry.media_content:
             if isinstance(media, dict) and media.get('url'):
-                return urljoin(base_url, media.get('url'))
+                url = media.get('url').strip()
+                if url and not url.startswith("data:"):
+                    return urljoin(base_url, html.unescape(url))
 
     if 'media_thumbnail' in entry and entry.media_thumbnail:
         for thumb in entry.media_thumbnail:
             if isinstance(thumb, dict) and thumb.get('url'):
-                return urljoin(base_url, thumb.get('url'))
+                url = thumb.get('url').strip()
+                if url and not url.startswith("data:"):
+                    return urljoin(base_url, html.unescape(url))
 
     if 'enclosures' in entry and entry.enclosures:
         for enc in entry.enclosures:
-            if enc.get('type', '').startswith('image/') and enc.get('href'):
-                return urljoin(base_url, enc.get('href'))
+            if isinstance(enc, dict):
+                href = enc.get('href', '').strip()
+                enc_type = enc.get('type', '').lower()
+                if href and (enc_type.startswith('image/') or re.search(r'\.(jpg|jpeg|png|webp|gif|svg)(\?.*)?$', href, re.I)):
+                    if not href.startswith("data:"):
+                        return urljoin(base_url, html.unescape(href))
 
     if 'image' in entry and isinstance(entry.image, dict) and entry.image.get('href'):
-        return urljoin(base_url, entry.image.get('href'))
+        href = entry.image.get('href').strip()
+        if href and not href.startswith("data:"):
+            return urljoin(base_url, html.unescape(href))
 
     for field in ['content', 'summary_detail', 'description_detail']:
         if field in entry:
@@ -169,9 +195,10 @@ def extract_image_from_entry(entry, base_url):
 
     for field in ['summary', 'description', 'story']:
         if field in entry and entry[field]:
-            img = extract_image_from_text(entry[field], base_url)
-            if img:
-                return img
+            if isinstance(entry[field], str):
+                img = extract_image_from_text(entry[field], base_url)
+                if img:
+                    return img
 
     return None
 
