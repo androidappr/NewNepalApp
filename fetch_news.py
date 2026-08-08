@@ -121,11 +121,7 @@ def clean_html(text):
         return ""
     clean = html.unescape(html.unescape(text))
     clean = re.sub(r'<[^>]+>', '', clean)
-
-    # Cut off text before [...], […], or WordPress RSS footer boilerplates
-    pattern = r'(\[\s*[\.\u2026]+\s*\]|The post\s+.*?\s+appeared first on)'
-    clean = re.split(pattern, clean, flags=re.IGNORECASE | re.DOTALL)[0]
-
+    clean = re.sub(r'\[\s*(?:…|\.\.\.).*', '', clean, flags=re.DOTALL)
     return clean.strip()
 
 def extract_image_from_text(text, base_url):
@@ -589,9 +585,7 @@ def fetch_and_store_news():
         if not isinstance(ex, dict):
             continue
         link = ex.get("link")
-        desc = clean_html(ex.get("description", ""))
-        ex["description"] = desc
-
+        desc = ex.get("description", "")
         if link and link not in seen_links and len(desc.split()) >= 10:
             seen_links.add(link)
 
