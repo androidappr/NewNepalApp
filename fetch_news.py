@@ -175,17 +175,14 @@ def extract_image_from_entry(entry, base_url):
                     if not href.startswith("data:"):
                         return urljoin(base_url, html.unescape(href))
 
-    for custom_key in ['featured_image', 'post_thumbnail', 'wp_post_thumbnail', 'cover']:
+    for custom_key in ['featured_image', 'post_thumbnail', 'wp_post_thumbnail', 'cover', 'image', 'image_href', 'image_url']:
         val = entry.get(custom_key)
-        if isinstance(val, str) and val.startswith('http'):
-            return urljoin(base_url, val)
-        elif isinstance(val, dict) and val.get('href'):
-            return urljoin(base_url, val['href'])
-
-    if 'image' in entry and isinstance(entry.image, dict) and entry.image.get('href'):
-        href = entry.image.get('href').strip()
-        if href and not href.startswith("data:"):
-            return urljoin(base_url, html.unescape(href))
+        if isinstance(val, str) and val.strip().startswith('http'):
+            return urljoin(base_url, html.unescape(val.strip()))
+        elif isinstance(val, dict):
+            for k in ['href', 'url', 'src', 'link', 'value']:
+                if k in val and isinstance(val[k], str) and val[k].strip().startswith('http'):
+                    return urljoin(base_url, html.unescape(val[k].strip()))
 
     if 'content_encoded' in entry and entry.content_encoded:
         img = extract_image_from_text(entry.content_encoded, base_url)
