@@ -128,17 +128,20 @@ def extract_image_from_text(text, base_url):
         return None
     text = html.unescape(html.unescape(text))
 
-    img_tags = re.findall(r'<img[^>]+>', text, re.IGNORECASE)
+    # Re.DOTALL allows matching img tags that span across newlines
+    img_tags = re.findall(r'<img\s+[^>]+>', text, re.IGNORECASE | re.DOTALL)
     for img_tag in img_tags:
         src = None
-        for attr in ['data-src', 'data-lazy-src', 'data-original', 'src']:
-            match = re.search(rf'{attr}=["\'](.*?)["\']', img_tag, re.IGNORECASE)
+        # Handle quoted AND unquoted attribute values
+        for attr in ['data-src', 'data-lazy-src', 'data-original', 'data-full-url', 'src']:
+            match = re.search(rf'{attr}=["\']?([^\s"\'>]+)["\']?', img_tag, re.IGNORECASE)
             if match and match.group(1).strip():
                 src = match.group(1).strip()
                 break
 
+        # Fallback to srcset if src is a placeholder or missing
         if not src or any(p in src.lower() for p in ["data:image", "1x1", "blank.gif", "placeholder"]):
-            srcset_match = re.search(r'srcset=["\'](.*?)["\']', img_tag, re.IGNORECASE)
+            srcset_match = re.search(r'srcset=["\']?([^\s"\'>]+)', img_tag, re.IGNORECASE)
             if srcset_match:
                 first_part = srcset_match.group(1).split(',')[0].strip()
                 if first_part:
@@ -151,6 +154,7 @@ def extract_image_from_text(text, base_url):
     return None
 
 def extract_image_from_entry(entry, base_url):
+    # 1. Check standard Media RSS fields
     if 'media_content' in entry and entry.media_content:
         for media in entry.media_content:
             if isinstance(media, dict) and media.get('url'):
@@ -165,6 +169,7 @@ def extract_image_from_entry(entry, base_url):
                 if url and not url.startswith("data:"):
                     return urljoin(base_url, html.unescape(url))
 
+    # 2. Check Enclosures
     if 'enclosures' in entry and entry.enclosures:
         for enc in entry.enclosures:
             if isinstance(enc, dict):
@@ -174,10 +179,24 @@ def extract_image_from_entry(entry, base_url):
                     if not href.startswith("data:"):
                         return urljoin(base_url, html.unescape(href))
 
+    # 3. Check custom RSS / WordPress fields
+    for custom_key in ['featured_image', 'post_thumbnail', 'wp_post_thumbnail', 'cover']:
+        val = entry.get(custom_key)
+        if isinstance(val, str) and val.startswith('http'):
+            return urljoin(base_url, val)
+        elif isinstance(val, dict) and val.get('href'):
+            return urljoin(base_url, val['href'])
+
     if 'image' in entry and isinstance(entry.image, dict) and entry.image.get('href'):
         href = entry.image.get('href').strip()
         if href and not href.startswith("data:"):
             return urljoin(base_url, html.unescape(href))
+
+    # 4. Check content:encoded and other content blocks
+    if 'content_encoded' in entry and entry.content_encoded:
+        img = extract_image_from_text(entry.content_encoded, base_url)
+        if img:
+            return img
 
     for field in ['content', 'summary_detail', 'description_detail']:
         if field in entry:
@@ -193,6 +212,7 @@ def extract_image_from_entry(entry, base_url):
                 if img:
                     return img
 
+    # 5. Check summary/description
     for field in ['summary', 'description', 'story']:
         if field in entry and entry[field]:
             if isinstance(entry[field], str):
