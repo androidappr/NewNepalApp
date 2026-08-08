@@ -197,11 +197,11 @@ def extract_image_from_entry(entry, base_url):
                     if res:
                         return res
 
-    for custom_key in ['image', 'featured_image', 'post_thumbnail', 'wp_post_thumbnail', 'cover', 'image_href', 'image_url']:
-        val = entry.get(custom_key)
-        res = parse_val_to_url(val, base_url)
-        if res:
-            return res
+    for key in entry.keys():
+        if any(k in key.lower() for k in ['image', 'photo', 'thumb', 'media', 'cover', 'picture']):
+            res = parse_val_to_url(entry[key], base_url)
+            if res:
+                return res
 
     if 'content_encoded' in entry and entry.content_encoded:
         img = extract_image_from_text(entry.content_encoded, base_url)
@@ -229,14 +229,23 @@ def extract_image_from_entry(entry, base_url):
                 if img:
                     return img
 
-    entry_str = str(entry)
-    match = re.search(r'<image[^>]*>\s*(https?://[^\s<"]+)\s*</image>', entry_str, re.IGNORECASE)
-    if match:
-        return urljoin(base_url, html.unescape(match.group(1).strip()))
+    base_domain = extract_domain_name(base_url)
+    for k, v in entry.items():
+        v_str = str(v)
+        img_matches = re.findall(r'https?://[^\s\'"<>]+\.(?:jpg|jpeg|png|webp|gif|svg)(?:\?[^\s\'"<>]*)?', v_str, re.IGNORECASE)
+        for img_match in img_matches:
+            clean_img = html.unescape(img_match.strip())
+            if not any(p in clean_img.lower() for p in ["1x1", "blank.gif", "placeholder", "data:image"]):
+                if base_domain and extract_domain_name(clean_img) == base_domain:
+                    return urljoin(base_url, clean_img)
 
-    img_url_match = re.search(r'https?://[^\s\'"]+\.(?:jpg|jpeg|png|webp|gif)(?:\?[^\s\'"]*)?', entry_str, re.IGNORECASE)
-    if img_url_match:
-        return urljoin(base_url, html.unescape(img_url_match.group(0).strip()))
+    for k, v in entry.items():
+        v_str = str(v)
+        img_matches = re.findall(r'https?://[^\s\'"<>]+\.(?:jpg|jpeg|png|webp|gif|svg)(?:\?[^\s\'"<>]*)?', v_str, re.IGNORECASE)
+        for img_match in img_matches:
+            clean_img = html.unescape(img_match.strip())
+            if not any(p in clean_img.lower() for p in ["1x1", "blank.gif", "placeholder", "data:image"]):
+                return urljoin(base_url, clean_img)
 
     return None
 
@@ -509,7 +518,10 @@ def deduplicate_cross_source(items):
                     u_item["categories"] = u_item_cats
 
                 if not u_item.get("image_url") and item.get("image_url"):
-                    u_item["image_url"] = item["image_url"]
+                    u_domain = extract_domain_name(u_item.get("link"))
+                    item_img_domain = extract_domain_name(item.get("image_url"))
+                    if u_domain and item_img_domain and u_domain == item_img_domain:
+                        u_item["image_url"] = item["image_url"]
 
                 break
 
