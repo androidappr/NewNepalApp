@@ -542,6 +542,20 @@ def fetch_and_store_news():
                 logging.warning(f"Skipped {feed['name']} (HTTP Status: {response.status_code})")
                 continue
 
+            raw_xml = response.text
+            item_images = {}
+            for item_match in re.finditer(r'<item[^>]*>(.*?)</item>', raw_xml, re.IGNORECASE | re.DOTALL):
+                item_xml = item_match.group(1)
+                link_match = re.search(r'<link[^>]*>(.*?)</link>', item_xml, re.IGNORECASE | re.DOTALL)
+                img_match = re.search(r'<image[^>]*>(.*?)</image>', item_xml, re.IGNORECASE | re.DOTALL)
+                
+                if link_match and img_match:
+                    l_val = link_match.group(1).strip()
+                    i_val = img_match.group(1).strip()
+                    l_val = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', l_val, flags=re.IGNORECASE).strip()
+                    i_val = re.sub(r'<!\[CDATA\[(.*?)\]\]>', r'\1', i_val, flags=re.IGNORECASE).strip()
+                    item_images[l_val] = i_val
+
             parsed_feed = feedparser.parse(response.content)
 
             for entry in parsed_feed.entries[:15]:
@@ -561,6 +575,10 @@ def fetch_and_store_news():
 
                 pub_date = extract_entry_date(entry)
                 image_url = extract_image_from_entry(entry, link)
+
+                if not image_url and link in item_images:
+                    image_url = parse_val_to_url(item_images[link], link)
+
                 source_domain = extract_domain_name(link) or extract_domain_name(feed['url'])
 
                 categories = determine_categories(
