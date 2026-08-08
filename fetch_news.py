@@ -129,6 +129,10 @@ def extract_image_from_text(text, base_url):
         return None
     text = html.unescape(html.unescape(text))
 
+    image_tag_match = re.search(r'<image[^>]*>\s*(https?://[^\s<"]+)\s*</image>', text, re.IGNORECASE)
+    if image_tag_match:
+        return urljoin(base_url, image_tag_match.group(1).strip())
+
     img_tags = re.findall(r'<img\s+[^>]+>', text, re.IGNORECASE | re.DOTALL)
     for img_tag in img_tags:
         src = None
@@ -151,20 +155,37 @@ def extract_image_from_text(text, base_url):
 
     return None
 
+def parse_val_to_url(val, base_url):
+    if not val:
+        return None
+    if isinstance(val, str):
+        v = val.strip()
+        if v.startswith("http") and not v.startswith("data:"):
+            return urljoin(base_url, html.unescape(v))
+    elif isinstance(val, dict):
+        for k in ['href', 'url', 'src', 'link', 'value', 'content']:
+            res = parse_val_to_url(val.get(k), base_url)
+            if res:
+                return res
+    elif isinstance(val, list):
+        for item in val:
+            res = parse_val_to_url(item, base_url)
+            if res:
+                return res
+    return None
+
 def extract_image_from_entry(entry, base_url):
     if 'media_content' in entry and entry.media_content:
         for media in entry.media_content:
-            if isinstance(media, dict) and media.get('url'):
-                url = media.get('url').strip()
-                if url and not url.startswith("data:"):
-                    return urljoin(base_url, html.unescape(url))
+            res = parse_val_to_url(media, base_url)
+            if res:
+                return res
 
     if 'media_thumbnail' in entry and entry.media_thumbnail:
         for thumb in entry.media_thumbnail:
-            if isinstance(thumb, dict) and thumb.get('url'):
-                url = thumb.get('url').strip()
-                if url and not url.startswith("data:"):
-                    return urljoin(base_url, html.unescape(url))
+            res = parse_val_to_url(thumb, base_url)
+            if res:
+                return res
 
     if 'enclosures' in entry and entry.enclosures:
         for enc in entry.enclosures:
@@ -172,17 +193,15 @@ def extract_image_from_entry(entry, base_url):
                 href = enc.get('href', '').strip()
                 enc_type = enc.get('type', '').lower()
                 if href and (enc_type.startswith('image/') or re.search(r'\.(jpg|jpeg|png|webp|gif|svg)(\?.*)?$', href, re.I)):
-                    if not href.startswith("data:"):
-                        return urljoin(base_url, html.unescape(href))
+                    res = parse_val_to_url(href, base_url)
+                    if res:
+                        return res
 
-    for custom_key in ['featured_image', 'post_thumbnail', 'wp_post_thumbnail', 'cover', 'image', 'image_href', 'image_url']:
+    for custom_key in ['image', 'featured_image', 'post_thumbnail', 'wp_post_thumbnail', 'cover', 'image_href', 'image_url']:
         val = entry.get(custom_key)
-        if isinstance(val, str) and val.strip().startswith('http'):
-            return urljoin(base_url, html.unescape(val.strip()))
-        elif isinstance(val, dict):
-            for k in ['href', 'url', 'src', 'link', 'value']:
-                if k in val and isinstance(val[k], str) and val[k].strip().startswith('http'):
-                    return urljoin(base_url, html.unescape(val[k].strip()))
+        res = parse_val_to_url(val, base_url)
+        if res:
+            return res
 
     if 'content_encoded' in entry and entry.content_encoded:
         img = extract_image_from_text(entry.content_encoded, base_url)
@@ -209,6 +228,15 @@ def extract_image_from_entry(entry, base_url):
                 img = extract_image_from_text(entry[field], base_url)
                 if img:
                     return img
+
+    entry_str = str(entry)
+    match = re.search(r'<image[^>]*>\s*(https?://[^\s<"]+)\s*</image>', entry_str, re.IGNORECASE)
+    if match:
+        return urljoin(base_url, html.unescape(match.group(1).strip()))
+
+    img_url_match = re.search(r'https?://[^\s\'"]+\.(?:jpg|jpeg|png|webp|gif)(?:\?[^\s\'"]*)?', entry_str, re.IGNORECASE)
+    if img_url_match:
+        return urljoin(base_url, html.unescape(img_url_match.group(0).strip()))
 
     return None
 
