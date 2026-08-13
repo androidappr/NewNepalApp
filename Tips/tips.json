@@ -264,5 +264,61 @@
     "description": "Take a deep breath and pace yourself through the middle of the week.",
     "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/wednsday-1.webp",
     "tags": ["Wednesday"]
+  },
+  {
+    "date": "",
+    "title": "Always Try",
+    "description": "Replace 'I can't' with 'I'll try' to build a resilient and growth-focused mindset.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/never-say-i-cant.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Small Steps, Big Changes",
+    "description": "Consistent daily habits and small actions lead to remarkable long-term transformations.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/small-steps-creat-big-changes.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Language of the Future",
+    "description": "Embrace technology not just as a tool, but as the core language shaping tomorrow.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/technology-is-language-of-future.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Today Decides Tomorrow",
+    "description": "The choices and deliberate effort you invest today build the foundation for your future.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/today-decide-tomorrow.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Work Smart, Change Life",
+    "description": "Start small, dream big, and work smart to transform your life step by step.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/work-smart.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Protect Your Energy",
+    "description": "Redirect your energy away from worrying and channel it toward believing, growing, and healing.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/dont-use-your-energy-to-worrey.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Learn More, Earn More",
+    "description": "Continuously expand your knowledge—the more you learn, the greater your opportunities become.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/learn-mpore-earn-more.webp",
+    "tags": [""]
+  },
+  {
+    "date": "",
+    "title": "Mistakes Are Proof",
+    "description": "Never fear making mistakes; they are positive proof that you are actively trying and progressing.",
+    "image_url": "https://raw.githubusercontent.com/androidappr/NewNepalApp/main/Tips/images/mistakes-are-proof.webp",
+    "tags": [""]
   }
 ]
