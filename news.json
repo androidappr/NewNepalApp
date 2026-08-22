@@ -1,5 +1,47 @@
 [
   {
+    "link": "https://www.setopati.com/social/396476",
+    "title": "ट्यांकरबाट पेट्रोल खन्याउँदा पम्पमा सल्कियो आगो",
+    "description": "त्यसै क्रममा काउन्टरमा प्रवेश गरेका म्यानेजर भण्डारी आगलागीमा परेर घाइते भएका हुन्।",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-08-22T11:27:23+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/586529/sudans-agricultural-sector-hit-by-el-nino-and-war",
+    "title": "एल निनो र युद्धको दोहोरो मारमा सुडानको कृषि क्षेत्र",
+    "description": "सुडान । सुडानमा नाइल नदीको जलस्तर घटेसँगै किसानहरू सिँचाइका लागि पानी जुटाउन सङ्घर्ष गरिरहेका छन् । यस वर्षको ढिलो र न्यून वर्षाले कृषि उत्पादन प्रभावित भएपछि कतिपय किसान वर्षाका लागि प्रार्थना गर्न बाध्य भएका छन्",
+    "categories": [
+      "International News"
+    ],
+    "pub_date": "2026-08-22T11:26:14+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/capture_IgkxjCPFO3.png",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://shilapatra.com/detail/192944",
+    "title": "अमेरिकी रियल इस्टेटमा चम्केका रविन",
+    "description": "नेपाली व्यवसायी रविन कार्की अहिले अमेरिकाकाे नर्थ क्यारोलाइनामा ‘रियल इस्टेट’ व्यवसाय गर्छन् । उनी ‘रियल इस्टेट’ व्यवसायमा साे क्षेत्रमा चर्चित व्यवसायीमध्येमा पर्छन् ।",
+    "categories": [],
+    "pub_date": "2026-08-22T11:23:00+05:45",
+    "image_url": null,
+    "source_name": "SHILAPATRA.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/219418",
+    "title": "रास्वपाको दुईदिने ‘नीति, सङ्गठन र नेतृत्व’ मन्थन सुरु",
+    "description": "काठमाडौँ, भदौ ६ गते । राष्ट्रिय स्वतन्त्र पार्टी (रास्वपा)ले केन्द्रीय सदस्यका लागि आयोजना गरेको ‘नीति, सङ्गठन र नेतृत्व’सम्बन्धी दुईदिने कार्यशाला यहाँ सुरु भएको छ ।‘रास्वपा कार्य...",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-08-22T11:21:37+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/377537/conversions/images-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
     "link": "https://www.setopati.com/politics/396475",
     "title": "पन्छाइयो पहिरो, प्रधानमन्त्री बालेन सडकमार्गबाटै मुस्ताङ जाने",
     "description": "दुवै खण्डको पहिरो हटाइएर सडक दुई तर्फी नै सञ्चालनमा ल्याइएको उनले बताए।",
@@ -22,15 +64,6 @@
     "pub_date": "2026-08-22T11:13:57+05:45",
     "image_url": "https://www.imagekhabar.com/wp-content/uploads/2026/08/raparapa.jpeg",
     "source_name": "IMAGEKHABAR.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/586528/rsvps-two-day-policy-organization-and-leadership-brainstorming-session-begins",
-    "title": "रास्वपाको दुई दिने ‘नीति, सङ्गठन र नेतृत्व’ मन्थन सुरु",
-    "description": "काठमाडौँ । राष्ट्रिय स्वतन्त्र पार्टी (रास्वपा)ले केन्द्रीय सदस्यका लागि आयोजना गरेको ‘नीति, सङ्गठन र नेतृत्व’सम्बन्धी दुईदिने कार्यशाला यहाँ सुरु भएको छ । ‘रास्वपा कार्यशाला–नीति, सङ्गठन र नेतृत्व, शृङ्खला–१’ नाम दिइएको कार्यशालामा पार्टीको नीति, सङ्गठन सुदृढीकरण, नेतृत्व",
-    "categories": [],
-    "pub_date": "2026-08-22T11:12:56+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/rsp-office_qYgZcktPr9.png",
-    "source_name": "RATOPATI.COM"
   },
   {
     "link": "https://newsofnepal.com/2026/08/22/783276/",
@@ -767,7 +800,6 @@
     "title": "नम्बर नफेरी एनसेलबाट टेलिकम र टेलिकमबाट एनसेल जान पाइने सुविधा, यसपालि होला त कार्यान्वयन ?",
     "description": "काठमाडौं । दशकौँदेखि चर्चा र बहसको विषय बन्दै आए पनि व्यावहारिक रूपमा लागु हुन नसकेको ‘मोबाइल नम्बर पोर्टेबिलिटी’ (एमएनपी) को मुद्दाले सरकारको नयाँ नीतिमा फेरि स्थान पाएको छ । नेपाल दूरसञ्चार प्राधिकरणले हालै सार्वजनिक गरेको ‘एकीकृत दूरसञ्चार नीति, २०८३’ को मस्यौदामा उपभोक्ता हितलाई ध्यानमा राख्दै मोबाइल नम्बर नफेरी सेवाप्रदायक परिवर्तन गर्न सकिने व्यवस्था समावेश गरिएको छ ।\n\nमस्यौदामा भनिएको छ, “ग्राहकहरूले मोबाइल नम्बर परिवर्तन नगरी सेवा प्रदायक छनोट गर्न सक्ने (Mobile Number Portability...",
     "categories": [
-      "Breaking News",
       "Technology News"
     ],
     "pub_date": "2026-08-22T09:50:56+05:45",
@@ -1982,9 +2014,7 @@
     "link": "https://rajdhanidaily.com/id/145798/",
     "title": "देशभर बदलीसँगै वर्षा, चार प्रदेशका पहाडी भूभागमा भारी वर्षाको सम्भावना",
     "description": "काठमाडौं । हाल देशभर मनसुनी वायुको प्रभाव रहेको तथा मनसुनको न्यून चापीय रेखा सरदर स्थानको आसपास रहेकाले देशभर सामान्यतया बदली भएको छ । कोशी, बागमती र गण्डकी प्रदेशका केही तथा लुम्बिनी प्रदेशका एकदुई स्थानमा मेघगर्जन र चट्याङसहित हल्कादेखि मध्यम वर्षा भइरहेको छ । जल तथा मौसम पूर्वानुमान महाशाखाका अनुसार आज दिउँसो देशभर सामान्यतया बदली रहनेछ",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-08-22T07:16:50+05:45",
     "image_url": "https://rajdhanidaily.com/wp-content/uploads/2026/08/barsha-1.png",
     "source_name": "RAJDHANIDAILY.COM"
@@ -2028,34 +2058,5 @@
     "pub_date": "2026-08-22T07:13:39+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1782179785_baideshik%20rojgar-.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/219371",
-    "title": "एक्लै र निहुरिएर काम गर्ने बढी बाघको निशानामा !",
-    "description": "वसन्त पराजुलीनारायणगढ, भदौ ६ गते । एक्लै तथा निहुरिएर काम गर्ने मानिस बाघको आक्रमणको बढी जोखिममा पर्ने गरेको एक अध्ययनले देखाएको छ। नेपालको तराई भू–परिधि क्षेत्र (बाघ पाइने क्षेत्र...",
-    "categories": [],
-    "pub_date": "2026-08-22T07:12:10+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/377485/conversions/Human-tiger-conflict.jpg---original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/08/2001253/the-mysterious-nepal-seen-by-foreigners-75-years-ago",
-    "title": "७५ वर्षअघि विदेशीले देखेको रहस्यमय नेपाल",
-    "description": "अमेरिकी जीवशास्त्री तथा लेखक एस डिलन रिप्लीले ७५ वर्षअघि नेपाल भ्रमण गरेका थिए । राणा प्रधानमन्त्रीको अनुमति लिएर अनुसन्धानमा आएका उनले १०६ वर्षदेखि हराइरहेको 'स्पाइनी ब्याब्लर' काँडे भ्याकुर नेपालको जंगलमा भेट्दा उनले ठूलो विजय उत्सव मनाए ।",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-08-22T07:10:49+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/08/image-75.png",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://newsofnepal.com/2026/08/22/783262/",
-    "title": "राष्ट्रिय अनुसन्धान विभाग प्रधानमन्त्री मातहत राख्ने विधेयकमाथि छलफल",
-    "description": "काठमाडौँ । राष्ट्रियसभाको शुक्रबारको बैठकमा ‘नेपाल विशेष सेवा ऐन, २०४२ को साबिकको व्यवस्था जगाउने सम्बन्धी विधेयक, २०८३’ माथि सैद्धान्तिक छलफल भएको छ। छलफलका क्रममा सांसदहरूले राष्ट्रिय अनुसन्धान विभागलाई गृह मन्त्रालयबाट प्रधानमन्त्री तथा मन्त्रिपरिषद्को कार्यालय मातहत राख्ने प्रस्तावबारे पक्ष–विपक्षमा धारणा राखेका छन्। केही सांसदले शक्ति केन्द्रीकरणले बेथिति निम्त्याउन सक्ने भन्दै विभागलाई प्रधानमन्त्री मातहत राख्ने प्रस्तावमा प्रश्न",
-    "categories": [],
-    "pub_date": "2026-08-22T07:10:46+05:45",
-    "image_url": "https://newsofnepal.com/wp-content/uploads/2026/08/rastiya-sabha-150x150.png",
-    "source_name": "NEWSOFNEPAL.COM"
   }
 ]
