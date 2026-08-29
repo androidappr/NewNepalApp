@@ -1,5 +1,14 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/220321",
+    "title": "‘प्रत्येक नागरिकसम्म राज्य पुग्ने छ’",
+    "description": "काठमाडौँ, भदौ १३ गते । प्रधानमन्त्री वालेन्द्र शाहले देश कठिन घडीमा रहेको उल्लेख गर्दै बाढी प्रभावित प्रत्येक नागरिकमा सरकार पुग्ने प्रतिबद्धता व्यक्त गर्नुभएको छ । भोटेकोशीमा गएको...",
+    "categories": [],
+    "pub_date": "2026-08-29T06:05:43+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/378877/conversions/pm-photo-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
     "link": "https://baahrakhari.com/detail/499463",
     "title": "भाद्र कृष्ण प्रतिपदा : गाईजात्रा पर्व मनाइँदै",
     "description": "भाद्र कृष्ण अष्टमीका दिनसम्म मनाइने यस पर्वका क्रममा प्रहसन, सामाजिक विकृतिप्रति व्यंग्यात्मक प्रदर्शन, नाचगान तथा मृत व्यक्तिको सम्झनामा रामायणको करुण रसका गीतहरू पनि गाइन्छ ।",
@@ -442,7 +451,9 @@
     "link": "https://www.onlinekhabar.com/2026/08/2005982/a-tragic-scene-outside-the-morgue-bodies-everywhere-relatives-wandering-around",
     "title": "शवगृह बाहिरको कारुणिक दृश्य : जताजता शव, उतैउतै भौंतारिँदै आफन्त",
     "description": "पोखरा स्वास्थ्य विज्ञान प्रतिष्ठान बाहिर रसुवा बाढीमा बेपत्ता भएका व्यक्तिको तस्वीर लिएर आफन्तहरू आइपुगेका थिए । बाढीमा परेकाहरूको शव जहाँजहाँ लगिएको थियो, त्यहाँत्यहाँ आफन्तहरू पहिचानका लागि  भौंतारिइरहेका थिए ।",
-    "categories": [],
+    "categories": [
+      "National News"
+    ],
     "pub_date": "2026-08-28T22:06:23+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/08/pokhara-badhi-bepatta.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -2010,16 +2021,5 @@
     "pub_date": "2026-08-28T19:05:50+05:45",
     "image_url": "https://clickmandu.com/wp-content/uploads/2026/08/image-112-768x484.png",
     "source_name": "CLICKMANDU.COM"
-  },
-  {
-    "link": "https://www.sidhakura.com/detail/28029",
-    "title": "भोटेकोशी बाढीः ५५३ शव फेला, १४७३ को उद्धार",
-    "description": "प्रहरीका अनुसार रसुवामा १३, नुवाकोटमा ३८, धादिङमा ४०, गोरखामा ४७, नवलपरासी पूर्वमा १३४, नवलपरासी पश्चिममा २८, तनहुँमा ३१ र चितवनमा २२२ शव फेला परेको छ ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-08-28T19:04:29+05:45",
-    "image_url": null,
-    "source_name": "SIDHAKURA.COM"
   }
 ]
