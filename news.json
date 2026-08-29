@@ -1,5 +1,43 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/220349",
+    "title": "त्रिशूली बाढीले विद्युत् सेवा अवरुद्ध, दुई हजार घरधुरी प्रभावित",
+    "description": "गुणबहादुर रोकासुलीकोट (गोरखा), भदौ १३ गते । त्रिशूली नदीमा आएको बाढीले विद्युतका संरचनामा क्षति पुर्‍याएपछि गोरखाको गण्डकी गाउँपालिकाका करिब दुई हजार घरधुरी तीन दिनदेखि विद्युतविही...",
+    "categories": [],
+    "pub_date": "2026-08-29T08:22:27+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/378915/conversions/sabstation-photho-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/220348",
+    "title": "नेपाल ‘ए’ भिक्टोरियाविरुद्ध सुखद अन्त्यको खोजीमा",
+    "description": "काठमाडौँ, भदौ १३ गते । अस्ट्रेलियामा जारी तेस्रो संस्करणको टप एन्ड टी–२० सिरिजमा नेपाल ‘ए’ पुरुष क्रिकेट टोलीले शनिबार भिक्टोरिया सिए–११ विरुद्ध खेल्दै छ । डार्विनस्थित मारारा क्रि...",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-08-29T08:17:13+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/378914/conversions/kushal-bhurtel-and-team-1787968785-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://shilapatra.com/detail/193641",
+    "title": "त्रिशूली– ३ बीमा कार्यरत व्यक्तिहरूको अवस्था अझै अज्ञात, हेमन्तराज जोशीको खोजीका लागि परिवारको अपिल",
+    "description": "उद्धार तथा राहतका गतिविधि भइरहेका विवरणहरू सार्वजनिक भइरहे पनि ३ बी साइटमा रहेका व्यक्तिहरूको अवस्था र खोजी तथा उद्धारबारे पर्याप्त जानकारी नआउँदा आफन्त तथा स्थानीयवासी चिन्तित बनेका छन् ।",
+    "categories": [],
+    "pub_date": "2026-08-29T08:17:00+05:45",
+    "image_url": null,
+    "source_name": "SHILAPATRA.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/588281/decision-to-declare-various-local-levels-as-disaster-prone-areas-published-in-the-gazette",
+    "title": "विभिन्न स्थानीय तहलाई ‘विपद् सङ्कटग्रस्त क्षेत्र’ घोषणा गर्ने निर्णय राजपत्रमा प्रकाशित",
+    "description": "काठमाडौँ । नेपाल सरकारले बाढीका कारण अत्यधिक प्रभावित भएका रसुवा, नुवाकोट, धादिङ, गोरखा र तनहुँका विभिन्न स्थानीय तहहरूलाई तीन महिनाका लागि 'विपद् सङ्कटग्रस्त क्षेत्र' घोषणा गरेको छ। गृह मन्त्रालयले नेपाल राजपत्रमा सूचना प्रकाशित गर्दै विपद् जोखिम",
+    "categories": [],
+    "pub_date": "2026-08-29T08:16:19+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/rasuwa-badhi_FjSp7aV6Eq.webp",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://newsofnepal.com/2026/08/29/784532/",
     "title": "माइक्रोफोन छेउबाट सुरु भएको अक्षरको मित्रता",
     "description": "दुर्गा दाइसँग मेरो अन्तिम संवाद नर्भिक अस्पतालको एउटा कोठामा भएको थियो । उहाँलाई केही दिनअघि अस्पताल भर्ना गरिएको थियो । उहाँ उपचारपछि घर फर्किने तयारीमा हुनुहुन्थ्यो । उहाँका जेठा छोरा सुमनजी पनि सँगै हुनुहुन्थ्यो । हामी कुरा गरिरहेका थियौँ । सुमनजीले मोबाइलमा हाम्रो संवाद रेकर्ड गरिरहनुभएको थियो । त्यतिबेला त्यो संवाद अन्तिम हुन सक्छ भन्ने",
@@ -77,9 +115,11 @@
     "link": "https://www.dcnepal.com/2026/08/791265/",
     "title": "संस्कार सहितको शिक्षाः आजको आवश्यकता",
     "description": "मानव सभ्यताको विकासक्रममा शिक्षा सधैं परिवर्तनशील रहँदै आएको छ। समय, परिस्थिति र आवश्यकता अनुसार शिक्षाको स्वरूप फेरिँदै गए पनि यसको मूल उद्देश्यः मानवलाई ज्ञानवान, सभ्य र जिम्मेवार बनाउनुः अपरिवर्तित छ। आजको युगमा विज्ञान र प्रविधिको तीव्र विकासले संसारलाई सानो बनाएको छ, जीवन शैलीलाई सहज बनाएको छ र अवसरका ढोकाहरू खोलेको छ। तर, यसैसँगै नैतिकता, मानवीयता",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-08-29T08:04:04+05:45",
-    "image_url": null,
+    "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/08/10-copy-12.jpg",
     "source_name": "DCNEPAL.COM"
   },
   {
@@ -103,18 +143,6 @@
     "pub_date": "2026-08-29T08:00:07+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Sarbadaliya-meeting.jpg",
     "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.setopati.com/sports/cricket/397092",
-    "title": "नेपाल ‘ए’ भिक्टोरियाविरुद्ध सुखद अन्त्यको खोजीमा",
-    "description": "पाँचौँ खेलमा भने नेपाल हैदरावाद किङ्समेन एकेडेमीविरुद्ध ३१ रनले पराजित भएको थियो ।",
-    "categories": [
-      "Breaking News",
-      "Sports News"
-    ],
-    "pub_date": "2026-08-29T07:59:47+05:45",
-    "image_url": null,
-    "source_name": "SETOPATI.COM"
   },
   {
     "link": "https://nagariknews.nagariknetwork.com/opinion/new-risks-of-climate-change-br-77-92.html",
@@ -264,7 +292,6 @@
     "title": "बाढी प्रभावित स्थानीय तहलाई पौने ७ करोड निकासा",
     "description": "प्राधिकरणका अनुसार यो रकम प्रभावित स्थानीय तहलाई आवश्यकता अनुसार वितरण गरिने जनाएको छ।",
     "categories": [
-      "Breaking News",
       "National News"
     ],
     "pub_date": "2026-08-29T07:42:00+05:45",
@@ -1983,38 +2010,5 @@
     "pub_date": "2026-08-28T20:51:44+05:45",
     "image_url": "https://www.imagekhabar.com/wp-content/uploads/2026/07/balen-4.jpg",
     "source_name": "IMAGEKHABAR.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/588226/bhotekoshi-flood-15-families-from-madhesh-in-contact",
-    "title": "भोटेकोशी बाढी : मधेसका १५ जना परिवारको सम्पर्कमा",
-    "description": "जनकपुरधाम। रसुवाको भोटेकोशी नदी आएको बाढीपछि हराइरहेका मधेस प्रदेशका १२७ मध्ये आज १५ जना परिवारको सम्पर्कमा आएका छन् । मधेस प्रदेश प्रहरी कार्यालय जनकपुरधामका प्रवक्ता एवं वरिष्ठ प्रहरी उपरीक्षक प्रभुप्रसाद ढकालका अनुसार बाढीपछि प्रदेशका १२७",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-08-28T20:51:39+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/rasuwa-badhi-(1)_joCdLC2wFm.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/588225/bhotekoshi-flood-15-people-from-morang-are-missing-three-rescued",
-    "title": "भोटेकोशी बाढी : मोरङका १५ सम्पर्कविहीन, तीन जनाको उद्धार",
-    "description": "मोरङ । रसुवाको भोटेकोशीमा बुधबार आएको बाढीपछि मोरङका १५ जना अझै सम्पर्कविहीन भएका छन्। जिल्ला प्रशासन कार्यालय मोरङका अनुसार विभिन्न कामका सिलसिलामा रसुवा, धादिङ र नुवाकोट पुगेका १५ जना हालसम्म सम्पर्कविहीन रहेकाले निरन्तर खोजी भइरहेको",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-08-28T20:48:41+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/rasuwa-badhi_UDfR4HgAOK.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/politics/the-state-stands-with-every-family-affected-by-the-disaster-prime-minister-balen-41-12.html",
-    "title": "विपद्‌बाट प्रभावित प्रत्येक परिवारको साथमा राज्य छ: प्रधानमन्त्री बालेन",
-    "description": "उद्धारको प्रतीक्षामा रहेका प्रत्येक नागरिकसम्म सरकार पुग्ने प्रतिबद्धता जनाएका छन्।",
-    "categories": [
-      "Political News"
-    ],
-    "pub_date": "2026-08-28T20:47:40+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1787732430_Balen%20(1).jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   }
 ]
