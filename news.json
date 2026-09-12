@@ -1,5 +1,14 @@
 [
   {
+    "link": "https://www.ratopati.com/story/591764/sikta-irrigation-preparations-to-complete-construction-within-five-years",
+    "title": "सिक्टा सिँचाइः पाँच वर्षभित्र निर्माण सम्पन्न गर्ने तयारी",
+    "description": "बाँके । बाँकेमा निर्माणाधीन राष्ट्रिय गौरवको सिक्टा सिँचाइ आयोजना आगामी पाँच वर्षभित्र निर्माण सम्पन्न गर्ने गरी काम भइरहेको छ । सरकारले पाँच वर्षभित्र आयोजनाको काम सम्पन्न गर्न निर्देशन दिएअनुरुप पछिल्लो समय सिक्टा सिँचाइको काम द्रुत",
+    "categories": [],
+    "pub_date": "2026-09-13T02:00:00+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/oHSuQxD5NA.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/591763/iranian-president-says-agreement-will-be-signed-with-oman-bahrain-will-not-participate",
     "title": "ओमानसँग सम्झौतामा हस्ताक्षर हुने इरानी राष्ट्रपतिको भनाइ, बहराइनले सहभागी नहुने",
     "description": "काठमाडौँ । इरानका राष्ट्रपति मोसुद पेजेस्कियानले आफ्नो देश र ओमानले सोमबार मस्कटमा हर्मुज जलमार्गमा संयुक्त नौपरिवहन मार्ग तोक्ने सम्झौतामा हस्ताक्षर गर्ने बताएका छन् । बहराइनले भने उक्त बैठकमा सहभागी नहुने शनिबार जनाएको छ ।\n\n‘इरानियन स्टुडेन्ट्स",
@@ -195,7 +204,9 @@
     "link": "https://www.ratopati.com/story/591752/provincial-government-to-build-houses-for-those-who-lost-their-homes-in-the-floods",
     "title": "बाढीमा घरबास गुमाएकालाई प्रदेश सरकारले आवास बनाइदिने",
     "description": "भक्तपुर। बागमती प्रदेशका मुख्यमन्त्री किरण थापामगर रसुवाको भोटेकोशीमा आएको बाढीबाट प्रभावित भएर घरवास गुमाएका नागरिकलाई प्रदेश सरकारले पुर्नवासको व्यवस्था गर्ने बताए ।\n\nभक्तपुरका सञ्चारकर्मीहरूसँग आज सूर्यविनायकमा छलफलका क्रममा उनले घरबास गुमाएकाहरूको लागि प्रदेश सरकारले बस्ती निर्माण",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-09-12T22:37:23+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/kiran-thapa-(1)_o2rOJmCknb.jpg",
     "source_name": "RATOPATI.COM"
@@ -429,7 +440,6 @@
     "title": "यात्रा एसिया कपको",
     "description": "कसैले राष्ट्रिय झण्डा ओढे, कसैले एकअर्कालाई अँगालो हालेर खुसी साटे । त्यो उत्सव केवल एउटा ट्रफीको थिएन, त्यो नेपाल फेरि एसिया कपमा फर्किएको क्षण थियो ।",
     "categories": [
-      "Breaking News",
       "Sports News"
     ],
     "pub_date": "2026-09-12T22:01:43+05:45",
@@ -462,7 +472,6 @@
     "title": "एआईले बदल्दैछ अपराधको शैली : साइबर हमलादेखि सूचना हेरफेरसम्म",
     "description": "एआई कम्पनी एन्थ्रोपिकको नयाँ रिपोर्टले भन्छ- 'एआईले आक्रमणकारी र साइबर अपराधीलाई झन् छिटो, सहज, शक्तिशाली र कम खर्चिलो बनाउँदै छ।'",
     "categories": [
-      "Breaking News",
       "Technology News"
     ],
     "pub_date": "2026-09-12T21:59:33+05:45",
@@ -473,9 +482,7 @@
     "link": "https://www.onlinekhabar.com/2026/09/2015725/proposal-to-resolve-contract-land-acquisition-and-compensation-issues-within-90-days",
     "title": "ठेक्का, जग्गा प्राप्ति, मुआब्जाको मुद्दा ९० दिनभित्र टुंग्याउनुपर्ने प्रस्ताव",
     "description": "मन्त्रालयले पूर्वाधार निर्माणसँग सम्बन्धित मुद्दा हेर्न न्यायाधीकरण गठन गर्ने गरी ऐन बनाउन लागेको हो।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-12T21:58:00+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/09/court.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -484,9 +491,7 @@
     "link": "https://www.onlinekhabar.com/2026/09/2015500/rare-surgery-performed-on-veer-6-swollen-blood-vessels-in-the-brain-were-closed-at-once",
     "title": "वीरमा दुर्लभ शल्यक्रिया : मस्तिष्कमा फुलेका ६ रक्तनली एकैपटक बन्द गरियो",
     "description": "एनेरिज्म फुटिसकेको अवस्थामा बिरामीको ज्यान मात्रै जोखिममा हुँदैन, मस्तिष्कमा रक्तस्रावका कारण दीर्घकालीन स्नायुसम्बन्धी समस्या हुने सम्भावना पनि हुन्छ ।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-12T21:57:32+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/09/Rita-Devi-durlav-surgery.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -495,9 +500,7 @@
     "link": "https://www.onlinekhabar.com/2026/09/2015676/how-to-raise-45-9-billion-for-adaptation",
     "title": "नगण्य उत्सर्जन, असमान जलवायु असर",
     "description": "विश्वव्यापी हरितगृह ग्यास उत्सर्जनमा नेपालको हिस्सेदारी नगण्य हो। तर, जलवायु सङ्कटका घातक वातावरणीय एवं सामाजिक–आर्थिक बहुआयामिक असरहरू झेल्न बाध्य अग्रपङ्क्तिका राष्ट्रहरूमा नेपाल पर्नु विश्वव्यापी जलवायु अन्यायको अकाट्य प्रमाण हो।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-12T21:57:05+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/09/shree-shiva-2.png",
     "source_name": "ONLINEKHABAR.COM"
@@ -506,9 +509,7 @@
     "link": "https://www.onlinekhabar.com/2026/09/2015694/sikta-irrigation-24-billion-rupees-spent-in-20-years-51-percent-physical-progress",
     "title": "सिक्टा सिँचाइ : २० वर्षमा २४ अर्ब खर्च, ५१ प्रतिशत भौतिक प्रगति",
     "description": "यो आयोजनाअन्तर्गत बाँकेको राप्ती सोनारी गाउँपालिका अगैयास्थित राप्ती नदीमा ३१७ मिटर क्षेत्रफलमा ब्यारेज निर्माण गरी ४२ हजार ७६६ हेक्टर भूमिमा सिँचाइ सुविधा पुर्‍याउने लक्ष्य राखिएको छ ।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-12T21:56:34+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2022/09/Sikta-Head-Box-.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -989,7 +990,6 @@
     "title": "बाढी प्रभावित क्षेत्रको स्थलगत अनुगमनमा प्रचण्ड : एकीकृत पुनःस्थापना योजना बनाउन जोड",
     "description": "काठमाडौं । नेपाली कम्युनिस्ट पार्टी (नेकपा)का संयोजक एवं पूर्वप्रधानमन्त्री पुष्पकमल दाहाल ‘प्रचण्ड’ ले रसुवामा आएको प्रलयकारी बाढीका कारण प्रभावित भएका धादिङ र नुवाकोटका विभिन्न क्षेत्रको स्थलगत अनुगमन गरेका छन्। अनुगमनका क्रममा उनले बाढीले पुर्‍याएको मानवीय तथा भौतिक क्षति, खोज तथा उद्धार, राहत वितरण र प्रभावितहरूको अस्थायी बसोबासको अवस्थाबारे स्थलगत जानकारी लिएका हुन्। संयोजक प्रचण्डले नुवाकोटको",
     "categories": [
-      "Breaking News",
       "Political News"
     ],
     "pub_date": "2026-09-12T20:09:07+05:45",
@@ -1010,7 +1010,6 @@
     "title": "बाढी प्रभावित क्षेत्रमा पुगे प्रचण्ड, के भने ?",
     "description": "नेपाली कम्युनिस्ट पार्टीका संयोजक एवं पूर्वप्रधानमन्त्री पुष्पकमल दाहाल ‘प्रचण्ड’ ले रसुवाको बाढीबाट प्रभावित नुवाकोट र धादिङका विभिन्न क्षेत्रको स्थलगत अनुगमन गरेका छन्।...",
     "categories": [
-      "Breaking News",
       "Political News"
     ],
     "pub_date": "2026-09-12T20:00:35+05:45",
@@ -2067,16 +2066,5 @@
     "pub_date": "2026-09-12T17:31:00+05:45",
     "image_url": null,
     "source_name": "SETOPATI.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/591709/hydropower-sector-suffers-losses-of-rs-151-billion-reconstruction-will-cost-rs-390-billion",
-    "title": "जलविद्युत् क्षेत्रमा १५१ अर्बको नोक्सानी, पुनर्निर्माणका लागि ३९० अर्ब लाग्ने",
-    "description": "काठमाडौँ । रसुवाको भोटेकोशी नदीमा आएको लेदोसहितको बाढीका कारण नेपालको जलविद्युत् तथा ऊर्जा क्षेत्रले इतिहासकै सबैभन्दा ठूलो क्षति व्यहोरेको छ।\n\nराष्ट्रिय विपद् जोखिम न्यूनीकरण तथा व्यवस्थापन प्राधिकरणको ‘द्रुत क्षति तथा आवश्यकता आकलन’ प्रतिवेदनअनुसार बाढीका कारण जलविद्युत्",
-    "categories": [
-      "Economic News"
-    ],
-    "pub_date": "2026-09-12T17:30:00+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/hydro-surung_fMywfK2IO4.webp",
-    "source_name": "RATOPATI.COM"
   }
 ]
