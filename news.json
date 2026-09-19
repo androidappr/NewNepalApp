@@ -119,9 +119,7 @@
     "link": "https://gorkhapatraonline.com/news/223454",
     "title": "एनएसजेएफ गण्डकीलाई प्रदेशस्तरीय मिडिया कप फुटसलको उपाधि",
     "description": "कास्की, असोज ३ गते । पोखरा रङ्गशाला सञ्चालन भएको गण्डकी प्रदेशस्तरीय मिडिया कप फुटसल प्रतियोगिताको उपाधि नेपाल खेलकुद पत्रकार मञ्च (एनएसजेएफ) गण्डकीले जितेको छ ।पोखरा रङ्गशालास्थित...",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-19T23:10:43+05:45",
     "image_url": "https://gorkhapatraonline.com/storage/media/383655/conversions/champions-original.jpg",
     "source_name": "GORKHAPATRAONLINE.COM"
@@ -641,15 +639,6 @@
     "source_name": "NEWSOFNEPAL.COM"
   },
   {
-    "link": "https://shilapatra.com/detail/195218",
-    "title": "साझाको रात्रिकालीन सेवा विस्तार, शनिबारदेखि ६ रुटमा २८ विद्युतीय बस (तस्वीरहरू)",
-    "description": "साझा यातायातले पछिल्लो समय काठमाडौं उपत्यकामा सार्वजनिक यातायातको माग बढ्दै गएको र रातिको समयमा सार्वजनिक सवारीसाधनको उपलब्धता तुलनात्मक रूपमा कम रहेको अवस्थालाई ध्यानमा राखेर रात्रिकालीन सेवा विस्तार गरिएको जनाएको छ ।",
-    "categories": [],
-    "pub_date": "2026-09-19T21:17:00+05:45",
-    "image_url": null,
-    "source_name": "SHILAPATRA.COM"
-  },
-  {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
     "title": "खाजा खाइरहेको बेला ह*त्या",
     "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
@@ -659,6 +648,15 @@
     "pub_date": "2026-09-19T21:17:00+05:45",
     "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://shilapatra.com/detail/195218",
+    "title": "साझाको रात्रिकालीन सेवा विस्तार, शनिबारदेखि ६ रुटमा २८ विद्युतीय बस (तस्वीरहरू)",
+    "description": "साझा यातायातले पछिल्लो समय काठमाडौं उपत्यकामा सार्वजनिक यातायातको माग बढ्दै गएको र रातिको समयमा सार्वजनिक सवारीसाधनको उपलब्धता तुलनात्मक रूपमा कम रहेको अवस्थालाई ध्यानमा राखेर रात्रिकालीन सेवा विस्तार गरिएको जनाएको छ ।",
+    "categories": [],
+    "pub_date": "2026-09-19T21:17:00+05:45",
+    "image_url": null,
+    "source_name": "SHILAPATRA.COM"
   },
   {
     "link": "https://www.onlinekhabar.com/2026/09/2020915/we-should-not-become-victims-of-competition-between-powerful-nations-vidya-bhandari",
