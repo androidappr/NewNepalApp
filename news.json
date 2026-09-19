@@ -36,9 +36,7 @@
     "link": "https://www.ratopati.com/story/593306/shivapuris-dhruvasthali-is-becoming-an-attractive-destination-for-meditation",
     "title": "ध्यानका लागि आकर्षक गन्तव्य बन्दै शिवपुरीको ध्रुवस्थली",
     "description": "काठमाडौँ ।  पशुपति क्षेत्रस्थित शिवपुरी बाबाले करिब १५ वर्ष ध्यान साधना गरेको आश्रम स्थलमा दैनिक सयौँ साधक ध्यान साधनाका लागि पुग्ने गरेका छन् ।\n\nराजधानी सहरको बीचभागमा रहेको श्लेषमान्तक वनको मध्यभागमा रहेको समथर भागको आकर्षक वातावरणमा शिवपुरी बाबाले साधना गरेका थिए ।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-20T00:27:42+05:45",
     "image_url": "https://rpcdn.ratopati.com/media/albums/Tapoban_Shivapuri_Baba_Mandir_5kVgUq3Ccj.jpg",
     "source_name": "RATOPATI.COM"
@@ -228,9 +226,7 @@
     "link": "https://www.ratopati.com/story/593298/demand-for-immediate-fulfillment-of-the-demands-of-injured-genji-who-is-on-a-hunger-strike-to-death",
     "title": "आमरण अनसनरत घाइते जेन्जीका माग तत्काल पूरा गर्न माग",
     "description": "काठमाडौँ । राष्ट्रिय जेन्जी नागरिक अभियानले झापाको बिर्तामोडमा विभिन्न पाँच बुँदे माग राख्दै आमरण अनसनमा बसेका जेन्जी आन्दोलनका घाइतेहरूको माग तत्काल सम्बोधन गर्न सरकारसँग माग गरेको छ ।\n\nअभियानले शनिबार विज्ञप्ति जारी गर्दै जेन्जी आन्दोलन भएको",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-19T22:29:06+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/788591596_27797800053230478_3994098678110604604_n_M91lPeBu3U.webp",
     "source_name": "RATOPATI.COM"
@@ -665,17 +661,6 @@
     "source_name": "NEWSOFNEPAL.COM"
   },
   {
-    "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
-    "title": "खाजा खाइरहेको बेला ह*त्या",
-    "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-09-19T21:17:00+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
     "link": "https://shilapatra.com/detail/195218",
     "title": "साझाको रात्रिकालीन सेवा विस्तार, शनिबारदेखि ६ रुटमा २८ विद्युतीय बस (तस्वीरहरू)",
     "description": "साझा यातायातले पछिल्लो समय काठमाडौं उपत्यकामा सार्वजनिक यातायातको माग बढ्दै गएको र रातिको समयमा सार्वजनिक सवारीसाधनको उपलब्धता तुलनात्मक रूपमा कम रहेको अवस्थालाई ध्यानमा राखेर रात्रिकालीन सेवा विस्तार गरिएको जनाएको छ ।",
@@ -685,6 +670,17 @@
     "pub_date": "2026-09-19T21:17:00+05:45",
     "image_url": null,
     "source_name": "SHILAPATRA.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
+    "title": "खाजा खाइरहेको बेला ह*त्या",
+    "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-09-19T21:17:00+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   },
   {
     "link": "https://www.onlinekhabar.com/2026/09/2020915/we-should-not-become-victims-of-competition-between-powerful-nations-vidya-bhandari",
