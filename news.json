@@ -193,9 +193,7 @@
     "link": "https://gorkhapatraonline.com/news/223451",
     "title": "मोटरसाइकलको ठक्करबाट वृद्धको मृत्यु, एक घाइते",
     "description": "जनार्जन खत्रीसर्लाही, असोज ३ गते । नवलपुर–मलङ्गवा सडकखण्ड अन्तर्गत सर्लाहीको मलङ्गवा नगरपालिका–११, गम्हरियामा शनिबार साँझ मोटरसाइकलको ठक्करबाट एक वृद्धको मृत्यु भएको छ भने एक जना घ...",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-19T22:40:52+05:45",
     "image_url": "https://gorkhapatraonline.com/storage/media/383650/conversions/_death-original.jpg",
     "source_name": "GORKHAPATRAONLINE.COM"
@@ -661,17 +659,6 @@
     "source_name": "NEWSOFNEPAL.COM"
   },
   {
-    "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
-    "title": "खाजा खाइरहेको बेला ह*त्या",
-    "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-09-19T21:17:00+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
     "link": "https://shilapatra.com/detail/195218",
     "title": "साझाको रात्रिकालीन सेवा विस्तार, शनिबारदेखि ६ रुटमा २८ विद्युतीय बस (तस्वीरहरू)",
     "description": "साझा यातायातले पछिल्लो समय काठमाडौं उपत्यकामा सार्वजनिक यातायातको माग बढ्दै गएको र रातिको समयमा सार्वजनिक सवारीसाधनको उपलब्धता तुलनात्मक रूपमा कम रहेको अवस्थालाई ध्यानमा राखेर रात्रिकालीन सेवा विस्तार गरिएको जनाएको छ ।",
@@ -681,6 +668,17 @@
     "pub_date": "2026-09-19T21:17:00+05:45",
     "image_url": null,
     "source_name": "SHILAPATRA.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
+    "title": "खाजा खाइरहेको बेला ह*त्या",
+    "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-09-19T21:17:00+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   },
   {
     "link": "https://www.onlinekhabar.com/2026/09/2020915/we-should-not-become-victims-of-competition-between-powerful-nations-vidya-bhandari",
