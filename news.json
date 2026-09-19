@@ -1,5 +1,27 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/223453",
+    "title": "अर्थमन्त्री डा. वाग्ले स्वदेश फिर्ता",
+    "description": "काठमाडौँ, असोज ३ गते ।  अर्थमन्त्री डा. स्वर्णिम वाग्ले तीनदिने भारत भ्रमण सम्पन्न गरी स्वदेश फर्किनुभएको छ । भारत सरकारको निमन्त्रणामा बिहीबार छ सदस्यीय प्रतिनिधिमण्डलको नेतृत्व ग...",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-09-19T22:54:33+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/383653/conversions/1000180460-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/593301/far-western-employees-have-been-without-pay-for-two-months",
+    "title": "दुई महिनादेखि तलबविहीन सुदूरपश्चिमका कर्मचारी",
+    "description": "कैलाली । आर्थिक वर्ष २०८३/८४ सुरु भएको दुई महिना बितिसक्दा पनि सुदूरपश्चिम प्रदेश सरकार मातहत कार्यरत कर्मचारीले नियमित तलब पाउन सकेका छैनन् ।\n\nआव सुरु भएपछि कार्यालयका नियमित प्रशासनिक काम तथा सेवा प्रवाहका गतिविधि सञ्चालन भइरहे",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-09-19T22:46:31+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/karmachari_Xk88F4RLJf.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://gorkhapatraonline.com/news/223452",
     "title": "बाढी पीडितलाई भाटले दिए ३० लाख सहयोग",
     "description": "ड्यालस, (अमेरिका), असोज ३ गते । रसुवामा भदौ १० गते आएको विनाशकारी बाढीबाट प्रभावितको उद्धार तथा राहतका लागि ‘भिजिट नेपाल’ का अध्यक्ष तथा युवा उद्यमी राजीवराज भाटले व्यक्तिगत रूपमा...",
@@ -524,17 +546,6 @@
     "source_name": "NEWSOFNEPAL.COM"
   },
   {
-    "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
-    "title": "खाजा खाइरहेको बेला ह*त्या",
-    "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-09-19T21:17:00+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
     "link": "https://shilapatra.com/detail/195218",
     "title": "साझाको रात्रिकालीन सेवा विस्तार, शनिबारदेखि ६ रुटमा २८ विद्युतीय बस (तस्वीरहरू)",
     "description": "साझा यातायातले पछिल्लो समय काठमाडौं उपत्यकामा सार्वजनिक यातायातको माग बढ्दै गएको र रातिको समयमा सार्वजनिक सवारीसाधनको उपलब्धता तुलनात्मक रूपमा कम रहेको अवस्थालाई ध्यानमा राखेर रात्रिकालीन सेवा विस्तार गरिएको जनाएको छ ।",
@@ -544,6 +555,17 @@
     "pub_date": "2026-09-19T21:17:00+05:45",
     "image_url": null,
     "source_name": "SHILAPATRA.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/social-affairs/murder-while-eating-lunch-15-72.html",
+    "title": "खाजा खाइरहेको बेला ह*त्या",
+    "description": "जीतपुरसिमरा उपमहानगरपालिका–२ सिमरामा रहेको सम्झना स्टाफ होटल भित्र खाजा खाइरहेका अवस्थामा शनिबार साँझ एक जनाको ह*त्या भएको छ ।...",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-09-19T21:17:00+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1789831900_814317429_29927159950217468_1411784084154564680_n.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   },
   {
     "link": "https://www.onlinekhabar.com/2026/09/2020915/we-should-not-become-victims-of-competition-between-powerful-nations-vidya-bhandari",
@@ -1480,7 +1502,9 @@
     "link": "https://www.dcnepal.com/2026/09/797777/",
     "title": "सुदूरपश्चिममा बजेट नआउँदा कर्मचारी दुई महिनादेखि तलबविहीन: दशैं नजिकिँदै गर्दा थपियो चिन्ता",
     "description": "कैलाली। आर्थिक वर्ष २०८३/८४ सुरु भएको दुई महिना बितिसक्दा पनि सुदूरपश्चिम प्रदेश सरकार मातहत कार्यरत कर्मचारीहरूले नियमित तलब पाउन सकेका छैनन्। नयाँ आर्थिक वर्ष सुरु भएपछि कार्यालयका नियमित प्रशासनिक काम तथा सेवा प्रवाहका गतिविधि सञ्चालन भइरहे पनि आवश्यक बजेट पारित र कार्यान्वयन हुन नसक्दा सिङ्गो सरकारी संयन्त्र नै आर्थिक दबाबमा परेको छ। कर्मचारीहरू नियमित रूपमा कार्यालयमा",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-09-19T18:41:57+05:45",
     "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/09/sudurpachim2021-03-04-07-50-43.jpeg",
     "source_name": "DCNEPAL.COM"
@@ -1772,9 +1796,7 @@
     "link": "https://www.lokpath.com/story/906578/",
     "title": "शीतलनिवासमा संविधान दिवसको विशेष समारोह, को-को भए सहभागी ?",
     "description": "काठमाडौं । संविधान दिवसको अवसरमा राष्ट्रपति रामचन्द्र पौडेलले शनिबार शीतलनिवासमा विशेष समारोह आयोजना गरेका छन् । राष्ट्रपति पौडेलको निमन्त्रणामा आयोजित समारोहमा प्रधानमन्त्री बालेन्द्र शाह (बालेन), सरकारका उच्चपदस्थ अधिकारी तथा विभिन्न क्षेत्रका विशिष्ट व्यक्तित्व सहभागी भएका छन् । नेपालको संविधान जारी भएको दिनको सम्झनामा हरेक वर्ष असोज ३ गते संविधान दिवस मनाउने गरिन्छ । यसअघि शुक्रबार",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-09-19T16:48:16+05:45",
     "image_url": "https://www.lokpath.com/wp-content/uploads/2026/09/ramchandra-balen-400x220.jpg",
     "source_name": "LOKPATH.COM"
@@ -2072,24 +2094,6 @@
     "categories": [],
     "pub_date": "2026-09-19T14:30:42+05:45",
     "image_url": "https://www.lokpath.com/wp-content/uploads/2026/09/Untitled-design-95-1789798769-400x220.jpg",
-    "source_name": "LOKPATH.COM"
-  },
-  {
-    "link": "https://newsofnepal.com/2026/09/19/787911/",
-    "title": "मौसम खराब हुँदा रेसुङ्गा विमानस्थलको उडान प्रभावित",
-    "description": "काठमाडौँ । गुल्मीको रेसुङ्गा विमानस्थलबाट हुने नियमित हवाई उडान पछिल्लो तीन महिनादेखि प्रभावित भएको छ। वर्षायाम सुरु भएसँगै बिहानपख बाक्लो हुस्सु लाग्ने तथा मौसम प्रतिकूल हुने गरेका कारण उडान सञ्चालनमा समस्या आएको हो। नेपाल एयरलाइन्स रेसुङ्गा विमानस्थलका स्टेशन प्रमुख सुमन थापाका अनुसार गत जेठ २४ गतेदेखि बिहानको मौसम लगातार प्रतिकूल हुँदा नियमित उडान प्रभावित हुँदै",
-    "categories": [],
-    "pub_date": "2026-09-19T14:24:46+05:45",
-    "image_url": "https://newsofnepal.com/wp-content/uploads/2026/09/resunga-airport-pc-1-150x150.jpg",
-    "source_name": "NEWSOFNEPAL.COM"
-  },
-  {
-    "link": "https://www.lokpath.com/story/906555/",
-    "title": "भदौमा नेपालले गर्‍यो ५ अर्बभन्दा बढीको विद्युत् निर्यात",
-    "description": "काठमाडौं । नेपालले भदौ महिनामा ५ अर्ब ९ करोड २४ लाख रुपैयाँभन्दा बढीको विद्युत् निर्यात गरेको छ । नेपाल विद्युत् प्राधिकरणका अनुसार भदौमा भारत र बङ्गलादेशतर्फ गरी कुल ५६ करोड ५६ लाख ६ हजार ४४३ युनिट विद्युत् निर्यात गरिएको हो । प्राधिकरणले द्विपक्षीय सम्झौता र विद्युत् बजार (एक्सचेन्ज मार्केट) मार्फत विद्युत् बिक्री गरेको जनाएको छ",
-    "categories": [],
-    "pub_date": "2026-09-19T14:22:10+05:45",
-    "image_url": "https://www.lokpath.com/wp-content/uploads/2024/07/electricity-400x220.jpg",
     "source_name": "LOKPATH.COM"
   }
 ]
