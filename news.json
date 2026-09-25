@@ -1295,7 +1295,6 @@
     "title": "टी–२० वरियतामा नेपालको दुई स्थान सुधार",
     "description": "काठमाडौं । नेपाली राष्ट्रिय पुरुष क्रिकेट टोलीले अन्तरराष्ट्रिय क्रिकेट परिषद् (आइसिसी) को टी–२० वरियतामा सुधार गरेको छ । शुक्रबार २०औँ एसियाली खेलकुदअन्तर्गत टेष्ट टोली अफगानिस्तानविरुद्ध ५ विकेटको जित निकाल्दै आइसिसीले ताजा वरियता सार्वजनिक गर्दा नेपालले दुई स्थान सुधार गरेको हो । नेपाल अब टी–२० अन्तरराष्ट्रिय वरियताको चौधौ स्थानमा उक्लिएको छ । यसअघि नेपाल वरियताको सोह्रौँ",
     "categories": [
-      "Breaking News",
       "Sports News"
     ],
     "pub_date": "2026-09-25T19:16:15+05:45",
@@ -1412,7 +1411,6 @@
     "title": "स्याक्म्यानका एक्स–५०००ई विद्युतीय ट्र्याक्टर र डम्प—ट्रक नेपाल आउँदै",
     "description": "काठमाडौं । शंकर ग्रुपअन्तर्गतको जगदम्बा मोटर्सले चीनको व्यावसायिक सवारीसाधन निर्माता स्याक्म्यानका एक्स–५००० ई ६×४ विद्युतीय ट्र्याक्टर र एक्स–५००० ई ६×४ विद्युतीय डम्प ट्रक नेपाल भित्र्याउने भएको छ । भारी तथा व्यावसायिक सवारीसाधनमा विद्युतीय प्रविधिको प्रयोग विस्तार गर्ने उद्देश्यसहित कम्पनीले यी दुई मोडल नेपाली बजारमा ल्याउन लागेको हो । नेपालमा विद्युतीय सवारीसाधनको प्रयोग यात्रुवाहक तथा हलुका",
     "categories": [
-      "Breaking News",
       "Business News"
     ],
     "pub_date": "2026-09-25T19:04:46+05:45",
@@ -1963,17 +1961,6 @@
     "source_name": "RAJDHANIDAILY.COM"
   },
   {
-    "link": "https://nagariknews.nagariknetwork.com/social-affairs/long-distance-vehicle-operations-from-the-far-west-banned-br-32-59.html",
-    "title": "सुदूरपश्चिमबाट लामो दुरीका सवारीसाधन सञ्चालनमा रोक",
-    "description": "भारी वर्षाबाट हुने सम्भावित जोखिमलाई मध्यनजर गर्दै सुदूरपश्चिमबाट चल्ने लामो दुरीका रात्रि बस सञ्चालन रोकिएको छ।...",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-09-25T18:16:07+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1790339441_dhangadhi.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
     "link": "https://nagariknews.nagariknetwork.com/sports/fusion-fight-chapter-1-on-october-24-13-86.html",
     "title": "‘फ्युजन फाइट च्याप्टर १’ असोज २४ गते",
     "description": "फ्रोथ फ्युजनको आयोजनामा हुने प्रतियोगितामा देशभरका २२ जना खेलाडीबीच ११ वटा मुवाथाई भिडन्त हुनेछन्। मुख्य प्रतिस्पर्धामा सुष्मा चौधरी र रजिना विष्ट भिड्नेछन्।...",
@@ -1982,6 +1969,17 @@
     ],
     "pub_date": "2026-09-25T18:16:07+05:45",
     "image_url": "https://images.nagariknewscdn.com/2026/third-party/1790339431_play.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/social-affairs/long-distance-vehicle-operations-from-the-far-west-banned-br-32-59.html",
+    "title": "सुदूरपश्चिमबाट लामो दुरीका सवारीसाधन सञ्चालनमा रोक",
+    "description": "भारी वर्षाबाट हुने सम्भावित जोखिमलाई मध्यनजर गर्दै सुदूरपश्चिमबाट चल्ने लामो दुरीका रात्रि बस सञ्चालन रोकिएको छ।...",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-09-25T18:16:07+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1790339441_dhangadhi.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   },
   {
