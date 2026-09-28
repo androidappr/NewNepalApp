@@ -1,5 +1,16 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/224702",
+    "title": "गुल्मीका अवरुद्ध सडकहरू खुलाउने प्रयास तीव्र",
+    "description": "रमेश विश्वकर्मागुल्मी, असोज १२ गते। भारी वर्षाका कारण गुल्मी जिल्लाका विभिन्न सडक खण्डहरुमा खसेको पहिरो हटाई यातायात सुचारु गर्ने कामलाई तीव्र पारिएको छ। यस जिल्लाको रुद्रवेणी–वामी...",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-09-28T23:35:23+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/385447/conversions/unnamed-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
     "link": "https://gorkhapatraonline.com/news/224701",
     "title": "हावाहुरीले बडिगाडका दर्जनबढी घरमा क्षति",
     "description": "रामकृष्ण बोहराबागलुङ, असोज १२ गते । निरन्तरको वर्षाले ग्रामीण सडक अबरुद्ध बाहेक खासै असर नगरेको पश्चिम बागलुङको बडिगाड गाउँपालिकामा चलेको तीव्र गतिको हावाहुरीले ठुलो क्षति गरेको छ...",
@@ -139,7 +150,9 @@
     "link": "https://www.ratopati.com/story/595647/kaligandaki-corridor-blocked-import-export-at-korala-border-crossing-affected-efforts-to-open-within-3-to-6-days",
     "title": "कालीगण्डकी कोरिडोर अवरुद्ध : कोरला नाकाको आयात–निर्यात प्रभावित, ३ देखि ६ दिनभित्र खुलाउने प्रयास",
     "description": "काठमाडौँ । लगातारको वर्षाका कारण राष्ट्रिय राजमार्ग अन्तर्गतको कालीगण्डकी कोरिडोर (मालढुङ्गा–बेनी–जोमसोम–कोरला) सडक खण्ड अवरुद्ध भएको छ । गत असोज ८ गतेदेखि परेको अविरल वर्षाका कारण विभिन्न स्थानमा पहिरो जानुका साथै सडक कटान र पुलको पहुँच",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-09-28T22:34:38+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/kaligandaki-koridor2_aFbItkKq89.jpg",
     "source_name": "RATOPATI.COM"
@@ -1594,7 +1607,6 @@
     "title": "रोग निगरानी प्रणाली देशभर विस्तार हुँदै, तीन प्रदेशका स्थानीय तहलाई ३५४ ट्याब्लेट",
     "description": "काठमाडौं रोगको प्रकोप तथा महामारीको सूचना तत्काल संकलन, प्रवाह र विश्लेषण गरी नियन्त्रणका उपाय प्रभावकारी बनाउन स्वास्थ्य सेवा विभागले रोग निगरानी प्रणालीलाई देशभर विस्तार गर्ने भएको छ। यसका लागि विश्व स्वास्थ्य संगठन (डब्लुएचओ) ले मधेश, लुम्बिनी र कर्णाली प्रदेशका स्थानीय तहमा वितरण गर्न ३५४ वटा ट्याब्लेट स्वास्थ्य सेवा विभागलाई हस्तान्तरण गरेको छ। पाण्डमिक फण्डको आर्थिक",
     "categories": [
-      "Breaking News",
       "Health News"
     ],
     "pub_date": "2026-09-28T19:33:19+05:45",
@@ -2112,16 +2124,5 @@
     "pub_date": "2026-09-28T18:42:54+05:45",
     "image_url": null,
     "source_name": "CLICKMANDU.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/595612/a-workshop-on-research-capacity-development-led-by-professor-irena-vodenska-of-kendraston-university-was-held-in-kathmandu",
-    "title": "अनुसन्धान क्षमता विकासमा बोस्टन विश्वविद्यालयकी प्राध्यापक इरेना भोडेन्स्काको नेतृत्वमा काठमाडौंमा कार्यशाला सम्पन्न",
-    "description": "काठमाडौँ। नेपालमा अनुसन्धान संस्कृति प्रवर्द्धन तथा अनुसन्धानकर्ताको क्षमता अभिवृद्धि गर्ने उद्देश्यले मोडेल इन्स्टिच्युट अफ टेक्नोलोजी (MIT), कमलादीमा अनुसन्धानसम्बन्धी दुई महत्वपूर्ण पाँच दिने कार्यशाला सम्पन्न भएका छन्। सक्ष्यम रिसर्च इन्स्टिच्युटको सहकार्यमा आयोजित ‘Causal Inference’ र ‘Research in",
-    "categories": [
-      "Business News"
-    ],
-    "pub_date": "2026-09-28T18:41:37+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/mit_0HWl2QFQCL.webp",
-    "source_name": "RATOPATI.COM"
   }
 ]
