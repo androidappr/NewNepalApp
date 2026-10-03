@@ -1,5 +1,27 @@
 [
   {
+    "link": "https://www.ratopati.com/story/596924/development-and-construction-work-in-mustang-affected-by-fuel-shortage",
+    "title": "इन्धन अभाव हुँदै गएपछि मुस्ताङमा विकास निर्माणका काम प्रभावित",
+    "description": "मुस्ताङ । राष्ट्रिय गौरवको बेनी–जोमसोम सडक अवरुद्ध भएसँगै मुस्ताङमा पेट्रोलियम पदार्थ इन्धनको अभाव हुन थालेको छ, जसका कारण राष्ट्रिय गौरवको बेनी–जोमसोम–कोरला सडक तथा सङ्घीय, प्रादेशिक र स्थानीय तहका विकास निर्माण योजनाका काम प्रभावित भएको छ",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-03T19:24:42+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/mustang-(17)_HAsL1srVsd.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/596923/459-disaster-incidents-in-madhesh-in-2-months-92-deaths",
+    "title": "मधेसमा २ महिनामा ४५९ विपद्का घटना : ९२ जनाको मृत्यु",
+    "description": "जनकपुरधाम । मधेस प्रदेशमा चालु आर्थिक वर्ष २०८३/८४ को पहिलो दुई महिनामै विभिन्न विपद्का ४५९ घटना भएका छन् ।\n\nती घटनामा परी ९२ जनाको मृत्यु भएको छ भने ५०० भन्दा बढी परिवार प्रभावित भएका छन् ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-03T19:16:12+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/madhesh_kahzSJNFtQ.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://gorkhapatraonline.com/news/225302",
     "title": "लागुऔषधसहित चार जना पक्राउ",
     "description": "राधा लुइटेल फिदिम, असोज १७ गते । पाँचथरमा दुई हजार पाँच सय ४० वटा लागु औषधका रुपमा प्रयोग हुने ट्याब्लेटसहित चार जना पक्राउ परेका छन् । पक्राउ पर्नेमा हिलिहाङ ७ भारपा निवासी उज्वल...",
@@ -89,6 +111,15 @@
     "pub_date": "2026-10-03T19:09:21+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/csRaGvCc42.jpg",
     "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://shilapatra.com/detail/196154",
+    "title": "म्याग्दीका पहिरोप्रभावित क्षेत्रमा भूगर्भविद्काे टोलीले थाल्याे स्थलगत अध्ययन",
+    "description": "टोलीले बेनी बजारको सुरक्षाका लागि चुनौती बनेका खरेनी खोल्सा, खोरिया पाखो र क्याम्पस चोकमाथिको पहिरोग्रस्त क्षेत्रमा पुगेर प्राविधिक अध्ययन गरेको बेनी नगरपालिकाका प्रमुख सुरत केसीले जानकारी दिए ।",
+    "categories": [],
+    "pub_date": "2026-10-03T19:09:00+05:45",
+    "image_url": null,
+    "source_name": "SHILAPATRA.COM"
   },
   {
     "link": "https://bizmandu.com/content/20261003190554.html",
@@ -266,17 +297,6 @@
     "pub_date": "2026-10-03T18:36:23+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/victim.jpg",
     "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/225297",
-    "title": "मधेसमा दुई महिनामा ४५९ विपद्का घटना, ९२ को मृत्यु",
-    "description": "जनकपुरधाम, असोज १७ गते । मधेस प्रदेशमा चालु आर्थिक वर्ष २०८३-८४ को पहिलो दुई महिनामै विपद्का ४५९ घटना भएका छन् । ती घटनामा परी ९२ जनाको मृत्यु भएको छ भने पाँच सय भन्दा बढी परिवार प...",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-03T18:36:13+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/386292/conversions/death-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
     "link": "https://www.setopati.com/kinmel/information-technology/399871",
@@ -1391,9 +1411,7 @@
     "link": "https://newsofnepal.com/2026/10/03/789858/",
     "title": "विमानस्थलको ३ किमि क्षेत्रमा वधशाला र फोहोर थुपार्न रोक",
     "description": "काठमाडौं । हवाई उडानमा चराचुरुङ्गी तथा वन्यजन्तुबाट हुने जोखिम नियन्त्रण गर्न सरकारले विमानस्थल वरपर कडा वातावरणीय मापदण्ड प्रस्ताव गरेको छ। सङ्घीय संसद्मा पेस भएको नेपाल हवाई सेवा प्राधिकरणको स्थापना र व्यवस्था गर्न बनेको विधेयक, २०८३ मा विमानस्थल र त्यसको तीन किलोमिटर वरिपरि अव्यवस्थित रूपमा वधशाला स्थापना तथा फोहोरमैला थुपार्न रोक लगाउने व्यवस्था गरिएको छ। विधेयकको",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-03T16:39:25+05:45",
     "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/Airport-Humla-Kalikot-150x150.jpg",
     "source_name": "NEWSOFNEPAL.COM"
@@ -2099,26 +2117,5 @@
     "pub_date": "2026-10-03T15:37:10+05:45",
     "image_url": "https://www.lokpath.com/wp-content/uploads/2026/10/surya-jyoti-alfa-plus-400x220.jpg",
     "source_name": "LOKPATH.COM"
-  },
-  {
-    "link": "https://shilapatra.com/detail/196138",
-    "title": "डोटीमा खोलामा बगेर एक जना बेपत्ता, एक महिलाको शव फेला",
-    "description": "डोटीमा सायली खोलामा बगेर एक जना बेपत्ता भएका छन् भने उनीसँगै बगेकी एक महिलाको शव फेला परेको छ ।",
-    "categories": [],
-    "pub_date": "2026-10-03T15:36:00+05:45",
-    "image_url": null,
-    "source_name": "SHILAPATRA.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/politics/jitiya-festival-strengthens-respect-for-women-and-family-unity-president-51-59.html",
-    "title": "जितीया पर्वले महिलाप्रतिको सम्मान र पारिवारिक एकता बलियो बनाउँछ: राष्ट्रपति",
-    "description": "जितीया पर्वले नेपाली समाजमा पारिवारिक एकता, सामाजिक सद्भाव र महिलाप्रतिको श्रद्धालाई थप बलियो बनाएको राष्ट्रपति रामचन्द्र पौडेलले बताएका छन्।...",
-    "categories": [
-      "Breaking News",
-      "Political News"
-    ],
-    "pub_date": "2026-10-03T15:33:48+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1788482059_Ramchandra.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   }
 ]
