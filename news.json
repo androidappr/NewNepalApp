@@ -1,5 +1,14 @@
 [
   {
+    "link": "https://www.ratopati.com/story/598051/rain-damages-rice-crops",
+    "title": "वर्षाले धानबालीमा क्षति",
+    "description": "बाँके । बुधबार परेको वर्षाका कारण बाँकेमा धानबालीमा ठुलो क्षति पुगेको छ । धेरै ठाउँमा धानबाली ढलेर किसानलाई समस्या भएको छ ।\n\nहावाहुरीसहितको वर्षाले पाकेको बीउ धानमा ठुलो क्षति पुर्‍याएको राप्ती सोनारीको साकार कृषि सहकारी संस्थाका",
+    "categories": [],
+    "pub_date": "2026-10-08T05:03:59+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/dhan-bali-ktm-(4)_iMl2Fo16sc.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/598049/action-will-be-taken-against-those-who-exceed-the-specified-fare-federation",
     "title": "तोकिएको भाडाभन्दा बढी लिए कारबाही हुन्छ: महासङ्घ",
     "description": "काठमाडौँ । नेपाल यातायात व्यवसायी राष्ट्रिय महासङ्घले चाडपर्वको समयमा तोकिएकोभन्दा बढी सवारी भाडा नलिन सम्बद्ध सबैलाई आग्रह गरेको छ ।\n\nमहासङ्घका महासचिव डेकनाथ गौतमका अनुसार सरकारले तोेकेकोभन्दा बढी भाडा लिने सवारीसाधनलाई कारबाही गरिने जानकारी दिए ।",
@@ -84,9 +93,7 @@
     "link": "https://www.ratopati.com/story/598044/suspect-in-shooting-in-kathmandus-kandaghari-arrested",
     "title": "काठमाडौँको काँडाघारीमा गोली हानेर फरार अभियुक्त पक्राउ",
     "description": "काठमाडौँ । काठमाडौँको काँडाघारीमा प्रहरीले गोली चलाएर चोरी तथा डाँका मुद्दाका एक फरार अभियुक्तलाई पक्राउ गरेको छ । पक्राउ पर्नेमा आयन माझी रहेका छन् । जिल्ला प्रहरी परिसर काठमाडौँका प्रहरी प्रमुख  दीलिप घिमिरेका अनुसार चोरी तथा",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-07T23:22:39+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/arrest_pakrau_jail_cartoon_xlgnwxprtw_ESXMmoARYl.webp",
     "source_name": "RATOPATI.COM"
@@ -141,7 +148,6 @@
     "title": "काठमाडौँको काँडाघारीमा गोली चल्यो, लुटेरा आर्यन माझी पक्राउ",
     "description": "गोली हानेर लुटेरा आर्यन माझीलाई पक्राउ गरिएको जिल्ला प्रहरी परिसर काठमाडौँका एसएसपी दीलिप घिमिरेले जानकारी दिए।",
     "categories": [
-      "Breaking News",
       "Crime & Investigation",
       "National News"
     ],
@@ -1997,17 +2003,5 @@
     "pub_date": "2026-10-07T19:00:00+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/umesh-dahal-banner_LhGL5rXHbQ.webp",
     "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.setopati.com/politics/400283",
-    "title": "कांग्रेस महाधिवेशनमा चिट बाँड्न प्रतिबन्ध, गगनले भने– अब पार्टीमा कुनै गुट छैन",
-    "description": "नेपाली कांग्रेसको १५औं महाधिवेशनअन्तर्गत बिहीबार बिहान १० बजेदेखि अपराह्न ५ बजेसम्म मतदान हुने भएको छ।",
-    "categories": [
-      "Breaking News",
-      "Political News"
-    ],
-    "pub_date": "2026-10-07T19:00:00+05:45",
-    "image_url": null,
-    "source_name": "SETOPATI.COM"
   }
 ]
