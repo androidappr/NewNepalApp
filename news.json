@@ -1,5 +1,37 @@
 [
   {
+    "link": "https://www.bbc.com/nepali/articles/c6dxwg8lpjkdo?at_medium=RSS&at_campaign=rss",
+    "title": "बिहारमा डुङ्गा पल्टिँदा कम्तीमा १३ जना बालबालिकाको मृत्यु",
+    "description": "भारतको बिहार राज्यको वैशाली जिल्लामा मङ्गलवार राति गङ्गा नदीमा एउटा डुङ्गा पल्टिँदा कम्तीमा १३ जना बालबालिकाको मृत्यु भएको अधिकारीहरूले बताएका छन्।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-14T07:43:42+05:45",
+    "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/ca44/live/8bdaf310-c771-11f1-9a39-31b474234113.jpg",
+    "source_name": "BBC.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/599483/best-western-plus-kathmandu-hotel-wins-sata-2026-silver-award-unveils-special-dashain-targeted-offers",
+    "title": "बेस्ट वेस्टर्न प्लस काठमाडौँ होटलले जित्यो 'साटा २०२६' सिल्भर अवार्ड, दसैँ लक्षित विशेष अफरसमेत सार्वजनिक",
+    "description": "काठमाडौँ । बेस्ट वेस्टर्न प्लस काठमाडौँ होटलले 'लिडिङ एयरपोर्ट होटल' अवार्ड जितेको छ । काठमाडौँको पिंगलास्थानमा अवस्थित उक्त होटलले साउथ एसियान ट्राभल अवार्ड्स (साटा) २०२६ मा उक्त विधामा अवार्ड जितेको हो । \n\nहालै मालदिभ्सको हुलहमालेस्थित बार्सेलो",
+    "categories": [
+      "Breaking News",
+      "Economic News"
+    ],
+    "pub_date": "2026-10-14T07:42:31+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/cc_OjRRRpyYpt.webp",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/10/2038850/wild-elephant-found-dead-in-udaipur",
+    "title": "उदयपुरमा जंगली हात्ती मृत फेला",
+    "description": "‘सानो दारे’ नामले चिनिने करिब २०–२५ वर्षे हात्ती धानखेतमा मंगलबार मृत अवस्थामा भेटिएको हो ।",
+    "categories": [],
+    "pub_date": "2026-10-14T07:39:51+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2018/07/elephant-123.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
     "link": "https://www.dcnepal.com/2026/10/805441/",
     "title": "चार देशका लागि प्रस्तावित राजदूतको संसदीय सुनुवाइ आज, १३ मुलुकका लागि नाम सिफारिस गरिने",
     "description": "काठमाडौं। संसदीय सुनुवाइ समितिले चार विभिन्न देशका लागि प्रस्तावित नेपाली राजदूतहरूको संसदीय सुनुवाइ प्रक्रिया अगाडि बढाउने भएको छ। समितिको बैठक बुधबार बिहान ८:३० बजे सिंहदरबारस्थित सार्वजनिक लेखा समितिको सभाकक्षमा बोलाइएको छ। बैठकमा लोकतान्त्रिक समाजवादी गणतन्त्र श्रीलंकाका लागि प्रस्तावित राजदूत डा. मञ्चला कुमारी झा, मलेसियाका लागि प्रस्तावित चुडामणि खरेल, जापानका लागि प्रस्तावित जीज्ञान कुमार थापा र",
@@ -191,7 +223,9 @@
     "link": "https://www.sidhakura.com/detail/29980",
     "title": "बिहारको राघोपुरमा डुङ्गा पल्टिँदा १३ बालबालिकाको मृत्यु",
     "description": "बिहारको वैशाली जिल्लाको राघोपुर थाना क्षेत्रअन्तर्गत मंगलबार राति गंगा नदीमा डुङ्गा पल्टिँदा कम्तीमा १३ बालबालिकाको ज्यान गएको छ।",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-10-14T07:20:10+05:45",
     "image_url": "https://www.sidhakura.com/uploads/posts/bihar-boat-accident-1791941699.jpg",
     "source_name": "SIDHAKURA.COM"
@@ -1986,34 +2020,5 @@
     "pub_date": "2026-10-13T20:32:15+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/budhigandaki-badhi1248.jpg",
     "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.dcnepal.com/2026/10/805387/",
-    "title": "सुदूरपश्चिममा हट्यो ‘बजेट शून्यता’, प्रतिपक्षीको बहिष्कारबीच बजेट पारित",
-    "description": "सुदूरपश्चिम। सुदूरपश्चिम प्रदेशमा बजेट शून्यताको अवस्था हटेको छ। प्रदेश सभाको आजको बैठकले प्रमुख प्रतिपक्षी दल नेपाली काँग्रेसको बहिष्कारकाबीच आर्थिक वर्ष २०८३/८४ को बजेट बहुमतले पारित भएसँगै करिब तीन महिनादेखिको बजेट शून्यताको अवस्था हटेको हो। आइतबार आर्थिक मामिलामन्त्री चक्रबहादुर मल्लले प्रदेशसभामा रु. ३७ अर्ब ७० करोड बराबरको बजेट प्रस्तुत गरेका थिए। सोही दिन बजेट प्रदेशसभामा टेबल",
-    "categories": [
-      "Political News"
-    ],
-    "pub_date": "2026-10-13T20:30:23+05:45",
-    "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/10/sudurpachim-pradesha-sava.jpg",
-    "source_name": "DCNEPAL.COM"
-  },
-  {
-    "link": "https://www.sidhakura.com/detail/29967",
-    "title": "२ दिनमा ९ जना प्रस्तावित राजदूतको सुनुवाइ, बाँकीकाे बुधबार",
-    "description": "बैठकमा प्रस्तावित राजदूतले आ–आफ्ना कार्ययोजना प्रस्तुत गरेका थिए । समितिको सोमबारको बैठकमा भारत, चीन, अमेरिका र बेलायतका प्रस्तावित राजदूतको सुनुवाइ भएको थियो ।",
-    "categories": [],
-    "pub_date": "2026-10-13T20:29:00+05:45",
-    "image_url": "https://www.sidhakura.com/uploads/posts/Samsadiya-sunuwai-samiti-1791902653.jpg",
-    "source_name": "SIDHAKURA.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/599423/nepali-congress-election-committee-to-discuss-whether-to-grant-certificate-to-binita-khadka",
-    "title": "विनिता खड्कालाई प्रमाणपत्र दिने कि नदिनेबारे कांग्रेस निर्वाचन समितिले छलफल गर्ने",
-    "description": "काठमाडौँ । इजरायलमा केयर गिभर पठाउने प्रकरणमा ठगीको आरोपमा पक्राउ परेकी विनिता खड्कालाई नेपाली कांग्रेसको केन्द्रीय सदस्यमा निर्वाचित भएको प्रमाणपत्र दिने कि नदिने भन्ने विषयमा निर्वाचन समितिले छलफल गर्ने भएको छ।\n\nनेपाली कांग्रेसको १५औँ महाधिवेशनअन्तर्गत महिला",
-    "categories": [],
-    "pub_date": "2026-10-13T20:28:21+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/binita_yCF2mYQxwO.webp",
-    "source_name": "RATOPATI.COM"
   }
 ]
