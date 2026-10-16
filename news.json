@@ -1,5 +1,23 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/226870",
+    "title": "कलाद्वारा दैविक सौन्दर्य",
+    "description": "काठमाडौँ, असोज ३० गते । सिद्धार्थ आर्ट ग्यालरीको ३९ औँ वार्षिकोत्सवका अवसरमा ३५ जना कलाकारको कृति समेटेर ‘दैविक सौन्दर्य’ शीर्षकमा कला प्रदर्शनी सुरु भएको छ । यस प्रदर्शनीमा काठमाड...",
+    "categories": [],
+    "pub_date": "2026-10-16T07:24:27+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/388376/conversions/rajdhanima-kala-gatibidhi-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/226869",
+    "title": "खेतमै उम्रियो धान",
+    "description": "गुलरिया समाचारदातागुलरिया (बर्दिया), असोज ३० गते । असोजमा आएको हावाहुरी र वर्षाका कारण पाकेर ढलेको धान खेतमै उम्रिएपछि बर्दियाका किसानले ठुलो क्षति बेहोर्नु परेको छ । खेतमा पानी जम...",
+    "categories": [],
+    "pub_date": "2026-10-16T07:17:57+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/388374/conversions/2112-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/599970/disease-outbreak-due-to-planting-of-unregistered-sona-mansuli-rice-variety",
     "title": "दर्ता नै नभएको सोना मन्सुली जातको धान लगाउँदा रोगको प्रकोप",
     "description": "जनकपुरधाम । धानबालीमा विभिन्न रोगको संक्रमण फैलिएपछि धनुषाका किसान यस वर्ष उत्पादन घट्ने चिन्तामा परेका छन् । जिल्लामा रोपाइँ भएको धानबालीमध्ये करिब १० प्रतिशतभन्दा बढीमा रोगको प्रकोप देखिएकाले यस वर्ष उत्पादनमा गिरावट आउन सक्ने अनुमान गरिएको",
@@ -40,7 +58,7 @@
   },
   {
     "link": "https://shilapatra.com/detail/197078",
-    "title": "दसैँ आएसँगै काठमाडौं छोड्नेको भिड (तस्वीरहरू)",
+    "title": "दसैँ आएसँगै काठमाडौं छोड्‌नेको भिड (तस्वीरहरू)",
     "description": "दसैँ सुरु भएसँगै काठमाडौं उपत्यकाबाट आफ्नो गाउँघर फर्किने यात्रुहरूको चहलपहल बढेको छ ।",
     "categories": [],
     "pub_date": "2026-10-16T07:10:00+05:45",
@@ -2028,27 +2046,5 @@
     "pub_date": "2026-10-15T19:20:00+05:45",
     "image_url": null,
     "source_name": "SHILAPATRA.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/599912/the-number-of-local-levels-to-establish-land-banks-has-reached-9-the-ministry-has-approved-four-more-municipalities",
-    "title": "भूमि बैंक स्थापना गर्ने स्थानीय तहको सङ्ख्या ९ पुग्यो, थप चार पालिकालाई मन्त्रालयले दियो स्वीकृति",
-    "description": "काठमाडौँ। भूमि व्यवस्था, सहकारी, सङ्घीय मामिला तथा सामान्य प्रशासन मन्त्रालयले थप चार स्थानीय तहमा भूमि बैंक स्थापना गर्न स्वीकृति दिएको छ।\n\nमन्त्रालयले गुल्मीको सत्यवती गाउँपालिका, मदाने गाउँपालिका, धुर्कोट गाउँपालिका र पाल्पाको रिब्दीकोट गाउँपालिकालाई भूमि बैंक स्थापना",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-15T19:17:43+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/bhumi-sahakari-mantralaya_ZnCEebu2Mi.jpg",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2039921/fruit-prices-rise-inflation-reaches-6-34-percent",
-    "title": "फलफूलको भाउ बढ्दा मूल्यवृद्धि ६.३४ प्रतिशत पुग्यो",
-    "description": "चालु आर्थिक वर्षको भदौमा फलफूलको मूल्य सबैभन्दा धेरै बढेको छ। फलफूलको मूल्य बढ्दा महँगी ६.३४ प्रतिशत पुगेको हो।",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-10-15T19:16:31+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2025/10/fruits.jpg",
-    "source_name": "ONLINEKHABAR.COM"
   }
 ]
