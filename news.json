@@ -1,9 +1,69 @@
 [
   {
+    "link": "https://www.ratopati.com/story/600420/clashes-on-afghanistan-pakistan-border-both-sides-have-their-own-claims",
+    "title": "अफगानिस्तान-पाकिस्तान सीमामा झडप, दुवै पक्षका आ-आफ्नै दाबी",
+    "description": "काठमाडौँ । अफगानिस्तान र पाकिस्तानको सीमा क्षेत्रमा दुई देशका सुरक्षा बलबिच झडप भएको खबर सार्वजनिक भएको छ । यस घटनालाई लिएर दुवै पक्षले फरक–फरक दाबी प्रस्तुत गरेका छन् । अफगानिस्तानको सरकारी समाचार संस्था 'बख्तर न्युज एजेन्सी'",
+    "categories": [
+      "International News"
+    ],
+    "pub_date": "2026-10-18T19:43:11+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/pakistan-afgan_W5pXphOldX.webp",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://www.setopati.com/politics/401082",
+    "title": "अमेरिकालाई इरानको प्रस्ताव– सर्त स्वीकारे ६ दिनमै होर्मुज जलमार्ग खोल्छौं",
+    "description": "तेल निर्यातमाथिको प्रतिबन्ध र बन्दरगाहमाथिको अमेरिकी नाकाबन्दी हटाउनुपर्ने माग, सात सर्तमा सहमति नजुट्दा वार्ता अवरूद्ध",
+    "categories": [
+      "Breaking News",
+      "Political News"
+    ],
+    "pub_date": "2026-10-18T19:40:47+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/international/discussions-continue-on-iran-s-seven-day-proposal-to-open-the-strait-of-hormuz-98-13.html",
+    "title": "होर्मुज जलमार्ग खोल्ने इरानको सात दिने प्रस्तावमाथि छलफल जारी",
+    "description": "इरानले ‘स्ट्रेट अफ होर्मुज’ पुनः खोल्न अमेरिकासमक्ष प्रस्तुत गरेको सात दिने प्रस्ताव अझै कायम रहेको जनाएको छ।...",
+    "categories": [
+      "Breaking News",
+      "International News"
+    ],
+    "pub_date": "2026-10-18T19:40:14+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1790566723_Iran%20Respond%20Trump.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://www.setopati.com/social/401069",
+    "title": "दसैंमा कुकुरका लागि पनि बसको टिकट, होस्टेलमा राख्न दैनिक हजार रूपैयाँसम्म",
+    "description": "दसैं आउनुभन्दा केही समयअघि मात्र उनीहरूले कुकुर किनेका थिए। पोखरा जाँदा काठमाडौंको घर रित्तो हुने भएपछि समस्या आइलाग्यो — कुकुरलाई कहाँ छाड्ने?",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-10-18T19:36:02+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
+  },
+  {
+    "link": "https://www.setopati.com/social/401079",
+    "title": "दसैंमा खासै चहलपहल छैन पृथ्वी राजमार्ग, सामान्य अवस्थामा छन् सवारी आउजाउ (तस्बिरहरू)",
+    "description": "बडादसैंमा राजधानीबाट गृहजिल्ला फर्कने यात्रुको आउजाउ निरन्तर छ। तर, पृथ्वी राजमार्गमा विगतका वर्षहरूको तुलनामा सवारीको चाप निकै घटेको छ।",
+    "categories": [
+      "Breaking News",
+      "National News"
+    ],
+    "pub_date": "2026-10-18T19:35:00+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
+  },
+  {
     "link": "https://www.onlinekhabar.com/2026/10/2041266/suspension-bridge-reconnects-dhunge-and-trishuli-bazaars-photos",
     "title": "झोलुङगे पुलले फेरि जोड्यो ढुङ्गे र त्रिशूली बजार (तस्वीरहरू)",
     "description": "पुल बगाएपछि आवतजावतमा समस्या भोग्दै आएका स्थानीयलाई झोलुङ्गे पुल बनेसँगै केही राहत मिलेको छ । यसअघि नदी वारपार गर्न कठिनाइ भोग्दै आएका स्थानीय तथा पैदल यात्रुका लागि पुल उपयोगी बनेको छ ।",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-10-18T19:32:05+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/trishuli-dhunge-bazar-1.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -68,6 +128,7 @@
     "title": "‘स्ट्रेट अफ होर्मुज’खोल्ने इरानको सातदिने योजना अझै छलफलमै",
     "description": "‘स्ट्रेट अफ होर्मुज’ पुनः खोल्न इरानले प्रस्ताव गरेको सातदिने योजना अझै छलफलका क्रममा रहेको इरानी विदेशमन्त्री सैयद अब्बास अराघचीले बताएका छन् ।\n\nइराकको राजधानी बग्दादमा आयोजित इस्लामिक सहयोग सङ्गठन (ओआइसी) को विदेशमन्त्री परिषद्को ५२औँ सत्रका क्रममा",
     "categories": [
+      "Breaking News",
       "International News"
     ],
     "pub_date": "2026-10-18T19:17:30+05:45",
@@ -175,7 +236,9 @@
     "link": "https://www.ratopati.com/story/600416/no-traffic-on-prithvi-highway-during-dashain-photos",
     "title": "दसैँमा पृथ्वी राजमार्गमा छैन चहलपहल, तस्बिरहरू",
     "description": "काठमाडौँ। बडादसैँमा राजधानीबाट गृहजिल्ला फर्कने यात्रुको आउजाउ निरन्तर छ। तर, पृथ्वी राजमार्गमा विगतका वर्षहरूको तुलनामा सवारीको चाप निकै घटेको छ। \n\nदसैँको समय भएकाले सडक किनारका सानातिना खानपिनका पसल तथा होटलहरू प्रायः बन्द छन् । मलेखु क्षेत्रका",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-10-18T19:01:35+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/05-prithivi-highway_npl-8_osPWJ5wHJy.webp",
     "source_name": "RATOPATI.COM"
@@ -220,6 +283,15 @@
     "pub_date": "2026-10-18T18:56:41+05:45",
     "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2fba/live/51ffa0b0-c950-11f1-bc2e-018d645d8d21.jpg",
     "source_name": "BBC.COM"
+  },
+  {
+    "link": "https://www.setopati.com/art/music/401063",
+    "title": "गोठको पिङ, हजुरबुवाको माया र मेरो दसैं",
+    "description": "अहिले दसैंको खुसी पनि पहिलेको जस्तो नहुँदोरहेछ। बाल्यकालमा पाँच–दस रूपैयाँ दक्षिणा पाउँदा पनि कति खुसी हुन्थ्यौं!",
+    "categories": [],
+    "pub_date": "2026-10-18T18:53:00+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
   },
   {
     "link": "https://www.ratopati.com/story/600415/why-are-the-worlds-major-financial-powers-worried-about-china-and-ai",
@@ -894,15 +966,6 @@
     "pub_date": "2026-10-18T16:53:01+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/Press-Picture.jpeg",
     "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.setopati.com/art/music/401063",
-    "title": "त्यो वर्ष परिवारबाट टाढा भएर दसैं मनाउँदा आँसु झर्‍यो",
-    "description": "अहिले दसैंको खुसी पनि पहिलेको जस्तो नहुँदोरहेछ। बाल्यकालमा पाँच–दस रूपैयाँ दक्षिणा पाउँदा पनि कति खुसी हुन्थ्यौं!",
-    "categories": [],
-    "pub_date": "2026-10-18T16:53:00+05:45",
-    "image_url": null,
-    "source_name": "SETOPATI.COM"
   },
   {
     "link": "https://www.onlinekhabar.com/2026/10/2041223/priyagold-biscuits-banned-in-nepal-after-cattle-feed-found",
@@ -2111,60 +2174,6 @@
     "description": "विराटनगर । इलामको सूर्योदय नगरपालिका–१२, आठघरेका मदन राईको परिवारलाई अकबरे खुर्सानीले वार्षिक लाखौँ रुपैयाँ आम्दानी दिइरहेको छ । करिब १० रोपनीमा गरिएको खेतीबाट गत वर्ष उनले दाना र बीउ बेचेरै २० लाख रुपैयाँ आम्दानी गरे । अकबरेको व्यावसायिक खेतीमा एक दशकदेखि निरन्तर लागेका राईका लागि अहिले यो खेती आम्दानीको स्रोत मात्र होइन, पहिचान नै बनेको",
     "categories": [],
     "pub_date": "2026-10-18T13:28:00+05:45",
-    "image_url": null,
-    "source_name": "CLICKMANDU.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/arts/tankanath-dahal-s-memorial-book-unveiled-93-78.html",
-    "title": "टङ्कनाथ दाहालको स्मृतिग्रन्थ लोकार्पण",
-    "description": "हाचेकाली दाहाल समाज, काठमाडौंद्वारा प्रकाशित उक्त ग्रन्थमा टङ्कनाथ दाहालको जीवनी, योगदान र तत्कालीन खोटाङको सामाजिक, शैक्षिक तथा राजनीतिक परिवेश समेटिएको छ।...",
-    "categories": [],
-    "pub_date": "2026-10-18T13:27:05+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1792309303_piccccs.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2029856/drinking-alcohol-with-meat-can-cause-a-bone-to-get-stuck-in-the-throat-what-to-do",
-    "title": "मासुसँगै रक्सी खाँदा अड्किन सक्छ घाँटीमा हड्डी, के गर्ने ?",
-    "description": "हड्डी अड्किएको आशंका भए पनि बाहिरबाट हेरेर त्यसको स्थान र गम्भीरता थाहा पाउन सकिँदैन । त्यसैले लक्षण देखिएमा घरमै पर्खेर बस्नु हुँदैन ।",
-    "categories": [
-      "Health News"
-    ],
-    "pub_date": "2026-10-18T13:25:47+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/meat-choked-1.jpg",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.sidhakura.com/detail/30139",
-    "title": "महाअष्टमीमा शक्तिपीठमा भक्तजनको घुइँचो",
-    "description": "बडादसैँअन्तर्गत नवरात्रको आठौँ दिन महाअष्टमीका अवसरमा काठमाडौं उपत्यकासहित देशभरका शक्तिपीठ तथा देवी मन्दिरमा भक्तजनको घुइँचो लागेको छ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-18T13:23:42+05:45",
-    "image_url": "https://www.sidhakura.com/uploads/posts/PRO_KTM_RSS_1_7R9A8827-1792309089.jpg",
-    "source_name": "SIDHAKURA.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/sports/west-indies-all-rounder-russell-to-play-npl-for-biratnagar-kings-99-86.html",
-    "title": "वेस्ट इन्डिजका अलराउन्डर रसेलले विराटनगर किङ्सबाट एनपीएल खेल्ने",
-    "description": "एनपीएलको लागि विराटनगर किङ्सले वेस्ट इन्डिजका अलराउन्डर आन्द्रे रसेललाई अनुबन्ध गरेको छ।",
-    "categories": [
-      "Breaking News",
-      "Sports News"
-    ],
-    "pub_date": "2026-10-18T13:22:44+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1792309022_andrew%20russel.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://clickmandu.com/2026/10/500666.html",
-    "title": "दशैंमा घर होइन, काम रोज्न बाध्य पेसाकर्मी",
-    "description": "“वर्षमा दिनको यो बडादशैंकमेरो लाइएनदेश र जनता भन्दाभन्दैघर जान पाइएनधानकै बाला झुलाउँला मायालाई बोलाउँला……” दशैं नजिकिएसँगै यो गीत हामीले हाम्रो फोन स्क्रिनको रिलमा देख्छौं; नभए पनि टेलिभिजनको स्क्रिन होस् वा रेडियोमा सुरक्षाकर्मीका पीडा र कर्तव्य समेटिएका गीतहरू फेरि बज्न थाल्छन्। सशस्त्र प्रहरी बल नेपालको ‘समर्पण राष्ट्रका लागि’ युट्युब च्यानलमा सार्वजनिक गरिएको यो गीतले देशकै ठूलो",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-10-18T13:17:35+05:45",
     "image_url": null,
     "source_name": "CLICKMANDU.COM"
   }
