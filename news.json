@@ -1,5 +1,37 @@
 [
   {
+    "link": "https://www.imagekhabar.com/news/561302/",
+    "title": "विश्वकप लिग-२ : ओमानसँग भिड्दै नेपाल",
+    "description": "काठमाडौँ । आईसीसी क्रिकेट विश्वकप लिग–२ अन्तर्गत एकदिवसीय (ओडीआई) शृङ्खलाको अन्तिम खेलमा नेपालले आज घरेलु टोली ओमानको सामना गर्दै छ। ओमानको अल अमेरतस्थित क्रिकेट ग्राउन्ड (मिनिस्ट्री टर्फ १) मा हुने यो खेल नेपाली समय अनुसार बिहान ११:१५ बजेदेखि सुरु हुनेछ। लिग-२ को अङ्कतालिकामा शीर्ष ६ भित्र अटाउँदै ओडीआई मान्यता कायम राख्ने होडमा रहेको नेपालका लागि",
+    "categories": [
+      "Breaking News",
+      "National News"
+    ],
+    "pub_date": "2026-10-19T09:54:15+05:45",
+    "image_url": "https://www.imagekhabar.com/wp-content/uploads/2026/09/nepali-toli-1.jpg",
+    "source_name": "IMAGEKHABAR.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/international/president-says-after-violent-protests-in-france-we-are-ashamed-br-53-54.html",
+    "title": "फ्रान्समा हिं’सात्मक प्रदर्शनपछि राष्ट्रपतिले भने : हामी लज्जित छौँ",
+    "description": "फ्रान्समा वर्षौंयताकै गम्भीर अशान्तिपछि राष्ट्रपति इमानुएल म्याक्रोनले नागरिकलाई शान्त रहन आग्रह गरेका छन्।...",
+    "categories": [
+      "International News"
+    ],
+    "pub_date": "2026-10-19T09:49:26+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1792382552_france.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://shilapatra.com/detail/197122",
+    "title": "कर्णाली : पर्यटन प्रवर्द्धनमा प्रदेश र स्थानीय तहहरूको प्राथमिकता, कस्तो छ पर्यटक आगमनको अवस्था ?",
+    "description": "सरकारले चालु आर्थिक वर्षमा पर्यापर्यटन, ग्रामीण पर्यटन र होमस्टेलाई प्रवर्द्धन गर्न नागरिकलाई पर्यटनसम्बद्ध रोजगारी, हस्पिटालिटी, ट्रेकिङ गाइड, स्थानीय मौलिक वास्तुकला, रैथाने बालीबाट उत्पादित परिकारसम्बन्धी सीप विकासका कार्यक्रमलाई प्राथमिकतामा राखेको छ ।",
+    "categories": [],
+    "pub_date": "2026-10-19T09:47:00+05:45",
+    "image_url": null,
+    "source_name": "SHILAPATRA.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/600478/a-girl-sleeping-at-home-was-bitten-by-a-snake-died-during-treatment",
     "title": "घरमै सुतिरहेकी बालिकालाई सर्पले टोक्यो, उपचारका क्रममा मृत्यु",
     "description": "रौतहट । बाराको परवानीपुरमा सर्पदंशबाट एक बालिकाको मृत्यु भएको छ। \n\nघरको कोठामा सुतिरहेकै अवस्थामा सर्पले टोकेपछि उपचारका लागि अस्पताल लगिएकी १० वर्षीया बालिकाको ज्यान गएको हो। \n\nमृत्यु हुनेमा बाराको परवानीपुर गाउँपालिका–५, नौतन टोलका मनोज साहकी छोरी सन्झना",
@@ -65,7 +97,6 @@
     "title": "सडक पुगेको दुई दशकपछि कालोपत्र",
     "description": "म्याग्दीको मालिका गाउँपालिका–६ दरवाङमा सडक पुगेको करिब दुई दशकपछि कालोपत्र भएको छ।",
     "categories": [
-      "Breaking News",
       "National News"
     ],
     "pub_date": "2026-10-19T09:29:50+05:45",
@@ -256,6 +287,7 @@
     "title": "विश्वकप लिग–२ : नेपाल र ओमान भिड्दै",
     "description": "आइसिसी विश्वकप लिग–२ अन्तर्गतको अन्तिम खेलमा आज नेपालले घरेलु टोली ओमानको सामना गर्दैछ।",
     "categories": [
+      "Breaking News",
       "Sports News"
     ],
     "pub_date": "2026-10-19T09:05:04+05:45",
@@ -2073,38 +2105,5 @@
     "pub_date": "2026-10-18T19:19:07+05:45",
     "image_url": "https://images.nagariknewscdn.com/2026/third-party/1792330400_CMC.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/600419/kp-oli-visits-hams-hospital-to-understand-jhalanath-khanals-health-condition",
-    "title": "झलनाथ खनालको स्वास्थ्य अवस्था बुझ्न ह्याम्स अस्पताल पुगे केपी ओली",
-    "description": "काठमाडौँ। नेकपा एमालेका अध्यक्ष केपी शर्मा ओली पूर्वप्रधानमन्त्री झलनाथ खनालको स्वास्थ्य अवस्था बुझ्न ह्याम्स अस्पताल पुगेका छन्। पूर्वप्रधानमन्त्री झलनाथ खनाल अस्पताल भर्ना नेपाली कम्युनिस्ट पार्टी(नेकपा)का वरिष्ठ नेता समेत हरेका खनालको स्वास्थ्यमा मुटुसँग सम्बन्धित समस्या देखिएपछि आइतबार",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-18T19:17:47+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/kp_Mx4AzD6b4h.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2041183/many-goats-die-of-suffocation-in-the-trunk-of-a-bus-the-animal-services-department-is-not-interested",
-    "title": "बसको डिकीमै निसासिएर मर्छन् कयौं खसीबोका, पशु सेवा विभागलाई छैन चासो",
-    "description": "दशैं नजिकिएसँगै गाउँबाट सहरमा खसीबोका ल्याउने क्रम बढेको छ । तर, पर्याप्त हावा नछिर्ने बसका डिकीमा कोचेर गरिने ओसारपसारका कारण बर्सेनि कयौं पशुले ज्यान गुमाइरहेका छन् । पशु ढुवानीलाई व्यवस्थित र सुरक्षित बनाउने जिम्मेवारी पाएको सरकारी निकायको प्रभावकारी अनुगमन र कडा कारबाही खोइ ? दशैंमा खसीबोकाको माग बढेसँगै गाउँबाट काठमाडौंलगायत सहरमा खसीबोका ल्याउने क्रम तीव्र",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-10-18T19:17:39+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/image-75.png",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2041223/priyagold-biscuits-banned-in-nepal-after-cattle-feed-found",
-    "title": "गाईवस्तुको दाना प्रयोग भएको पाइएपछि ‘प्रियागोल्ड बिस्कुट’ नेपालमा प्रतिबन्धित",
-    "description": "खाद्य प्रविधि विभागले नेपालका सबै आधिकारिक पैठारीकर्ता र खाद्य व्यवसायीलाई बजारमा रहेका प्रियागोल्ड बिस्कुट (सबै ब्याच र जुनसुकै उत्पादन मिति भएका) तत्काल बिक्री वितरण रोक्न र बजारबाट फिर्ता गर्न आदेश दिएको छ ।",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-10-18T19:16:45+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/Priyagold-Biscuits-1.jpg",
-    "source_name": "ONLINEKHABAR.COM"
   }
 ]
