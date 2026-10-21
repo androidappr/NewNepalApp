@@ -543,17 +543,6 @@
     "source_name": "DCNEPAL.COM"
   },
   {
-    "link": "https://www.setopati.com/sports/cricket/401164",
-    "title": "नेपालमै हुने यू–१९ महिला विश्वकपका १५ खेल, भारतसँग पनि काठमाडौंमै प्रतिस्पर्धा",
-    "description": "नेपाल र बंगलादेशले संयुक्त रूपमा आयोजना गर्ने आइसिसी यू–१९ महिला टी–२० विश्वकप क्रिकेटका १५ खेल काठमाडौंमा हुने भएका छन्।",
-    "categories": [
-      "Sports News"
-    ],
-    "pub_date": "2026-10-21T18:08:35+05:45",
-    "image_url": null,
-    "source_name": "SETOPATI.COM"
-  },
-  {
     "link": "https://www.bbc.com/nepali/listen/c6g7x58dn401o?at_medium=RSS&at_campaign=rss",
     "title": "बाढीबाट प्रभावित क्षेत्रमा गर्भवती महिलालाई पोषण र नियमित परीक्षणको कस्तो सुविधा",
     "description": "सन्तान जन्माउने अवस्थामा रहेका गर्भवती महिलाहरुलाई खानपानदेखि सुरक्षित बसोबासका विशिष्ट आवश्यकताहरू हुन्छन्।",
@@ -561,6 +550,17 @@
     "pub_date": "2026-10-21T18:08:30+05:45",
     "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/1118/live/281126d0-cd4b-11f1-8177-0f8bd59b54c4.jpg",
     "source_name": "BBC.COM"
+  },
+  {
+    "link": "https://www.setopati.com/sports/cricket/401164",
+    "title": "नेपालमै हुने यू–१९ महिला विश्वकपका १५ खेल, भारतसँग पनि काठमाडौंमै प्रतिस्पर्धा",
+    "description": "नेपाल र बंगलादेशले संयुक्त रूपमा आयोजना गर्ने आइसिसी यू–१९ महिला टी–२० विश्वकप क्रिकेटका १५ खेल काठमाडौंमा हुने भएका छन्।",
+    "categories": [
+      "Sports News"
+    ],
+    "pub_date": "2026-10-21T18:08:00+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
   },
   {
     "link": "https://www.dcnepal.com/2026/10/807722/",
