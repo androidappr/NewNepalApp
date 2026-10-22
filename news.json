@@ -1,5 +1,16 @@
 [
   {
+    "link": "https://www.ratopati.com/story/600865/ebola-spreading-in-africa",
+    "title": "अफ्रिकामा फैलिँदै इबोला",
+    "description": "काठमाडौँ । नाइजेरियामा इबोला भाइरसको सङ्क्रमण पुष्टि भएपछि अफ्रिकाले थप जटिल प्रकोपको सामना गर्नुपरेको विश्व स्वास्थ्य सङ्गठन (डब्लुएचओ) का अफ्रिका क्षेत्रीय निर्देशक मोहम्मद जनाबीले चेतावनी दिएका छन् ।\n\nबिहीबार आयोजित अनलाइन सञ्चारमाध्यम ब्रिफिङमा उहाँले पूर्वी अफ्रिकाबाट",
+    "categories": [
+      "International News"
+    ],
+    "pub_date": "2026-10-22T22:30:35+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/ebola_Y9o1oxJfQ8.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/600864/sri-lankas-record-win-in-one-day-cricket-against-england",
     "title": "इंग्ल्यान्डसँगको एक दिवसीय क्रिकेटमा  श्रीलङ्काको कीर्तिमानी जित",
     "description": "काठमाडौँ । श्रीलङ्काले एक दिवसीय अन्तर्राष्ट्रिय क्रिकेट (ओडीआई) मा ४३० रनको विशाल लक्ष्य सफलतापूर्वक पछ्याउँदै इंग्ल्यान्डलाई स्तब्ध बनाएको छ । बिहीबार पाकिस्तानको रावलपिन्डीमा भएको खेलमा श्रीलङ्काले ४९।५ ओभरमा ८ विकेट गुमाएर लक्ष्य पूरा गर्दै २",
@@ -7,6 +18,17 @@
     "pub_date": "2026-10-22T22:22:09+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/srilanka_7rr25RvhOo.webp",
     "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/10/2042750/rashtriya-swayamsevak-sangh-rss-president-rabi-lamichhane-is-leaving-for-india-on-a-3-day-visit",
+    "title": "रास्वपा सभापति रवि लामिछाने ३ दिने भ्रमणका लागि भारत जाँदै",
+    "description": "५ कात्तिक, काठमाडौं । राष्ट्रिय स्वतन्त्र पार्टी (रास्वपा) का सभापति रवि लामिछाने तीन दिने भ्रमणका लागि भारत जाने भएका छन् । उनको यो भ्रमणलाई निजी तथा पारिवारिक तीर्थाटन भनिएको छ । लामिछाने शुक्रबार (कात्तिक ६) गतेदेखि तीन दिनका लागि भारत जान लागेको उनको निजी सचिवालयले जनाएको छ। भ्रमणका क्रममा उनले भारतको उत्तराखण्डस्थित नैनीतालमा रहेको कैंची धाम",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-22T22:16:49+05:45",
+    "image_url": null,
+    "source_name": "ONLINEKHABAR.COM"
   },
   {
     "link": "https://www.dcnepal.com/2026/10/807998/",
@@ -842,9 +864,7 @@
     "link": "https://www.bbc.com/nepali/listen/cm1j3wd7yg9jo?at_medium=RSS&at_campaign=rss",
     "title": "विपद्‌पछि मानव बेचबिखनको जोखिम उच्च,  कसरी जोगिने र सचेत रहने",
     "description": "हालैको भोटेकोशी-त्रिशूली बाढीपश्चात् पनि प्रभावित जिल्लाबाट बालबालिका र महिलाहरू तस्करीमा पर्ने सक्ने भन्दै विशेष सर्तकता अपनाउन अभियानकर्मीहरूले सुझाव दिएका छन्।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-22T18:28:44+05:45",
     "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8e40/live/8ab0c900-ce16-11f1-bbba-c577fd901ff7.jpg",
     "source_name": "BBC.COM"
@@ -1342,9 +1362,7 @@
     "link": "https://newsofnepal.com/2026/10/22/791996/",
     "title": "साइबर जोखिमका कारण केही सरकारी वेबसाइट अस्थायी बन्द",
     "description": "काठमाडौं । पीएचपी प्रविधिमा गम्भीर सुरक्षा जोखिम देखिएपछि सफ्टवेयर विकास तथा सञ्चालन केन्द्र (एसडीओसी) ले केही सरकारी वेबसाइट तथा प्रणालीहरू अस्थायी रूपमा बन्द गरेको छ। प्रधानमन्त्री तथा मन्त्रिपरिषद्को कार्यालयअन्तर्गत रहेको केन्द्रका अनुसार ‘PHP टू शेल’ नामक सुरक्षा जोखिमका कारण सर्भरमा अनधिकृत कोड चलाउन सक्ने खतरा देखिएको हो। सीभीएसएस ९.२ रेटिङ प्राप्त दुई सुरक्षा त्रुटिका कारण",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-22T17:04:40+05:45",
     "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/PHP-photo-1024x574-1-150x150.jpg",
     "source_name": "NEWSOFNEPAL.COM"
@@ -1581,9 +1599,7 @@
     "link": "https://newsofnepal.com/2026/10/22/791991/",
     "title": "मध्यपुरथिमिमा मल्लकालीन युद्धकला प्रदर्शन गर्दै खाँ पिहाँवइगु जात्रा",
     "description": "भक्तपुर । भक्तपुरको मध्यपुरथिमिमा असोज शुक्ल पक्षको एकादशीका अवसरमा मल्लकालीन युद्धकलाको झल्को दिने खाँ पिहाँवइगु जात्रा बिहीबार सम्पन्न भएको छ। लाय्कुस्थित तलेजु भवानीको द्यो छेंबाट खड्ग, तरबार, ढाल र युद्धकवचसहित निस्किएको जात्रामा गुठियारले नगरका विभिन्न टोलमा परम्परागत युद्धकला प्रदर्शन गरेका थिए। परम्पराअनुसार जात्रा माथिल्लो टोलको इनाएटोल, दुईपोखरी हुँदै दिगु भैरवसम्म र तल्लो टोलको दथुटोल हुँदै",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-22T16:34:16+05:45",
     "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/jatra_cPKYvbwDkK-150x150.webp",
     "source_name": "NEWSOFNEPAL.COM"
@@ -2116,27 +2132,5 @@
     "pub_date": "2026-10-22T14:34:00+05:45",
     "image_url": null,
     "source_name": "SHILAPATRA.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2042558/is-riyadh-airport-open-for-international-flights",
-    "title": "रियाध विमानस्थल अन्तर्राष्ट्रिय उडान गर्न खुला छ ?",
-    "description": "साउदी राजधानीमा भएको मिसाइल तथा ड्रोन आक्रमणपछि लागु गरिएका उडान प्रतिबन्धका कारण यात्रुले निरन्तर अनिश्चितताको सामना गरिरहेका छन् ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-22T14:33:30+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/King-Khalid-Airport-2.png",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/600824/cop-31-internal-preparations-intensify-national-position-paper-in-final-stages",
-    "title": "कोप ३१ः आन्तरिक तयारी तीव्र, राष्ट्रिय स्थितिपत्र अन्तिमचरणमा",
-    "description": "काठमाडौँ । नेपालले आगामी नोभेम्बर ९ देखि २० सम्म टर्कीको अन्टाल्यामा हुन गइरहेको संयुक्त राष्ट्रसङ्घीय जलवायु परिवर्तनसम्बन्धी सम्मेलन (कोप–३१) को मिति नजिकिँदै गर्दा आन्तरिक तयारीलाई पनि तीव्र बनाएको छ ।\n\nकृषि, वन तथा पर्यावरण मन्त्रालयले राष्ट्रिय",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-22T14:32:41+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/4szMXISyyD.png",
-    "source_name": "RATOPATI.COM"
   }
 ]
