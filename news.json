@@ -1,5 +1,40 @@
 [
   {
+    "link": "https://www.ratopati.com/story/600995/php-issues-advisory-after-new-security-vulnerability-discovered",
+    "title": "नयाँ सुरक्षा कमजोरी देखिएपछि पीएचपीले जारी गर्‍यो एडभाइजरी",
+    "description": "काठमाडौँ। वेब सर्भरमा अनधिकृत रूपमा कोड चलाउन सकिने नयाँ सुरक्षा कमजोरी देखिएपछि पीएचपीले एडभाइजरी जारी गरेको छ ।\n\nपीएचपीले शुक्रबार जारी गरेको सूचनामा अर्को नियमित बगफिक्स अपडेट नआएसम्म session.upload_progress.enabled=0 सेटिङ राख्न सुझाव दिएको छ । यसो",
+    "categories": [
+      "Breaking News",
+      "International News"
+    ],
+    "pub_date": "2026-10-23T21:55:07+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/php_cxPpLg2EcX.webp",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/600994/security-vulnerability-found-again-in-php-risk-of-hackers-running-code-on-the-server",
+    "title": "पीएचपीमा फेरि देखियो सुरक्षा कमजोरी, ह्याकरले सर्भरमा कोड चलाउन सक्ने जोखिम",
+    "description": "काठमाडौँ। दुई दिनअघि मात्रै गम्भीर सुरक्षा कमजोरी सच्याउन आपत्कालीन अपडेट जारी गरेको पीएचपीले फेरि अर्को सुरक्षा जोखिमबारे चेतावनी दिएको छ।\n\nनयाँ कमजोरीका कारण विशेष सेटिङमा सञ्चालन भएका वेब एप्लिकेसनमा ह्याकरले सर्भरमा कोड चलाउन सक्ने जोखिम रहेको",
+    "categories": [
+      "Breaking News",
+      "International News"
+    ],
+    "pub_date": "2026-10-23T21:50:21+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/php_cxPpLg2EcX.webp",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/politics/congress-and-other-parties-to-conclude-all-district-conventions-by-kartik-15-66-65.html",
+    "title": "कांग्रेस इतर पक्षले कात्तिक १५ भित्र सबै जिल्लाको अधिवेशन सक्ने",
+    "description": "नेपाली कांग्रेसको इतर पक्षले कात्तिक १५ गतेभित्र सबै जिल्लाको अधिवेशन सम्पन्न गर्ने तयारी गरेको छ।...",
+    "categories": [
+      "Political News"
+    ],
+    "pub_date": "2026-10-23T21:43:54+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2024/third-party/1735096710_deuba-1200x560.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/600993/the-excitement-of-nepali-language-literature-conference-in-bhaktapur",
     "title": "भक्तपुरमा नेपालभाषा साहित्य सम्मेलनको रौनक",
     "description": "भक्तपुर । भक्तपुरमा उल्लेख्य जनसहभागितासहित ४६औँ नेपालभाषा साहित्य सम्मेलन तथा सांस्कृतिक कार्यक्रमले रौनक थएिको छ ।\n\n‘जनता बाँचे भाषा बाँच्छ’ भन्ने मूल नाराका साथ हरेक वर्ष आयोजना हुँदै आएको सो सम्मेलन यस वर्ष भक्तपुर नगरपालिका–७ गोमारीको",
@@ -591,9 +626,7 @@
     "link": "https://nagariknews.nagariknetwork.com/arts/why-did-amitabh-bachchan-receive-a-threatening-email-br-76-56.html",
     "title": "अमिताभ बच्चनलाई किन आयो धम्कीपूर्ण इमेल ?",
     "description": "बलिउडका वरिष्ठ अभिनेता अमिताभ बच्चनको मुम्बईस्थित बंगलामा बम विस्फोट गराउने धम्की आएपछि प्रहरीले अनुसन्धान सुरु गरेको छ।...",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-23T19:44:21+05:45",
     "image_url": "https://images.nagariknewscdn.com/2026/third-party/1792763953_amitab.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
@@ -1401,9 +1434,7 @@
     "link": "https://newsofnepal.com/2026/10/23/792049/",
     "title": "बडादशैँ २०८३ को अवसरमा सशस्त्र प्रहरी बल, नेपालद्वारा टीका जमरा प्रदान",
     "description": "काठमाडौ । बडादशैँ २०८३ को पावन अवसरमा सशस्त्र प्रहरी बल, नेपालका संगठन प्रमुख सशस्त्र प्रहरी महानिरीक्षक नारायण दत्त पौडेलले कात्तिक ६ गते शुक्रबारका दिन सशस्त्र प्रहरी कर्मचारीहरू, पूर्व सशस्त्र प्रहरी कर्मचारीहरू एवं परिवारजनलाई विजयादशमीको टिका जमरा लगाई प्रसाद प्रदान गर्नुभएको छ। स्वयम्भूस्थित “शरद भवन” मा आयोजित कार्यक्रममा संगठन प्रमुख सशस्त्र प्रहरी महानिरीक्षक बाट बडादशैँको टीका",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-23T16:58:03+05:45",
     "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/received_1436881055233254-150x150.jpeg",
     "source_name": "NEWSOFNEPAL.COM"
@@ -2120,37 +2151,5 @@
     "pub_date": "2026-10-23T14:54:30+05:45",
     "image_url": "https://images.nagariknewscdn.com/2026/third-party/1792746537_Brazilian%20women.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://newsofnepal.com/2026/10/23/792046/",
-    "title": "घट्टेखोला कटान नियन्त्रणका लागि २ करोडको ठेक्का आह्वान",
-    "description": "भक्तपुर । अविरल वर्षापछि घट्टेखोलामा आएको बाढीले बस्ती आसपास कटान गरेपछि बागमती प्रदेशका मुख्यमन्त्री किरण थापा मगरले गर्नुभएकाे दुई करोड रुपैयाँ उपलब्ध गराउने प्रतिबद्धता कार्यान्वयनमा आएको छ।  प्रदेश सरकारबाट स्रोत सुनिश्चितता भएपछि सूर्यविनायक नगरपालिकाले कटान नियन्त्रण तथा जोखिम न्यूनीकरणसम्बन्धी कामका लागि ठेक्का आह्वान गरेको छ। वर्षाकाे बाढीले बस्ती आसपासको क्षेत्र कटान गरेपछि बागमती प्रदेशका मुख्यमन्त्री किरण",
-    "categories": [],
-    "pub_date": "2026-10-23T14:53:41+05:45",
-    "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/received_979849541854563-150x150.jpeg",
-    "source_name": "NEWSOFNEPAL.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/international/more-than-50-000-die-in-europe-from-heatwave-18-77.html",
-    "title": "युरोपमा गर्मीबाट ५० हजार बढीको मृत्यु",
-    "description": "यस वर्षको गर्मीयाममा युरोपमा अत्यधिक तापक्रमका कारण ५० हजार ३९१ जनाको मृत्यु भएको छ।",
-    "categories": [
-      "Breaking News",
-      "International News"
-    ],
-    "pub_date": "2026-10-23T14:51:19+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1782215625_europe%20france.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2042935/un-urges-restraint-in-yemen",
-    "title": "यमनमा संयम अपनाउन राष्ट्र सङ्घको आग्रह",
-    "description": "६ कात्तिक, काठमाडौं । यमनमा बढ्दो द्वन्द्व र साउदी अरबमाथि हुथी विद्रोहीका आक्रमणले क्षेत्रीय तनाव बढाइरहेका बेला संयुक्त राष्ट्रसङ्घका महासचिव एन्टोनियो गुटेरेसले संयम अपनाउन र राजनीतिक समाधान खोज्न आग्रह गरेका छन् । सामाजिक सञ्जाल एक्समा उनले साउदी अरबका नागरिक लक्ष्यविरुद्ध हुथीहरूले गरेका आक्रमण अस्वीकार्य रहेको बताए । यस्ता गतिविधिले सर्वसाधारणलाई पीडा दिनुका साथै क्षेत्रीय तनाव",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-23T14:44:11+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/03/Antonio-Guterres-scaled.png",
-    "source_name": "ONLINEKHABAR.COM"
   }
 ]
