@@ -1,12 +1,25 @@
 [
   {
-    "link": "https://www.ratopati.com/story/600992/pokhara-dubai-flight-more-than-6000-passengers-used-the-service-in-a-month",
-    "title": "पोखरा–दुबई उडान : एक महिनामा ६ हजारभन्दा बढी यात्रुले लिए सेवा",
-    "description": "कास्की । पोखरा अन्तर्राष्ट्रिय विमानस्थलबाट नियमित अन्तर्राष्ट्रिय उडान सुरु गरेको फ्लाइ दुबईले आज एक महिना पूरा गरेको छ । फ्लाइ दुबईले गत असोज ७ गतेदेखि उक्त रुटमा नियमित उडान सुरु गरेको थियो । एक महिनामा ३०",
-    "categories": [],
-    "pub_date": "2026-10-23T21:32:26+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/pokhara-international-airport-(2)_VsqdbJlNvn.jpg",
+    "link": "https://www.ratopati.com/story/600993/the-excitement-of-nepali-language-literature-conference-in-bhaktapur",
+    "title": "भक्तपुरमा नेपालभाषा साहित्य सम्मेलनको रौनक",
+    "description": "भक्तपुर । भक्तपुरमा उल्लेख्य जनसहभागितासहित ४६औँ नेपालभाषा साहित्य सम्मेलन तथा सांस्कृतिक कार्यक्रमले रौनक थएिको छ ।\n\n‘जनता बाँचे भाषा बाँच्छ’ भन्ने मूल नाराका साथ हरेक वर्ष आयोजना हुँदै आएको सो सम्मेलन यस वर्ष भक्तपुर नगरपालिका–७ गोमारीको",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-23T21:36:12+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/QVYvqoWwef.jpg",
     "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://shilapatra.com/detail/197399",
+    "title": "पोखरा–दुबई उडान : एक महिनामा ६ हजारभन्दा बढी यात्रुले लिए सेवा",
+    "description": "पोखरा अन्तर्राष्ट्रिय विमानस्थलबाट नियमित अन्तर्राष्ट्रिय उडान सुरु गरेको फ्लाई दुबईले आज एक महिना पूरा गरेको छ । फ्लाई दुबईले गत ७ असोजदेखि उक्त रुटमा नियमित उडान सुरु गरेको थियो ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-23T21:33:00+05:45",
+    "image_url": null,
+    "source_name": "SHILAPATRA.COM"
   },
   {
     "link": "https://www.ratopati.com/story/600991/besisahar-chame-road-operational",
@@ -688,7 +701,9 @@
     "link": "https://nagariknews.nagariknetwork.com/arts/large-scale-nepali-language-literature-conference-begins-in-bhaktapur-85-63.html",
     "title": "भक्तपुरमा बृहत् नेपालभाषा साहित्य सम्मेलन सुरु",
     "description": "दुई दिन दुई रातसम्म निरन्तर सञ्चालन हुने सम्मेलन शनिबार राति समापन हुनेछ।",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-10-23T19:17:41+05:45",
     "image_url": "https://images.nagariknewscdn.com/2026/third-party/1792762346_Sammelan.jpeg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
@@ -2137,16 +2152,5 @@
     "pub_date": "2026-10-23T14:44:11+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/03/Antonio-Guterres-scaled.png",
     "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://rajdhanidaily.com/id/150425/",
-    "title": "हिमनदी पग्लिँदा खुल्दैछ स्विट्जरल्यान्डको इतिहास",
-    "description": "लुसर्न । जलवायु परिवर्तनका कारण स्विट्जरल्यान्डका हिमनदी तीव्र गतिमा पग्लिरहेका बेला त्यहाँ वर्षौंदेखि बरफभित्र दबिएका पुराना वस्तु, ऐतिहासिक सामग्री र वातावरणीय परिवर्तनका प्रमाण बाहिर आउन थालेका छन् । यस्ता सामग्री समेटेर लुसर्नस्थित ग्लेसियर गार्डेनले ‘ट्रेजरी अफ आइस’ अर्थात् ‘बरफको खजाना’ नामक प्रदर्शनी आयोजना गरेको छ । प्रदर्शनीमा प्राचीन सिकारीले प्रयोग गर्ने धनुष, मेयोनेजको खाली ट्युब,",
-    "categories": [
-      "International News"
-    ],
-    "pub_date": "2026-10-23T14:43:23+05:45",
-    "image_url": "https://rajdhanidaily.com/wp-content/uploads/2026/10/SWISS-2.jpg",
-    "source_name": "RAJDHANIDAILY.COM"
   }
 ]
