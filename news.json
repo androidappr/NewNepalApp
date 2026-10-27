@@ -1,5 +1,135 @@
 [
   {
+    "link": "https://www.setopati.com/social/401359",
+    "title": "चक्रवात 'अर्नब'ले नेपालका कुन-कुन भूभागमा पार्छ पानी?",
+    "description": "चक्रवात ‘अर्नब’ भारतको आन्ध्र प्रदेश र ओडिशाको तटीय क्षेत्रमा प्रवेश गर्ने सम्भावना रहेकाले त्यहाँ पनि सतर्कता बढाइएको छ।",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-10-27T07:25:40+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/601477/budget-shortage-and-government-apathy-are-increasing-the-risk-of-insect-borne-diseases",
+    "title": "बजेट अभाव र सरकारी उदासीनताले कीटजन्य रोगको जोखिम बढ्दै",
+    "description": "काठमाडौँ । बर्सेनि कीटजन्य रोगको प्रकोप बढ्दै गए पनि रोकथाम र नियन्त्रणतर्फ राज्यको ध्यान पर्याप्त पुग्न सकेको छैन । बजेट अभाव, जनचेतनाको कमी र नागरिकस्तरको हेलचेक्य्राइँका कारण प्रत्येक वर्ष सयौँ नागरिक यसबाट प्रभावित हुने गरेका",
+    "categories": [],
+    "pub_date": "2026-10-27T07:25:09+05:45",
+    "image_url": "https://rpcdn.ratopati.com/media/albums/vaccine_VsHJil3RVX.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/227351",
+    "title": "बिउ जोगाउँदै सांसद चौधरी",
+    "description": "दाङ समाचारदातादाङ, कात्तिक १० गते । किसानले खेती गर्न छाड्दै गएपछि लोप हुने जोखिममा परेको कालानमक (रैथाने कालो बासमती) धानको बिउ संरक्षण गर्न राष्ट्रिय स्वतन्त्र पार्टी (रास्वपा) क...",
+    "categories": [],
+    "pub_date": "2026-10-27T07:23:19+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389039/conversions/333-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://newsofnepal.com/2026/10/27/792220/",
+    "title": "एनपीएलमा आज विराटनगर–चितवन र कर्णाली–जनकपुर भिड्दै",
+    "description": "काठमाडौं । नेपाल प्रिमियर लिग (एनपीएल) अन्तर्गत आज दुई खेल हुँदैछन्। पहिलो खेलमा विराटनगर किंग्स र चितवन राइनोजबीच दिउँसो साढे १२ बजे त्रिवि क्रिकेट मैदानमा प्रतिस्पर्धा हुनेछ। दोस्रो खेलमा साँझ ५ बजे कर्णाली याक्स र जनकपुर बोल्ट्स आमनेसामने हुनेछन्। हिजो भएको उद्घाटन खेलमा लुम्बिनी लायन्सले सुदूरपश्चिम रोयल्सलाई ७ विकेटले हराएको थियो। कात्तिक ९ गतेदेखि सुरु",
+    "categories": [
+      "Breaking News",
+      "Sports News"
+    ],
+    "pub_date": "2026-10-27T07:21:06+05:45",
+    "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/IMG_20261027_071957-150x150.jpg",
+    "source_name": "NEWSOFNEPAL.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/technology/microsoft-is-investing-heavily-in-ai-offering-voluntary-retirement-to-60-000-employees-63-89.html",
+    "title": "एआईमा ठुलो लगानी गर्दै माइक्रोसफ्ट, ६० हजार कर्मचारीलाई स्वैच्छिक अवकाशको प्रस्ताव",
+    "description": "पछिल्लो समय एआई प्रविधि सञ्चालन गर्न आवश्यक डेटा सेन्टरमा प्रविधि कम्पनीहरूले ठुलो लगानी गरिरहेका छन्।...",
+    "categories": [
+      "Technology News"
+    ],
+    "pub_date": "2026-10-27T07:20:37+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1793064720_Microsoft%20offers.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://www.bbc.com/nepali/articles/cwdr866gmgv4o?at_medium=RSS&at_campaign=rss",
+    "title": "लगभग हरेक सङ्क्रमण पत्ता लगाउने आनुवंशिक प्रविधि",
+    "description": "सेप्सिस (रगतमा सङ्क्रमणका कारण उत्पन्न हुने गम्भीर अवस्था) को छिटो निदान गर्नेदेखि स्पष्ट कारण पत्ता नलागेका रोगहरूको कारण पहिचान गर्नेसम्म यसले पहिले नै मानिसहरूको जीवन बचाइरहेको छ।",
+    "categories": [],
+    "pub_date": "2026-10-27T07:19:36+05:45",
+    "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/821a/live/13e5c220-cc5f-11f1-9a39-31b474234113.jpg",
+    "source_name": "BBC.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/227350",
+    "title": "कर्णालीमा हवाई उडान प्रभावकारी बनाउन छलफल",
+    "description": "गोरखापत्र समाचारदाताकाठमाडौँ, कात्तिक १० गते । कर्णाली प्रदेशको हवाई उडान सेवामा देखिएका समस्या र तिनको समाधानका उपायबारे सरोकारवालाबिच गहन छलफल भएको छ । संस्कृति, पर्यटन तथा नागरि...",
+    "categories": [],
+    "pub_date": "2026-10-27T07:19:01+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389038/conversions/Paryatan-Mantri-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/601476/if-diabetics-do-not-take-care-of-their-mouth-their-teeth-may-fall-out",
+    "title": "मधुमेहका बिरामीले मुखको ध्यान नदिए दाँत नै झर्न सक्छ",
+    "description": "काठमाडौँ । मधुमेह (सुगर)ले आँखा, मिर्गौला, स्नायु प्रणाली र मुटुलाई मात्र नभई मुख र दाँतको स्वास्थ्यमा समेत गम्भीर असर पुर्‍याउँछ ।\n\nरगतमा चिनीको मात्रा अनियन्त्रित हुँदा मुखसम्बन्धी विभिन्न जटिल रोगहरू देखिन सक्ने भन्दै चिकित्सकहरूको भनाइ छ",
+    "categories": [],
+    "pub_date": "2026-10-27T07:18:45+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/images_VTCdEJ1x9z.webp",
+    "source_name": "RATOPATI.COM"
+  },
+  {
+    "link": "https://www.dcnepal.com/2026/10/809184/",
+    "title": "भोटेकोशी बाढीको दुई महिना: बेपत्ताको कानुनी मृत्यु घोषणा, राहत र स्थायी आवासको प्रक्रिया अघि बढाउँदै सरकार",
+    "description": "काठमाडौं।  गत भदौ १० गते रसुवा र सिन्धुपाल्चोक क्षेत्र भएर बग्ने भोटेकोशी नदीमा आएको विनाशकारी बाढीको दुई महिना पूरा भएको छ। बाढीले ठूलो जनधनको क्षति पुर्‍याएको दुई महिना बितिसक्दा पनि हजारौं मानिसहरू अझै सम्पर्कविहीन रहेका छन्। सरकारले अब रसुवा तथा आसपासका प्रभावित क्षेत्रमा बाढीमा परी बेपत्ता भएकाहरूको विवरण यकिन गरी आधिकारिक रूपमा मृत्यु घोषणा गर्ने",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-27T07:17:25+05:45",
+    "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/08/rasuwa-flood_20260827182713.jpg",
+    "source_name": "DCNEPAL.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/10/2044562/harry-kane-wins-the-2026-ballon-dor-award",
+    "title": "ह्यारी केनले जिते सन् २०२६ को बालोन डी’ओर अवार्ड",
+    "description": "१० कात्तिक, काठमाडौं । इंग्ल्यान्डका कप्तान ह्यारी केनले सन् २०२६ को बालोन डी’ओर अवार्ड जितेका छन् । सोमबार लन्डनमा आयोजित समारोहमा केनलाई विश्वकै उत्कृष्ट पुरुष फुटबल खेलाडी घोषित गरिएको हो । किलियन एमबाप्पे र लामिन यामाललाई पछि पार्दै उनले यो अवार्ड जितेका हुन् । ३३ वर्षीय केनले क्लब र देशका लागि ६५ प्रतिस्पर्धात्मक खेलहरूमा ७३",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-27T07:16:43+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/Harry-Kane.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/227349",
+    "title": "ग्लोबल आइएमईले फेरि पायो ‘बेस्ट बैङ्क अवार्ड’",
+    "description": "गोरखापत्र समाचारदाताकाठमाडौँ, कात्तिक १० गते । ग्लोबल आइएमई बैङ्क अन्तर्राष्ट्रिय आर्थिक पत्रिका ‘ग्लोबल फाइनान्स’ ले प्रदान गर्ने ‘बेस्ट बैङ्क अवार्ड’ २०२६ बाट सम्मानित भएको छ । य...",
+    "categories": [],
+    "pub_date": "2026-10-27T07:16:39+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389037/conversions/Best-Bank-Awards-2026-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://arthasarokar.com/2026/10/npl-cricket-lumbini-defeats-sudurpaschim.html",
+    "title": "एनपिएल क्रिकेटः सुदूरपश्चिममाथि लुम्बिनीको जित",
+    "description": "काठमाडौँ । नेपाल प्रिमियर लिग (एनपिएल) को उद्घाटन खेलमा लुम्बिनी लायन्सले सुदूरपश्चिम रोयल्सलाई हराउँदै प्रतियोगितामा सुखद् सुरुवात गरेको छ । कीर्तिपुरस्थित त्रिभुवन विश्वविद्यालय अन्तरराष्ट्रिय क्रिकेट मैदानमा भएको खेलमा लुम्बिनी लायन्सले सुदूरपश्चिम रोयल्समाथि सात विकेटको जित निकालेको हो । सुदुरपश्चिमले जितको लागि दिएको ८८ रनको सामान्य लक्ष्य पच्छाएको साविक विजता लुम्बिनीले ९.५ ओभरमा ३ विकेट गुमाएरContinue reading \"एनपिएल क्रिकेटः सुदूरपश्चिममाथि लुम्बिनीको जित\"",
+    "categories": [],
+    "pub_date": "2026-10-27T07:16:24+05:45",
+    "image_url": "https://media.arthasarokar.com/uploads/2026/10/Lumbini-wins.jpg",
+    "source_name": "ARTHASAROKAR.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/politics/question-to-the-government-in-which-meeting-of-the-council-of-ministers-was-the-finance-minister-s-visit-to-india-approved-88-56.html",
+    "title": "सरकारलाई झाँक्रीको प्रश्न : अर्थमन्त्रीको भारत भ्रमण मन्त्रिपरिषदको कतिऔं बैठकबाट स्वीकृत भएको हो?",
+    "description": "राष्ट्रियसभा सदस्य रामकुमारी झाँक्रीले अर्थमन्त्री डा. स्वर्णिम वाग्लेको हालैको भारत भ्रमण मन्त्रिपरिषद्को कुन बैठकबाट स्वीकृत भएको हो भन्दै सरकारसँग प्रश्न गरेकी छन्।...",
+    "categories": [
+      "Political News"
+    ],
+    "pub_date": "2026-10-27T07:15:58+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1762252995_jhakri.png",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
     "link": "https://www.ratopati.com/story/601475/five-killed-one-arrested-in-guwahati-hotel-shooting",
     "title": "गुवाहाटीको होटलमा गोली चल्दा पाँच जनाको मृत्यु, एक पक्राउ",
     "description": "असम । भारतको असम राज्यको गुवाहाटीस्थित एक होटलमा गोली चल्दा महिलासहित पाँच जनाको मृत्यु भएको छ भने अन्य केही घाइते भएका छन् ।\n\nसोमबार राति करिब ९ बजे लाचित नगरस्थित होटल बिलास इनमा गोली चलेको हो",
@@ -58,6 +188,17 @@
     "pub_date": "2026-10-27T07:08:53+05:45",
     "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/e5b8/live/53e967b0-c9f2-11f1-a64c-550be9e3c66b.jpg",
     "source_name": "BBC.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/economy/problem-viewing-exchange-rates-when-the-national-bank-website-does-not-open-17-35.html",
+    "title": "राष्ट्र बैंकको वेबसाइट नखुल्दा विनिमय दर हेर्न समस्या",
+    "description": "सरकारी वेबसाइट खुल्न थाले पनि नेपाल राष्ट्र बैंकको आधिकारिक वेबसाइट सोमबारसम्म सञ्चालनमा आएको छैन।...",
+    "categories": [
+      "Economic News"
+    ],
+    "pub_date": "2026-10-27T07:08:13+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1789717330_1742974727_nepal%20rastra%20bank-1200x560.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   },
   {
     "link": "https://gorkhapatraonline.com/news/227346",
@@ -660,7 +801,9 @@
     "link": "https://www.onlinekhabar.com/2026/10/2044541/trumps-approval-rating-rises-by-one-percentage-point-democrats-lead-in-midterm-elections-reuters",
     "title": "ट्रम्पको लोकप्रियतादर एक प्रतिशत बढ्यो : रोयटर्स",
     "description": "१० कात्तिक, काठमाडौं । अमेरिकी राष्ट्रपति डोनाल्ड ट्रम्पको लोकप्रियता दर गत साताको ऐतिहासिक न्यून विन्दुबाट एक प्रतिशत विन्दुले बढेर ३२ प्रतिशत पुगेको छ । नोभेम्बर ३ मा हुने मध्यावधि निर्वाचनअघि गरिएको रोयटर्स/इप्सोस सर्वेक्षणले यस्तो देखाएको हो । सोमबार सम्पन्न सर्वेक्षणअनुसार अमेरिकी कंग्रेसमा कुन दलको नियन्त्रण हुनुपर्छ भन्ने प्रश्नमा दर्ता भएका मतदातामध्ये ४७ प्रतिशतले डेमोक्र्याटिक पार्टी",
-    "categories": [],
+    "categories": [
+      "National News"
+    ],
     "pub_date": "2026-10-27T06:11:19+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2025/03/Trump-in-Car.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -1911,149 +2054,5 @@
     "pub_date": "2026-10-26T19:34:00+05:45",
     "image_url": null,
     "source_name": "SETOPATI.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/10/2044466/dispute-over-drinking-alcohol-together-one-person-dies-6-arrested",
-    "title": "सँगै बसेर मदिरा पिएपछि विवाद : एक जनाको मृत्यु, ६ पक्राउ",
-    "description": "९ कात्तिक, पोखरा । कास्कीको माछापुच्छ्रे गाउँपालिका–७ धम्पुस घिप्लेमा एक युवक मृत फेला परेका छन् । उनको मृत्यु प्रकरणमा प्रहरीले ६ जनालाई नियन्त्रणमा लिएर अनुसन्धान अघि बढाएको छ । प्रहरीका अनुसार २०८३ कात्तिक ९ गते बिहान करिब ८:२० बजे स्थानीय २२ वर्षीय राजेन्द्र पौडेल घरबाट करिब ५० मिटर पूर्वतर्फ रहेको बारीको पाटामा मृत अवस्थामा फेला",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-10-26T19:33:17+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2023/07/Death-Body.jpg",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.dcnepal.com/2026/10/809102/",
-    "title": "ग्यास बिक्रीपछि अनिवार्य रूपमा भ्याट बिल जारी गर्न आयल निगमको निर्देशन",
-    "description": "काठमाडौं। नेपाल आयल निगमले ग्यास बिक्री गरेपछि अनिवार्य रूपमा भ्याट बिल जारी गर्न ग्यास उद्योगीहरूलाई निर्देशन दिएको छ। निगमले ग्यास बिक्री वितरणमा बिल जारी नगरेको गुनासो आएपछि यस्तो निर्देशन दिएको हो। निगमको एलपी ग्यास तथा एभिएसन विभागले यसअघि २०८१ वैशाख ३० र २०८१ कात्तिक १० गते पनि निर्णय कार्यान्वयनका सम्बन्धमा सम्बन्धित संघसंस्थालाई पत्राचार गरिएको स्मरण",
-    "categories": [
-      "Economic News"
-    ],
-    "pub_date": "2026-10-26T19:29:16+05:45",
-    "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/02/Gyas-11.jpg",
-    "source_name": "DCNEPAL.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/601423/more-than-40-dead-in-ethiopias-oromia",
-    "title": "इथियोपियाको ओरोमियामा ४० भन्दा बढीको मृत्यु",
-    "description": "काठमाडाैँ। इथियोपियाको मध्यवर्ती ओरोमिया राज्यमा शनिबार अर्थोडक्स इसाई चर्च र गाउँहरूमा भएका आक्रमणमा ४० जनाभन्दा बढीको मृत्यु भएको स्थानीय बासिन्दा र एक पादरीले सोमबार एएफपीलाई बताएका छन्।\n\nइथियोपियाको सबैभन्दा ठुलो राज्य ओरोमिया लामो समयदेखि विद्रोही गतिविधि",
-    "categories": [
-      "International News"
-    ],
-    "pub_date": "2026-10-26T19:22:50+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/ethopia_iIbICNFiLE.jpg",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://newsofnepal.com/2026/10/26/792206/",
-    "title": "एनपीएल उद्घाटन खेल : लुम्बिनीलाई सुदूरपश्चिमको ८८ रनको लक्ष्य",
-    "description": "काठमाडौं । नेपाल प्रिमियर लिग (एनपीएल) को तेस्रो संस्करणअन्तर्गत उद्घाटन खेलमा सुदूरपश्चिम रोयल्सले लुम्बिनी लायन्सलाई ८८ रनको सामान्य लक्ष्य दिएको छ। काठमाडौंको कीर्तिपुरस्थित त्रिवि क्रिकेट मैदानमा टस हारेर पहिले ब्याटिङ गरेको सुदूरपश्चिम रोयल्स १७.२ ओभरमा ८७ रन बनाउँदै अलआउट भयो। सुदूरपश्चिमका लागि कप्तान दीपेन्द्रसिंह ऐरीले सर्वाधिक २७ रन बनाए। उनले २३ बलको सामना गर्दै उक्त",
-    "categories": [
-      "Sports News"
-    ],
-    "pub_date": "2026-10-26T19:21:11+05:45",
-    "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/npl11-150x150.jpg",
-    "source_name": "NEWSOFNEPAL.COM"
-  },
-  {
-    "link": "https://shilapatra.com/detail/197533",
-    "title": "पाल्पामा बसले स्कुटरलाई ठक्कर दिँदा एक महिलाकाे मृत्यु",
-    "description": "मृत्यु हुनेमा गुल्मीको धुर्कोट गाउँपालिकाकी माया कुँवर रहेको जिल्ला प्रहरी कार्यालय पाल्पाका प्रहरी नायब उपरीक्षक भीमलाल भट्टराईले जानकारी दिए ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-26T19:21:00+05:45",
-    "image_url": null,
-    "source_name": "SHILAPATRA.COM"
-  },
-  {
-    "link": "https://www.dcnepal.com/2026/10/809098/",
-    "title": "गुल्मीमा स्कारपियो दुर्घटना: ६ जनाको मृत्यु, ३ जना घाइते",
-    "description": "गुल्मी।  गुल्मीको कालीगण्डकी गाउँपालिका-२ स्थित दबौखानीमा बुधबार दिउँसो एक स्कारपियो दुर्घटना हुँदा ६ जनाको मृत्यु भएको छ भने ३ जना गम्भीर घाइते भएका छन्। स्याङ्जाको चिरकोटबाट गुल्मीको राक्सेतर्फ जाँदै गरेको बा ०२२० नम्बरको स्कारपियो दिउँसो करिब ४ बजे कालीगण्डकी करिडोर सडकखण्डमा अनियन्त्रित भई सडकबाट करिब २५० मिटर तल खसेको हो। दुर्घटनामा परी पाँच जनाको घटनास्थलमै",
-    "categories": [],
-    "pub_date": "2026-10-26T19:19:55+05:45",
-    "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/10/Untitled-2-cover.jpg",
-    "source_name": "DCNEPAL.COM"
-  },
-  {
-    "link": "https://www.dcnepal.com/2026/10/809095/",
-    "title": "सार्वजनिक शान्तिविरुद्धको कसुरमा रास्वपा वडा सभापति पक्राउ",
-    "description": "सिरहा । सिरहाको गोलबजारमा दुई समुदायबीच भएको तोडफोड तथा आगजनीको घटनामा संलग्न रहेको आरोपमा राष्ट्रिय स्वतन्त्र पार्टी (रास्वपा) का गोलबजार नगरपालिका-११ का वडा सभापति दानिश खान पक्राउ परेका छन्। सार्वजनिक शान्तिविरुद्धको कसुरमा उनलाई गोलबजार क्षेत्रबाट पक्राउ गरी थप अनुसन्धानका लागि जिल्ला प्रहरी कार्यालय सिरहामा राखिएको छ। गत साउन १४ गते भएको उक्त घटनामा खानको मुख्य",
-    "categories": [
-      "Political News"
-    ],
-    "pub_date": "2026-10-26T19:18:13+05:45",
-    "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/10/Danosh-khan.jpg",
-    "source_name": "DCNEPAL.COM"
-  },
-  {
-    "link": "https://www.imagekhabar.com/news/561801/",
-    "title": "एनपीएल ३ : सुदूरपश्चिमले लुम्बिनीलाई दियो ८७ रनको लक्ष्य",
-    "description": "काठमाडौं । नेपाल प्रिमियर लिग (एनपीएल) को तेस्रो संस्करणको उद्घाटन खेलमा सुदूरपश्चिम रोयल्सले लुम्बिनी लायन्सलाई ८८ रनको लक्ष्य दिएको छ । कीर्तिपुरस्थित त्रिवि क्रिकेट मैदानमा टस हारेर पहिले ब्याटिङ गरेको सुदूरपश्चिम १७.१ ओभरमा ८७ रनमा अलआउट भयो । सुदूरपश्चिमका कप्तान दीपेन्द्रसिंह ऐरीले सर्वाधिक २७ रन बनाए भने अनिल खरेल १५ रनमा अविजित रहे । अन्य",
-    "categories": [],
-    "pub_date": "2026-10-26T19:14:26+05:45",
-    "image_url": "https://www.imagekhabar.com/wp-content/uploads/2026/10/npl-2.jpg",
-    "source_name": "IMAGEKHABAR.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/601422/scorpio-accident-in-gulmi-6-people-killed",
-    "title": "गुल्मीमा स्कार्पियो दुर्घटना, ६ जनाको मृत्यु",
-    "description": "गुल्मी। गुल्मीको कालीगण्डकी गाउँपालिका–२ अर्बेनीको दबौखानीमा स्कार्पियो दुर्घटना हुँदा ६ जनाको मृत्यु भएको ६ भने तीन जना घाइते भएका छन्। दुर्घटनामा परी मृत्यु हुनेमा चालक स्याङ्जा वालिङ नगरपालिका–२ का ६७ वर्षीय दिलीपकुमार बगाले, वालिङ नगरपालिका–१० का",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-10-26T19:11:29+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/apWGeAzOsC.jpg",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://shilapatra.com/detail/197532",
-    "title": "तस्वीरमा हेर्नुहाेस् फ्लडलाइटमा एनपीएलको रौनक",
-    "description": "नेपाल प्रिमियर लिग (एनपीएल) को तेस्रो संस्करणको उद्घाटन खेलले कीर्तिपुरस्थित त्रिभुवन विश्वविद्यालय (टीयू) क्रिकेट मैदानमा रौनक बढाएको छ ।",
-    "categories": [],
-    "pub_date": "2026-10-26T19:10:00+05:45",
-    "image_url": null,
-    "source_name": "SHILAPATRA.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/601421/singapore-developing-nuclear-energy-expertise",
-    "title": "आणविक ऊर्जा विशेषज्ञता विकास गर्दै सिङ्गापुर",
-    "description": "काठमाडाैँ। सिङ्गापुरले ऊर्जा उत्पादनका लागि उन्नत आणविक प्रविधिको उपयुक्तता मूल्याङ्कन गर्दै यस क्षेत्रमा स्थानीय विशेषज्ञता विकास गर्न जनशक्ति विकाससम्बन्धी तीन योजना सुरु गरेको छ।\n\nसिङ्गापुरको ऊर्जा, व्यापार तथा उद्योग मन्त्रालय र ऊर्जा बजार प्राधिकरणले सोमबार जारी",
-    "categories": [
-      "International News"
-    ],
-    "pub_date": "2026-10-26T19:07:58+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/singapore_R0TMoSApys.jpg",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.setopati.com/special-stories/international-feature/401330",
-    "title": "भारतीय रूपैयाँ उकास्न आरबिआईको कसरत, नेपाली मुद्रामा कस्तो असर?",
-    "description": "नेपालका लागि यो विषय अझ महत्त्वपूर्ण छ। नेपाली रूपैयाँ भारतीय रूपैयाँसँग स्थिर विनिमय दरमा बाँधिएको छ।",
-    "categories": [],
-    "pub_date": "2026-10-26T19:07:00+05:45",
-    "image_url": null,
-    "source_name": "SETOPATI.COM"
-  },
-  {
-    "link": "https://www.setopati.com/politics/401350",
-    "title": "कांग्रेसले माग्यो सुदूरपश्चिमका मुख्यमन्त्री भट्टको राजीनामा, सभामुखमाथि पदीय मर्यादा भुलेको आरोप",
-    "description": "नेपाली कांग्रेस सुदूरपश्चिम संसदीय दलले मुख्यमन्त्री खगराज भट्टसहित मन्त्रीहरूलाई नैतिकताका आधारमा राजीनामा दिएर सरकारबाट बाहिरिन आग्रह गरेको छ।",
-    "categories": [
-      "Political News"
-    ],
-    "pub_date": "2026-10-26T19:06:00+05:45",
-    "image_url": null,
-    "source_name": "SETOPATI.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/227323",
-    "title": "गुल्मी स्कारपियो दुर्घटना : छ जनाको मृत्यु, तीन घाइते",
-    "description": "रमेश विश्वकर्मागुल्मी, कात्तिक ९ गते। गुल्मीमा स्कारपियो दुर्घटना हुँदा छ जनाको मृत्यु भएको छ। यस जिल्लाको कालीगण्डकी गाउँपालिका वडा नम्बर–२ दबौखानीस्थित कालीगण्डकी करिडोर सडक खण्ड...",
-    "categories": [],
-    "pub_date": "2026-10-26T19:05:18+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/389002/conversions/IMG_4158-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
   }
 ]
