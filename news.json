@@ -1,5 +1,25 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/227554",
+    "title": "सडक बन्यो बिस्कुन र फुटपाथ पसल",
+    "description": "गोरखापत्र समाचारदाताकाठमाडौँ, कात्तिक १२ गते । सामान्यत सडक दुर्घटनाको मुख्य कारण चालकको लापर्बाही मान्ने आमबुझाइ छ तर त्यसविपरीत ग्रामीण भेगका सडकमा सुकाइने अन्नबाली र छाडा चौपाया...",
+    "categories": [],
+    "pub_date": "2026-10-29T05:28:20+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389339/conversions/road-saftey-illustration-keshabraj-khanal-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/10/2046097/rain-and-snowfall-expected-in-nepal-from-today-appeal-to-be-cautious",
+    "title": "नेपालमा आजदेखि वर्षा र हिमपात, सतर्क रहन अपिल",
+    "description": "कात्तिक १२ गते साँझदेखि १४ गतेसम्म देशका अधिकांश स्थानमा मेघगर्जन र चट्याङसहित मध्यम वर्षा तथा हिमपातको सम्भावना छ । कर्णाली र सुदूरपश्चिम प्रदेशमा पनि मेघगर्जन, चट्याङ र असिनासहित मध्यम वर्षा तथा हिमपात हुने पूर्वानुमान छ ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-10-29T05:20:54+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/MAP-DHM.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
     "link": "https://www.onlinekhabar.com/2026/10/2046095/netanyahu-and-eisenkot-did-not-get-a-majority-what-are-the-options-now",
     "title": "नेतान्याहु र आइजेनकोटले पाएनन् बहुमत, अबको विकल्प के ?",
     "description": "इजरायलमा नयाँ सरकार गठनका लागि सम्भावित चार विकल्पबारे बहस भइरहेको छ ।",
@@ -311,15 +331,6 @@
     "source_name": "DCNEPAL.COM"
   },
   {
-    "link": "https://gorkhapatraonline.com/news/227543",
-    "title": "प्रकृति र ग्रामीण सौन्दर्यले भरिएको जुम्लाको लिताकोट गाउँ",
-    "description": "प्रेमराज सिम्खडाकालीकोट, कार्तिक ११ गते । कर्णाली प्रदेशको जुम्ला जिल्लास्थित तातोपानी गाउँपालिका–३, लिताकोट प्राकृतिक सौन्दर्य, हरियाली र ग्रामीण जीवनशैलीले भरिपूर्ण सुन्दर गाउँ ह...",
-    "categories": [],
-    "pub_date": "2026-10-28T22:04:34+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/389325/conversions/jumla-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
-  },
-  {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/the-next-option-is-the-ujjaya-nepal-party-the-upcoming-elections-will-be-in-our-favor-kulman-ghising-45-48.html",
     "title": "अबको विकल्प उज्यालो नेपाल पार्टी नै हो, आगामी चुनाव हाम्रो पक्षमा आउँछ: कुलमान घिसिङ",
     "description": "उज्यालो नेपाल पार्टीका अध्यक्ष एवं पूर्वमन्त्री कुलमान घिसिङले मुलुकको अबको निर्विकल्प शक्ति आफ्नो पार्टी भएको दाबी गर्दै आगामी निर्वाचनको नतिजा आफ्नो पक्षमा आउने दाबी गरेका छन्।...",
@@ -329,6 +340,15 @@
     "pub_date": "2026-10-28T22:04:34+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1793202223_kulman.png",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/227543",
+    "title": "प्रकृति र ग्रामीण सौन्दर्यले भरिएको जुम्लाको लिताकोट गाउँ",
+    "description": "प्रेमराज सिम्खडाकालीकोट, कार्तिक ११ गते । कर्णाली प्रदेशको जुम्ला जिल्लास्थित तातोपानी गाउँपालिका–३, लिताकोट प्राकृतिक सौन्दर्य, हरियाली र ग्रामीण जीवनशैलीले भरिपूर्ण सुन्दर गाउँ ह...",
+    "categories": [],
+    "pub_date": "2026-10-28T22:04:34+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389325/conversions/jumla-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/risk-of-cyclone-arnab-can-instructs-to-adopt-vigilance-in-aviation-safety-60-69.html",
@@ -2027,23 +2047,5 @@
     "pub_date": "2026-10-28T18:10:59+05:45",
     "image_url": "https://www.dcnepal.com/wp-content/uploads/2026/10/pppppp-768x506-1.jpg",
     "source_name": "DCNEPAL.COM"
-  },
-  {
-    "link": "https://www.sidhakura.com/detail/30424",
-    "title": "नेप्से परिसूचक ३३ दशमलव २९ अङ्कले बढ्यो",
-    "description": "नेपाल स्टक एक्सचेञ्जका अनुसार नेप्से परिसूचक  ३३ दशमलव २९ अङ्कले बढेर दुई हजार ६६४ दशमलव ०६ मा पुगेको छ । ठूला कम्पनीको कारोबार मापन गर्ने सेन्सेटिभ परिसूचक छ दशमलव ३२ अङ्कले बढेर ४८१ दशमलव ७९ मा पुगेको छ ।",
-    "categories": [],
-    "pub_date": "2026-10-28T18:10:57+05:45",
-    "image_url": "https://www.sidhakura.com/uploads/posts/Nepse-1776250288.jpg",
-    "source_name": "SIDHAKURA.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/Aparadh/lalji-murder-case-three-people-including-two-minors-arrested-33-95.html",
-    "title": "लालजी हत्या प्रकरण : दुई नाबालकसहित तीन जना पक्राउ",
-    "description": "विराटनगरका ६९ वर्षीय लालजीप्रसाद गुप्ताको हत्या गरेको आरोपमा दुई नाबालकसहित तीन जना पक्राउ परेका छन् ।...",
-    "categories": [],
-    "pub_date": "2026-10-28T18:10:45+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1784470130_pakrau.jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   }
 ]
