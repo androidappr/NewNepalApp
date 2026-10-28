@@ -41,9 +41,7 @@
     "link": "https://gorkhapatraonline.com/news/227552",
     "title": "मोटरसाइकलको ठक्करबाट वृद्धाको मृत्यु",
     "description": "दमौली (तनहुँ), कात्तिक ११ गते । पृथ्वीराजमार्गअन्तर्गत तनहुँको बन्दीपुर गाउँपालिका–४ विमलनगरमा मोटरसाइकलको ठक्करबाट आज राति पैदलयात्री वृद्धाको मृत्यु भएको छ । मृत्यु हुनेमा स्थानी...",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-28T23:38:58+05:45",
     "image_url": "https://gorkhapatraonline.com/storage/media/389337/conversions/death-original.jpg",
     "source_name": "GORKHAPATRAONLINE.COM"
@@ -70,9 +68,7 @@
     "link": "https://gorkhapatraonline.com/news/227550",
     "title": "भौतिक पूर्वाधार निर्माणका लागि चीनद्वारा उपकरण प्रदान",
     "description": "ताप्लेजुङ, कात्तिक ११ गते । चीन सरकारको अनुदान सहयोगस्वरूप ताप्लेजुङको मेरिङदेन गाउँपालिकालाई स्काभेटर मेसिन प्राप्त भएको छ । गाउँपालिकाको पूर्वाधार विकास तथा निर्माण कार्यलाई तीव्...",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-28T23:15:51+05:45",
     "image_url": "https://gorkhapatraonline.com/storage/media/389335/conversions/WhatsApp-Image-2026-10-28-at-3.09.57-PM-original.jpg",
     "source_name": "GORKHAPATRAONLINE.COM"
@@ -293,6 +289,15 @@
     "source_name": "DCNEPAL.COM"
   },
   {
+    "link": "https://gorkhapatraonline.com/news/227543",
+    "title": "प्रकृति र ग्रामीण सौन्दर्यले भरिएको जुम्लाको लिताकोट गाउँ",
+    "description": "प्रेमराज सिम्खडाकालीकोट, कार्तिक ११ गते । कर्णाली प्रदेशको जुम्ला जिल्लास्थित तातोपानी गाउँपालिका–३, लिताकोट प्राकृतिक सौन्दर्य, हरियाली र ग्रामीण जीवनशैलीले भरिपूर्ण सुन्दर गाउँ ह...",
+    "categories": [],
+    "pub_date": "2026-10-28T22:04:34+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389325/conversions/jumla-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/the-next-option-is-the-ujjaya-nepal-party-the-upcoming-elections-will-be-in-our-favor-kulman-ghising-45-48.html",
     "title": "अबको विकल्प उज्यालो नेपाल पार्टी नै हो, आगामी चुनाव हाम्रो पक्षमा आउँछ: कुलमान घिसिङ",
     "description": "उज्यालो नेपाल पार्टीका अध्यक्ष एवं पूर्वमन्त्री कुलमान घिसिङले मुलुकको अबको निर्विकल्प शक्ति आफ्नो पार्टी भएको दाबी गर्दै आगामी निर्वाचनको नतिजा आफ्नो पक्षमा आउने दाबी गरेका छन्।...",
@@ -302,15 +307,6 @@
     "pub_date": "2026-10-28T22:04:34+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1793202223_kulman.png",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/227543",
-    "title": "प्रकृति र ग्रामीण सौन्दर्यले भरिएको जुम्लाको लिताकोट गाउँ",
-    "description": "प्रेमराज सिम्खडाकालीकोट, कार्तिक ११ गते । कर्णाली प्रदेशको जुम्ला जिल्लास्थित तातोपानी गाउँपालिका–३, लिताकोट प्राकृतिक सौन्दर्य, हरियाली र ग्रामीण जीवनशैलीले भरिपूर्ण सुन्दर गाउँ ह...",
-    "categories": [],
-    "pub_date": "2026-10-28T22:04:34+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/389325/conversions/jumla-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/risk-of-cyclone-arnab-can-instructs-to-adopt-vigilance-in-aviation-safety-60-69.html",
@@ -1804,9 +1800,7 @@
     "link": "https://nagariknews.nagariknetwork.com/arts/director-shares-experience-of-gauthali-winning-western-foreign-cinema-award-50-41.html",
     "title": "‘गौँथली’ ले पायो ‘वेस्ट फरेन सिनेमा’ अवार्ड",
     "description": "बुधबार ‘वल्र्ड फिल्म फेस्टिभल इन क्यान्स’ मा नेपाली कथानक चलचित्र ‘गौँथली’ ले ‘वेस्ट फरेन सिनेमा’ को अवार्ड जितेको छ।...",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-28T18:29:49+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1793191462_2.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
