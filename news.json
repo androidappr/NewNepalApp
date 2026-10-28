@@ -199,9 +199,7 @@
     "link": "https://www.onlinekhabar.com/2026/10/2046081/four-hours-of-prime-minister-balen-at-ravis-residence",
     "title": "रविको निवासमा प्रधानमन्त्री बालेनका चार घण्टा",
     "description": "बालेन–रविको भेट लम्बिएकै कारण र सम्भवतः केही महत्वपूर्ण विषय आज अनिर्णित रहेका कारण आज बस्ने तयारी गरिएको मन्त्रिपरिषद् बैठकसमेत भोलि बिहीबारलाई सारिएको छ ।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-28T22:18:31+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/07/Rabi-balen-7.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -237,9 +235,7 @@
     "link": "https://www.onlinekhabar.com/2026/10/2045989/when-the-soil-becomes-aggressive-in-koshi-other-parties-are-defensive",
     "title": "कोशीमा माटो आक्रामक बन्दा अरू दल रक्षात्मक",
     "description": "हर्क साम्पाङको पार्टीका कार्यकर्ताहरु आक्रामक तयारीमा लाग्दा परम्परागत मत आधार भएका पार्टीहरु भने संगठन बचाउने ध्याउन्नमा देखिन्छन् । रास्वपालाई पनि पूर्वमा श्रम संस्कृति पार्टी नै मूख्य चुनौती बन्ने संकेतहरु स्पष्ट छन् ।",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-28T22:16:41+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/10/Harka-sampang.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -312,15 +308,6 @@
     "source_name": "DCNEPAL.COM"
   },
   {
-    "link": "https://gorkhapatraonline.com/news/227543",
-    "title": "प्रकृति र ग्रामीण सौन्दर्यले भरिएको जुम्लाको लिताकोट गाउँ",
-    "description": "प्रेमराज सिम्खडाकालीकोट, कार्तिक ११ गते । कर्णाली प्रदेशको जुम्ला जिल्लास्थित तातोपानी गाउँपालिका–३, लिताकोट प्राकृतिक सौन्दर्य, हरियाली र ग्रामीण जीवनशैलीले भरिपूर्ण सुन्दर गाउँ ह...",
-    "categories": [],
-    "pub_date": "2026-10-28T22:04:34+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/389325/conversions/jumla-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
-  },
-  {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/the-next-option-is-the-ujjaya-nepal-party-the-upcoming-elections-will-be-in-our-favor-kulman-ghising-45-48.html",
     "title": "अबको विकल्प उज्यालो नेपाल पार्टी नै हो, आगामी चुनाव हाम्रो पक्षमा आउँछ: कुलमान घिसिङ",
     "description": "उज्यालो नेपाल पार्टीका अध्यक्ष एवं पूर्वमन्त्री कुलमान घिसिङले मुलुकको अबको निर्विकल्प शक्ति आफ्नो पार्टी भएको दाबी गर्दै आगामी निर्वाचनको नतिजा आफ्नो पक्षमा आउने दाबी गरेका छन्।...",
@@ -330,6 +317,15 @@
     "pub_date": "2026-10-28T22:04:34+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1793202223_kulman.png",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/227543",
+    "title": "प्रकृति र ग्रामीण सौन्दर्यले भरिएको जुम्लाको लिताकोट गाउँ",
+    "description": "प्रेमराज सिम्खडाकालीकोट, कार्तिक ११ गते । कर्णाली प्रदेशको जुम्ला जिल्लास्थित तातोपानी गाउँपालिका–३, लिताकोट प्राकृतिक सौन्दर्य, हरियाली र ग्रामीण जीवनशैलीले भरिपूर्ण सुन्दर गाउँ ह...",
+    "categories": [],
+    "pub_date": "2026-10-28T22:04:34+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/389325/conversions/jumla-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/risk-of-cyclone-arnab-can-instructs-to-adopt-vigilance-in-aviation-safety-60-69.html",
@@ -668,9 +664,7 @@
     "link": "https://newsofnepal.com/2026/10/28/792449/",
     "title": "चिकित्सा शिक्षा क्षेत्रमा राखिएका माग सम्बोधन गरिने",
     "description": "काठमाडौँ। सरकारले स्वास्थ्य तथा चिकित्सा शिक्षा क्षेत्रका माग सम्बोधनका लागि आन्दोलनरत विभिन्न पक्षसँग आफूले विगतमा गरेका सहमतिको समीक्षा गर्दै त्यसको प्रभावकारी कार्यान्वयन गर्ने निर्णय गरेको छ। सिंहदरबारस्थित प्रधानमन्त्री तथा मन्त्रिपरिषद्को कार्यालयमा आज स्वास्थ्य तथा खाद्य स्वच्छता मन्त्री, शिक्षा तथा खेलकुद मन्त्री, प्रधानमन्त्री वालेन्द्र शाहका स्वास्थ्य सल्लाहकारसहित बसेको बैठकले कार्यान्वयन हुन बाँकी सहमतिका विषयलाई समन्वयका साथ",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-10-28T20:55:28+05:45",
     "image_url": "https://newsofnepal.com/wp-content/uploads/2026/10/pmoooo-150x150.jpg",
     "source_name": "NEWSOFNEPAL.COM"
