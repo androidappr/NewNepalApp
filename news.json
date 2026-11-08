@@ -18,7 +18,7 @@
       "Breaking News"
     ],
     "pub_date": "2026-11-08T23:01:12+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/390993/conversions/Image-2026-11-07-at-11.53.28-AM-original.jpg",
+    "image_url": "https://gorkhapatraonline.com/storage/media/390994/conversions/Image-2026-11-07-at-11.53.28-AM-original.jpg",
     "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
@@ -537,15 +537,6 @@
     "source_name": "SHILAPATRA.COM"
   },
   {
-    "link": "https://gorkhapatraonline.com/news/228716",
-    "title": "रोल्पामा बस दुर्घटना हुँदा १३ जना घाइते",
-    "description": "भरत विकरोल्पा, कात्तिक २२ गते । रोल्पा नगरपालिका –६ कुटिवाङस्थित दार्बोट–माडिचौर सडकखण्ड अन्तर्गतको रिम्सक भन्ने स्थिानमा बस दुर्घटना हुँदा १३ जना घाइते भएका छन् ।घर्तीगाउँबाट लिबा...",
-    "categories": [],
-    "pub_date": "2026-11-08T20:52:04+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/390984/conversions/accident-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
-  },
-  {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/the-gandigad-bridge-connecting-achham-doti-has-been-abandoned-for-16-months-with-even-the-suspension-bridge-collapsing-making-travel-risky-60-66.html",
     "title": "गण्डीगाडमा नयाँ पुल बनेन, भएको पनि रहेन",
     "description": "अछाम र डोटी जिल्लाको सिमानास्थित गण्डीगाडमा सम्झौता भएको १६ महिना बितिसक्दा पनि मोटरेबल पुल निर्माणको काम अघि बढ्न सकेको छैन। पुल निर्माणका क्रममा डोजरले ढुङ्गा खसालेर पुरानो झोलुङ्गे पुलसमेत क्षतिग्रस्त बनाइदिएपछि स्थानीय बासिन्दा ज्यान जोखिममा राखेर आवत...",
@@ -556,6 +547,15 @@
     "pub_date": "2026-11-08T20:52:04+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1794150438_banen.png",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/228716",
+    "title": "रोल्पामा बस दुर्घटना हुँदा १३ जना घाइते",
+    "description": "भरत विकरोल्पा, कात्तिक २२ गते । रोल्पा नगरपालिका –६ कुटिवाङस्थित दार्बोट–माडिचौर सडकखण्ड अन्तर्गतको रिम्सक भन्ने स्थिानमा बस दुर्घटना हुँदा १३ जना घाइते भएका छन् ।घर्तीगाउँबाट लिबा...",
+    "categories": [],
+    "pub_date": "2026-11-08T20:52:04+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/390984/conversions/accident-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
     "link": "https://www.ratopati.com/story/604127/massive-fire-breaks-out-at-delhi-garment-factory-25-fire-engines-mobilized-simultaneously",
@@ -1832,9 +1832,7 @@
     "link": "https://www.imagekhabar.com/news/563126/",
     "title": "पोखरामा मोटरसाइकल दुर्घटनामा एकको मृत्यु",
     "description": "पोखरा । पोखरा महानगरपालिका–२२ पुम्दीभुम्दीस्थित लीला आधारभूत विद्यालय नजिकै भएको मोटरसाइकल दुर्घटनामा स्थानीय सुरेश लामिछानेको मृत्यु भएको छ । पिच सडकबाट अनियन्त्रित भई करिव दुई मिटर तल खसेको अवस्थामा मोटरसाइकल र चालक लामिछाने मृत फेला परेपछि स्थानीय क्षेत्रमा त्रास बढेको हो । आईतबार बिहान लीला आधारभूत विद्यालय नजिकै क्षतविक्षत अवस्थामा पल्सर मोटरसाइकल फेला परेपछि स्थानीयले",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-11-08T17:12:35+05:45",
     "image_url": "https://www.imagekhabar.com/wp-content/uploads/2026/11/Motorcycle-Durghatana.jpg",
     "source_name": "IMAGEKHABAR.COM"
