@@ -236,7 +236,6 @@
     "title": "सामाजिक सद्भाव कायम गरी चाडपर्व मनाउन आग्रह",
     "description": "कञ्चनपुर। जिल्ला प्रशासन कार्यालय कञ्चनपुरले मर्यादित र सामाजिक सद्भाव कायम गरी चाडपर्व मनाउन आग्रह गरेको छ। प्रशासनले सार्वजनिक सूचना जारी गर्दै जिल्लामा शान्ति सुरक्षा कायम राख्ने उद्देश्यले देउसीभैलो, नाचगानलगायत सांस्कृतिक कार्यक्रम बिहान ७ बजेदेखि राति १० बजेसम्म मात्र सञ्चालन गर्न अनुरोध गरेको हो। सहायक प्रमुख जिल्ला अधिकारी मोहन चन्द जोशीद्वारा जारी सूचनामा कानुन विपरीत जुवातास,",
     "categories": [
-      "Breaking News",
       "National News"
     ],
     "pub_date": "2026-11-08T21:52:17+05:45",
@@ -258,9 +257,7 @@
     "link": "https://www.ratopati.com/story/604135/a-fugitive-defendant-arrested-during-the-genji-movement",
     "title": "जेनजी आन्दोलनका क्रममा फरार प्रतिवादी पक्राउ",
     "description": "काठमाडौँ । जेनजी आन्दोलनका क्रममा फरार एक प्रतिवादीलाई प्रहरीले पक्राउ गरेको छ । सुनसरीको इनरुवा नगरपालिका ९ का २० वर्षीय आकाशकुमार खत्वेलाई आइतबार प्रहरीले पक्राउ गरेको हो । खत्वे जबरजस्ती करणी मुद्दामा १३ वर्ष कैद र",
-    "categories": [
-      "Breaking News"
-    ],
+    "categories": [],
     "pub_date": "2026-11-08T21:51:16+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/895363368_1131969353031772_8379561473038358805_n_OdrcyyGekg.webp",
     "source_name": "RATOPATI.COM"
@@ -573,6 +570,15 @@
     "source_name": "SHILAPATRA.COM"
   },
   {
+    "link": "https://gorkhapatraonline.com/news/228716",
+    "title": "रोल्पामा बस दुर्घटना हुँदा १३ जना घाइते",
+    "description": "भरत विकरोल्पा, कात्तिक २२ गते । रोल्पा नगरपालिका –६ कुटिवाङस्थित दार्बोट–माडिचौर सडकखण्ड अन्तर्गतको रिम्सक भन्ने स्थिानमा बस दुर्घटना हुँदा १३ जना घाइते भएका छन् ।घर्तीगाउँबाट लिबा...",
+    "categories": [],
+    "pub_date": "2026-11-08T20:52:04+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/390984/conversions/accident-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
     "link": "https://nagariknews.nagariknetwork.com/social-affairs/the-gandigad-bridge-connecting-achham-doti-has-been-abandoned-for-16-months-with-even-the-suspension-bridge-collapsing-making-travel-risky-60-66.html",
     "title": "गण्डीगाडमा नयाँ पुल बनेन, भएको पनि रहेन",
     "description": "अछाम र डोटी जिल्लाको सिमानास्थित गण्डीगाडमा सम्झौता भएको १६ महिना बितिसक्दा पनि मोटरेबल पुल निर्माणको काम अघि बढ्न सकेको छैन। पुल निर्माणका क्रममा डोजरले ढुङ्गा खसालेर पुरानो झोलुङ्गे पुलसमेत क्षतिग्रस्त बनाइदिएपछि स्थानीय बासिन्दा ज्यान जोखिममा राखेर आवत...",
@@ -582,15 +588,6 @@
     "pub_date": "2026-11-08T20:52:04+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1794150438_banen.png",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/228716",
-    "title": "रोल्पामा बस दुर्घटना हुँदा १३ जना घाइते",
-    "description": "भरत विकरोल्पा, कात्तिक २२ गते । रोल्पा नगरपालिका –६ कुटिवाङस्थित दार्बोट–माडिचौर सडकखण्ड अन्तर्गतको रिम्सक भन्ने स्थिानमा बस दुर्घटना हुँदा १३ जना घाइते भएका छन् ।घर्तीगाउँबाट लिबा...",
-    "categories": [],
-    "pub_date": "2026-11-08T20:52:04+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/390984/conversions/accident-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
   },
   {
     "link": "https://www.ratopati.com/story/604127/massive-fire-breaks-out-at-delhi-garment-factory-25-fire-engines-mobilized-simultaneously",
@@ -648,7 +645,6 @@
     "title": "सयपत्री फूलबाट वार्षिक चार लाख आम्दानी",
     "description": "गुल्मी। बढ्दो बसाइँसराइका कारण पछिल्लो समय गाउँघरका खेतबारी बाँझिँदै गएका छन्। रोजगारी र अवसरको खोजीमा युवा पुस्ता विदेशिने क्रम बढ्दो छ। तर छत्रकोट गाउँपालिका–२ ग्वाघाकी ५२ वर्षीया लक्ष्मी महत्राले भने अरूले छाडेका बाँझो जग्गामा व्यावसायिक रूपमा फूलखेती गरेर मनग्य आम्दानी गर्दै आएकी छन्। महत्राले विगत पाँच वर्षदेखि बाँझो जग्गामा व्यावसायिक रूपमा सयपत्री फूलखेती गरेर पर्याप्त",
     "categories": [
-      "Breaking News",
       "National News"
     ],
     "pub_date": "2026-11-08T20:40:56+05:45",
