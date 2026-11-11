@@ -1,5 +1,48 @@
 [
   {
+    "link": "https://www.bbc.com/nepali/articles/cqj9k9gvwkgyo?at_medium=RSS&at_campaign=rss",
+    "title": "घर पुनर्निर्माण गर्दा के केमा ध्यान दिने?",
+    "description": "घर पुनर्निर्माण गर्दा इन्जिनियरसँग परामर्श लिन भोटेकोशी बाढी प्रभावितलाई अधिकारीहरूको आग्रह छ।",
+    "categories": [],
+    "pub_date": "2026-11-11T20:30:35+05:45",
+    "image_url": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/b7ec/live/78a3c930-ddcd-11f1-93e1-3b657b665bcf.jpg",
+    "source_name": "BBC.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2055502/bhotekoshi-disaster-takes-away-the-joy-of-festivals-even-the-glittering-tihar-is-dark-for-the-displaced",
+    "title": "भोटेकोशी विपत्तिले खोस्यो चाडपर्वको खुसी, विस्थापितका लागि तिहार पनि अँध्यारो",
+    "description": "देविघाट बजारबाट विस्थापित भएर लामिबगैंचा पुगेका ३० परिवारका करिब एक सय जना बाढी प्रभावित यसैगरी निराशाबीच तिहारको समय गुजारिरहेका छन् । आफन्तको शोकका कारण धेरैजसोले दशैँ पनि मनाएनन् ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-11T20:25:23+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/rasuwa-badhi-pidit.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2055700/lady-traveler-traveling-to-show-hidden-nepal",
+    "title": "लेडी ट्राभलर : घुम्दै देखाउँदैछन् ‘लुकेको नेपाल’",
+    "description": "देशका कुना–कन्दरामा पदयात्रा गर्दै भिडिओमार्फत भूगोलमात्र होइन, संस्कृति चिनाउने, मौलिक लोक कला बाहिर ल्याउने र घुम्नलाई अभिप्रेरित गर्ने काम गरिरहेका छन्– लेडी ट्राभलरहरू ।",
+    "categories": [
+      "Breaking News",
+      "Business News"
+    ],
+    "pub_date": "2026-11-11T20:23:06+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Lady-travellor.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2055658/the-process-of-mobilizing-climate-finance-must-be-simple-and-predictable",
+    "title": "‘जलवायु वित्त परिचालनको प्रक्रिया सरल र अनुमानयोग्य हुनुपर्छ’",
+    "description": "नेपालजस्ता जलवायु परिवर्तनको उच्च जोखिममा रहेका देशमा बारम्बार विपद् आइरहने भएकाले अनुकूलन र न्यूनीकरणका लागि आवश्यक स्रोत सुनिश्चित हुनुपर्छ । प्रत्येक पटक परियोजना प्रस्ताव तयार पारेर मात्र वित्त प्राप्त गर्ने अवस्था हुनुहुँदैन । जलवायु वित्त अनुदानमा आधारित हुनुपर्छ ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-11T20:21:17+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Shishir-khanal-1.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
     "link": "https://www.onlinekhabar.com/2026/11/2055611/prakash-rises-from-ashes-of-a-business-worth-60-million",
     "title": "६ करोडको व्यवसाय खरानी भएकै ठाउँबाट फेरि उठे प्रकाश",
     "description": "२५ हजार रुपैयाँबाट ब्रिज कोर्स पढाउने व्यवसाय थालेका प्रकाशले ६ करोड बढी लगानीको व्यवसाय आगलागीले ध्वस्त भएपछि पनि हरेश नखाइ सोही ठाउँमा नयाँ व्यवसाय सुरु गरिसकेका छन् । आगामी नयाँ वर्षसम्म नेपाली लुगा घर र नेपाली जुत्ता घरलाई ब्युँताउने तयारीमा छन् ।",
@@ -8,6 +51,17 @@
     ],
     "pub_date": "2026-11-11T20:20:24+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/prakash-vusal-1-e1794388135488.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2055750/netanyahus-new-proposal-to-preserve-power-a-government-of-national-unity",
+    "title": "सत्ता जोगाउन नेतन्याहूको नयाँ प्रस्ताव- राष्ट्रिय एकताको सरकार",
+    "description": "नेतन्याहूका लागि यो सत्ता संघर्ष राजनीतिक भविष्यसँगै व्यक्तिगत स्वतन्त्रतासँग पनि जोडिएको छ । उनीमाथि लागेका विभिन्न भ्रष्टाचारसम्बन्धी मुद्दा अदालतमा विचाराधीन छन् ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-11T20:19:26+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/benjamin-netanyahu.jpg",
     "source_name": "ONLINEKHABAR.COM"
   },
   {
@@ -22,13 +76,35 @@
     "source_name": "ONLINEKHABAR.COM"
   },
   {
+    "link": "https://www.onlinekhabar.com/2026/11/2055639/why-did-sonia-gandhi-reject-the-post-of-prime-minister",
+    "title": "सोनिया गान्धीले किन अस्वीकार गरेकी थिइन् प्रधानमन्त्री पद ?",
+    "description": "सन् २००४ मा मनमोहन सिंह प्रधानमन्त्री बनेपछि भारतको राजनीतिक समीकरणमा ठूलो परिवर्तन आएको थियो । त्यसबेला कांग्रेसको नेतृत्व सोनिया गान्धीले गरिरहेकी थिइन् । कांग्रेसले चुनाव जितेपछि उनी नै प्रधानमन्त्री बन्ने चर्चा पनि व्यापक थियो ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-11T20:17:50+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Soniya-gandhi.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2055690/leaving-foreign-countries-and-markets-farming-in-the-village-monthly-income-2-lakh",
+    "title": "विदेश र बजार छाडेर गाउँमा कृषि, मासिक आम्दानी २ लाख",
+    "description": "कृषि कर्मबाटै सबै खर्च कटाएर थापा दम्पतीले मासिक करिब २ लाख रुपैयाँसम्म आम्दानी गरिरहेका छन् भने गाउँका दुई जनालाई नियमित रोजगारी समेत दिएका छन् ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-11T20:16:42+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/ganesh-thapa.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
     "link": "https://www.onlinekhabar.com/2026/11/2055474/naresh-bhatt-found-guilty-in-mamta-kafle-murder-case",
     "title": "ममता काफ्ले ह*त्या प्रकरणमा नरेश भट्ट दोषी ठहर",
     "description": "२५ कात्तिक, काठमाडौं । अमेरिकाको भर्जिनिया राज्यमा ममता काफ्लेको हत्या प्रकरणमा उनका पति नरेश भट्ट दोषी ठहर भएका छन् । १० नोभेम्बर २०२६ मा जुरीले भट्टलाई प्रथम श्रेणीको हत्या, शव लुकाएको र शव विकृत बनाएको अभियोगमा दोषी ठहर गरेको अमेरिकी सञ्चारमाध्यमहरूले जनाएका छन् । सीएनएनका अनुसार भट्टले आफ्नी पत्नीको हत्या गरेको अभियोग अस्वीकार गर्दै आएकामा",
     "categories": [
       "Crime & Investigation"
     ],
-    "pub_date": "2026-11-11T20:17:18+05:45",
+    "pub_date": "2026-11-11T20:14:18+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Naresh-Bhatta-e1794364322662.jpg",
     "source_name": "ONLINEKHABAR.COM"
   },
@@ -115,17 +191,6 @@
     "source_name": "RATOPATI.COM"
   },
   {
-    "link": "https://www.onlinekhabar.com/2026/11/2055502/bhotekoshi-disaster-takes-away-the-joy-of-festivals-even-the-glittering-tihar-is-dark-for-the-displaced",
-    "title": "भोटेकोशी विपत्तिले खोस्यो चाडपर्वको खुसी, विस्थापितका लागि तिहार पनि अँध्यारो",
-    "description": "देविघाट बजारबाट विस्थापित भएर लामिबगैंचा पुगेका ३० परिवारका करिब एक सय जना बाढी प्रभावित यसैगरी निराशाबीच तिहारको समय गुजारिरहेका छन् । आफन्तको शोकका कारण धेरैजसोले दशैँ पनि मनाएनन् ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-11T19:54:23+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/rasuwa-badhi-pidit.jpg",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
     "link": "https://nagariknews.nagariknetwork.com/others/unique-offer-from-dating-app-that-will-refund-rs-45-000-if-marriage-cannot-be-arranged-84-16.html",
     "title": "विवाह गराउन नसके ४५ हजार फिर्ता गर्ने ‘डेटिङ एप’को अनौठो अफर",
     "description": "सामान्य डेटिङ एपमा प्रयोगकर्ताले एकैपटक धेरै व्यक्तिसँग कुराकानी गर्न सक्छन्। तर, लियाङपेई एआईले भने प्रयोगकर्तालाई एक समयमा एक जनासँग मात्र सम्बन्ध अगाडि बढाउन प्रोत्साहित गर्छ।...",
@@ -144,18 +209,6 @@
     "pub_date": "2026-11-11T19:52:29+05:45",
     "image_url": null,
     "source_name": "BIZMANDU.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/11/2055700/lady-traveler-traveling-to-show-hidden-nepal",
-    "title": "लेडी ट्राभलर : घुम्दै देखाउँदैछन् ‘लुकेको नेपाल’",
-    "description": "देशका कुना–कन्दरामा पदयात्रा गर्दै भिडिओमार्फत भूगोलमात्र होइन, संस्कृति चिनाउने, मौलिक लोक कला बाहिर ल्याउने र घुम्नलाई अभिप्रेरित गर्ने काम गरिरहेका छन्– लेडी ट्राभलरहरू ।",
-    "categories": [
-      "Breaking News",
-      "Business News"
-    ],
-    "pub_date": "2026-11-11T19:52:06+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Lady-travellor.jpg",
-    "source_name": "ONLINEKHABAR.COM"
   },
   {
     "link": "https://shilapatra.com/detail/198476",
@@ -178,17 +231,6 @@
     "source_name": "NEWSOFNEPAL.COM"
   },
   {
-    "link": "https://www.onlinekhabar.com/2026/11/2055639/why-did-sonia-gandhi-reject-the-post-of-prime-minister",
-    "title": "सोनिया गान्धीले किन अस्वीकार गरेकी थिइन् प्रधानमन्त्री पद ?",
-    "description": "सन् २००४ मा मनमोहन सिंह प्रधानमन्त्री बनेपछि भारतको राजनीतिक समीकरणमा ठूलो परिवर्तन आएको थियो । त्यसबेला कांग्रेसको नेतृत्व सोनिया गान्धीले गरिरहेकी थिइन् । कांग्रेसले चुनाव जितेपछि उनी नै प्रधानमन्त्री बन्ने चर्चा पनि व्यापक थियो ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-11T19:48:50+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Soniya-gandhi.jpg",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
     "link": "https://www.ratopati.com/story/604617/provincial-assembly-member-khatun-takes-oath-of-office-and-secrecy",
     "title": "प्रदेशसभा सदस्य खातुनले लिइन् पद तथा गोपनीयताको शपथ",
     "description": "जनकपुरधाम । मधेस प्रदेशसभा सदस्यमा नियुक्त नाजिमा खातुनले आज पद तथा गोपनीयताको शपथ लिएकी छन् । \n\nमधेस प्रदेशसभाका सभामुख रामअशिष यादवले प्रदेशसभा सचिवालयमा आज आयोजित समारोहमा नवनियुक्त सदस्य खातुनलाई पद तथा गोपनीयताको शपथ गराएका हुन् ।\n\nशपथ",
@@ -201,7 +243,9 @@
     "link": "https://www.onlinekhabar.com/2026/11/2055757/the-excitement-of-bhai-tika-in-australia-sisters-head-to-the-city-to-vaccinate-their-brothers",
     "title": "अस्ट्रेलियामा भाइटीकाको रौनक, दाजुभाइलाई टीका लगाउन सहर पुगे दिदीबहिनी",
     "description": "क्यानबेरा । अस्ट्रेलियामा यसवर्षको भाइटीका नेपाली समुदायले हर्षोल्लासका साथ मनाएका छन् । स्थानीय समयअनुसार बिहान करिब ११ बजेदेखि नै भाइटीका लगाउने क्रम सुरु भएको थियो । कतिपय परिवारले बिहानै शुभसाइतमा भाइटीका लगाए भने, काम र अन्य व्यस्तताका कारण कतिपयले काम सकेपछि साँझसम्म पनि दाजुभाइलाई टीका लगाएर पर्व मनाएका छन् । भाइटीकाको अवसरमा दाजुभाइ तथा दिदीबहिनीसँग",
-    "categories": [],
+    "categories": [
+      "National News"
+    ],
     "pub_date": "2026-11-11T19:35:50+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/australia-bhaitika.jpg",
     "source_name": "ONLINEKHABAR.COM"
@@ -285,21 +329,11 @@
     "title": "फिनल्यान्डका वैदेशिक व्यापारमन्त्रीसँग परराष्ट्रमन्त्रीको भेटवार्ता",
     "description": "२५ कात्तिक, टर्किए । परराष्ट्रमन्त्री शिशिर खनाल र फिनल्यान्डका वैदेशिक व्यापार तथा विकासमन्त्री भिले ताभियोबीच द्विपक्षीय भेटवार्ता भएको छ । जलवायु परिवर्तनसम्बन्धी संयुक्त राष्ट्रसङ्घीय सम्मेलन (कोप–३१) मा सहभागी हुन अन्ताल्यामा आएका मन्त्री खनालले बुधबार फिनल्यान्डका मन्त्री ताभियोसँग भेटवार्ता गरेका हुन् । भेटमा परराष्ट्रमन्त्री खनालले हालै नेपालमा गएको विनाशकारी जलवायुजन्य बाढीपछि फिनल्यान्ड सरकार र त्यहाँका जनताले",
     "categories": [
-      "Breaking News"
+      "Breaking News",
+      "National News"
     ],
     "pub_date": "2026-11-11T19:23:08+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/vet-1.jpg",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/11/2055750/netanyahus-new-proposal-to-preserve-power-a-government-of-national-unity",
-    "title": "सत्ता जोगाउन नेतन्याहूको नयाँ प्रस्ताव- राष्ट्रिय एकताको सरकार",
-    "description": "नेतन्याहूका लागि यो सत्ता संघर्ष राजनीतिक भविष्यसँगै व्यक्तिगत स्वतन्त्रतासँग पनि जोडिएको छ । उनीमाथि लागेका विभिन्न भ्रष्टाचारसम्बन्धी मुद्दा अदालतमा विचाराधीन छन् ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-11T19:17:26+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/benjamin-netanyahu.jpg",
     "source_name": "ONLINEKHABAR.COM"
   },
   {
@@ -312,17 +346,6 @@
     "pub_date": "2026-11-11T19:14:02+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1745480626_Tourist%20visiting%20bhaktapur-01.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/11/2055658/the-process-of-mobilizing-climate-finance-must-be-simple-and-predictable",
-    "title": "‘जलवायु वित्त परिचालनको प्रक्रिया सरल र अनुमानयोग्य हुनुपर्छ’",
-    "description": "नेपालजस्ता जलवायु परिवर्तनको उच्च जोखिममा रहेका देशमा बारम्बार विपद् आइरहने भएकाले अनुकूलन र न्यूनीकरणका लागि आवश्यक स्रोत सुनिश्चित हुनुपर्छ । प्रत्येक पटक परियोजना प्रस्ताव तयार पारेर मात्र वित्त प्राप्त गर्ने अवस्था हुनुहुँदैन । जलवायु वित्त अनुदानमा आधारित हुनुपर्छ ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-11T19:13:17+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/Shishir-khanal-1.jpg",
-    "source_name": "ONLINEKHABAR.COM"
   },
   {
     "link": "https://www.sidhakura.com/detail/30974",
@@ -430,17 +453,6 @@
     ],
     "pub_date": "2026-11-11T18:51:47+05:45",
     "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/prasanta.png",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/11/2055690/leaving-foreign-countries-and-markets-farming-in-the-village-monthly-income-2-lakh",
-    "title": "विदेश र बजार छाडेर गाउँमा कृषि, मासिक आम्दानी २ लाख",
-    "description": "कृषि कर्मबाटै सबै खर्च कटाएर थापा दम्पतीले मासिक करिब २ लाख रुपैयाँसम्म आम्दानी गरिरहेका छन् भने गाउँका दुई जनालाई नियमित रोजगारी समेत दिएका छन् ।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-11T18:50:42+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/ganesh-thapa.jpg",
     "source_name": "ONLINEKHABAR.COM"
   },
   {
@@ -1391,7 +1403,6 @@
     "title": "त्रिभुवन विमानस्थलको आन्तरिक टर्मिनलको छानो जुहिएर जलमग्न, यात्रुलाई सास्ती",
     "description": "काठमाडौं । बुधबार दिउँसो असिनासहित परेको भीषण वर्षाका कारण त्रिभुवन अन्तर्राष्ट्रिय विमानस्थलको आन्तरिक टर्मिनल भवन जलमग्न भएको छ। कमजोर छानाबाट पानी भित्र चुहिएपछि विभिन्न गन्तव्यतर्फ उड्न विमानस्थल पुगेका यात्रुहरूले सास्ती व्यहोर्नुपरेको छ। पानी जमेका कारण विभिन्न वायुसेवा कम्पनीका चेक–इन काउन्टरमा बोर्डिङ पास लिएर प्रतीक्षा गरिरहेका तथा भित्र–बाहिर आउजाउ गर्ने यात्रुहरूको आवागमन प्रभावित भएको थियो। नेपाल",
     "categories": [
-      "Breaking News",
       "National News"
     ],
     "pub_date": "2026-11-11T14:43:43+05:45",
@@ -2097,18 +2108,6 @@
     ],
     "pub_date": "2026-11-11T11:37:02+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1790137091_Trump%20Claim%20(1).jpg",
-    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
-  },
-  {
-    "link": "https://nagariknews.nagariknetwork.com/social-affairs/reasons-to-remember-mahaguru-phalgunanda-86-56.html",
-    "title": "महागुरु फाल्गुनन्दलाई सम्झिनुपर्ने कारण",
-    "description": "विशेष गरी पूर्वी नेपालसहित देशका विभिन्न स्थानमा किराँत समुदायले यस दिनलाई उत्सव तथा विशेष पर्वका रूपमा श्रद्धापूर्वक मनाउँदै आएका छन्।...",
-    "categories": [
-      "Breaking News",
-      "National News"
-    ],
-    "pub_date": "2026-11-11T11:35:16+05:45",
-    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1794376206_phalgunanda.png",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   }
 ]
