@@ -1,5 +1,51 @@
 [
   {
+    "link": "https://baahrakhari.com/detail/507135",
+    "title": "तीन महिनामा ४२ अर्ब ३२ करोडभन्दा बढी वैदेशिक सहायता प्राप्त",
+    "description": "सरकारले यस वर्ष दुई खर्ब ४७ अर्ब २८ करोड सात लाख ऋण र ६१ अर्ब ७४ करोड ५४ लाख अनुदान गरी कुल तीन खर्ब नौ अर्ब दुई करोड ६१ लाख रुपैयाँ वैदेशिक सहायता प्राप्तिको लक्ष्य राखेको छ ।",
+    "categories": [],
+    "pub_date": "2026-11-12T13:33:00+05:45",
+    "image_url": null,
+    "source_name": "BAAHRAKHARI.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/sports/npl-pokhara-struggles-against-biratnagar-yuvraj-samra-hits-half-century-62-71.html",
+    "title": "एनपीएलः विराटनगरविरुद्ध संघर्ष गर्दै पोखरा, युवराज साम्राको अर्धशतक",
+    "description": "कीर्तिपुरस्थित त्रिवि क्रिकेट मैदानमा टस जितेर पहिला ब्याटिङ गरेको पोखराले १२ ओभरको समाप्तिमा ५ विकेट गुमाएर ९१ रन बनाएको छ।...",
+    "categories": [
+      "Breaking News",
+      "Sports News"
+    ],
+    "pub_date": "2026-11-12T13:32:17+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2026/third-party/1794469627_BRT_POK%201.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2046515/6-months-of-box-office-only-a-few-films-profit-most-producers-disappointed",
+    "title": "बक्स अफिसको ६ महिना : केही फिल्म मात्रै फाइदामा, अधिकांश निर्माता निराश",
+    "description": "२०८३ सालको पहिलो ६ महिनाको बक्स अफिसले नेपाली चलचित्र उद्योगमा व्यावसायिक सफलताको कुनै निश्चित सूत्र नरहेको देखाएको छ ।",
+    "categories": [
+      "Breaking News",
+      "Business News",
+      "Entertainment News"
+    ],
+    "pub_date": "2026-11-12T13:27:50+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/movie-1.jpg",
+    "source_name": "ONLINEKHABAR.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/politics/ravi-demands-free-treatment-for-those-injured-in-bhimphedi-accident-and-compensation-for-the-families-of-the-deceased-69-64.html",
+    "title": "भीमफेदी दुर्घटनाका घाइतेको निःशुल्क उपचार र मृतकका परिवारलाई क्षतिपूर्ति दिन रविको माग",
+    "description": "राष्ट्रिय स्वतन्त्र पार्टी (रास्वपा) का सभापति रवि लामिछानेले मकवानपुरको भीमफेदी गाउँपालिका–६ स्थित चिसापानी गढीमा भएको सडक दुर्घटनाप्रति दुःख व्यक्त गरेका छन्।...",
+    "categories": [
+      "Breaking News",
+      "Political News"
+    ],
+    "pub_date": "2026-11-12T13:27:19+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1778422592_rabi.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
     "link": "https://www.sidhakura.com/detail/31003",
     "title": "भीमफेदी दुर्घटनाप्रति जनमत पार्टीद्वारा दुःख व्यक्त",
     "description": "मकवानपुरको भीमफेदीमा भएको भीषण माइक्रोबस दुर्घटनामा १० जनाको मृत्यु र पाँच जना गम्भीर घाइते भएको घटनाप्रति जनमत पार्टीले दुःख व्यक्त गरेको छ।",
@@ -23,7 +69,9 @@
     "link": "https://shilapatra.com/detail/198499",
     "title": "अघिल्लो खेलमा शतक हानेका पोखराका साम्राको विराटनगरविरुद्ध अर्धशतक",
     "description": "नेपाल प्रिमियर लिग (एनपीएल) को तेस्रो संस्करणमा अघिल्लो अर्धशतक हानेका पोखरा एभेन्जर्सका युवराज सिंह साम्राले अर्धशतक पनि हानेका छन् ।",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-11-12T13:22:00+05:45",
     "image_url": null,
     "source_name": "SHILAPATRA.COM"
@@ -962,7 +1010,9 @@
     "link": "https://baahrakhari.com/detail/507121",
     "title": "गाडी दुर्घटनाका घाइतेको प्रभावकारी उपचारमा ध्यान दिन प्रचण्डको आग्रह",
     "description": "उनले घाइतेहरूको शीघ्र स्वास्थ्यलाभको कामना गरेका छन् । आवश्यक उपचार तथा सहयोगको व्यवस्था मिलाउन उनले सरकारको ध्यानाकर्षण गराएका छन् ।",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-11-12T11:23:44+05:45",
     "image_url": null,
     "source_name": "BAAHRAKHARI.COM"
@@ -2094,49 +2144,5 @@
     "pub_date": "2026-11-12T09:21:05+05:45",
     "image_url": "https://newsofnepal.com/wp-content/uploads/2026/11/IMG_20261109_144907-150x150.jpg",
     "source_name": "NEWSOFNEPAL.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/604672/bhimphedi-accident-update-three-injured-admitted-to-hetauda-hospital",
-    "title": "भीमफेदी दुर्घटना अपडेट : तीन घाइते हेटौंडा अस्पतालमा",
-    "description": "मकवानपुर । मकवानपुरको भीमफेदी गाउँपालिका–६ चिसापानी गढीमा भएको यात्रुवाहक इभी दुर्घटनामा घाइते भएकामध्ये तीन जनालाई उपचारका लागि हेटौंडा अस्पताल ल्याइएको छ ।\n\nघाइते हुनेमा सर्लाहीको चक्रघट्टा गाउँपालिका–४ सुन्दरपुरटोलका ३३ वर्षीय मुकेश यादव, ५ वर्षीय सक्षम कुमार",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-12T09:16:47+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/ev_B3b9Z1dwMs.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.sidhakura.com/detail/30986",
-    "title": "परराष्ट्रमन्त्री खनालद्वारा हिन्दुकुश हिमालय क्षेत्रमा क्षेत्रीय सहकार्य सुदृढ गर्न जोड",
-    "description": "परराष्ट्रमन्त्री शिशिर खनालले जलवायु परिवर्तनका चुनौती सामना गर्न तथा विपद् उत्थानशीलता बढाउन हिन्दुकुश हिमालय क्षेत्रमा क्षेत्रीय सहकार्यका संयन्त्र सुदृढ गर्नुपर्ने बताएका छन्।",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-12T09:13:05+05:45",
-    "image_url": "https://www.sidhakura.com/uploads/posts/WhatsApp-Image-2026-11-12-at-09.09.11-1794454068.jpeg",
-    "source_name": "SIDHAKURA.COM"
-  },
-  {
-    "link": "https://bizmandu.com/content/20261112091123.html",
-    "title": "भीमफेदीको चिसापानीमा गाडी दुर्घटना, १० जनाको मृत्यु, ५ जना घाइते",
-    "description": "काठमाडौं। मकवानपुरको भीमफेदी गाउँपालिका–६ स्थित चिसापानीगढीमा गाडी दुर्घटना हुँदा १० जनाको मृत्यु भएको छ भने पाँच जना घाइते भएका छन्। बिहीबार (आज) बिहान करिब ६:१० बजे काठमाडौंबाट सर्लाहीतर्फ जाँदै गरेको इभी गाडी सडकबाट करिब ७०० मिटर तल खसेर दुर्घटना भएको प्रहरीले जनाएको छ। दुर्घटनामा गाडीमा सवार १५ जनामध्ये १० जनाको मृत्यु भएको र पाँच जना",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-12T09:11:23+05:45",
-    "image_url": "https://bizmandu.com/wp-content/uploads/2026/11/Bhimphedi_EV-accident_K26-3-1024x472.jpg",
-    "source_name": "BIZMANDU.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/228864",
-    "title": "विद्युतीय गाडी दुर्घटना: १० जनाको मृत्यु, पाँच घाइते",
-    "description": "अनिल पराजुलीमकवानपुर, कात्तिक २६ गते । मकवानपुरको भीमफेदी गाउँपालिका –६, चिसापानी गढीमा यात्रुवाहक विद्युतीय गाडी दुर्घटना हुँदा १० जनाको मृत्यु भएको छ । पाँच जना घाइते भएका छन् ।...",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-12T09:10:41+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/391197/conversions/Accident_makwanpur-(3)-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
   }
 ]
