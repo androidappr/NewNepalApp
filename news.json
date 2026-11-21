@@ -1,5 +1,56 @@
 [
   {
+    "link": "https://gorkhapatraonline.com/news/229750",
+    "title": "कन्याममा आजदेखि दुईदिने चिया महोत्सव",
+    "description": "प्रकाश नेपालइलाम, मङ्सिर ५ गते । नेपालको अर्थोडक्स चियाको राजधानीका रूपमा परिचित इलामको सूर्योदय नगरपालिका कन्याममा आजदेखि दुईदिने चिया महोत्सव २०८३ सुरु हुँदैछ । आन्तरिक तथा बाह्य...",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-21T07:14:33+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/392405/conversions/kanyam-(2)-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/politics/one-year-of-ujjaya-nepal-party-kulman-s-commitment-to-creating-jobs-and-ending-poverty-37-71.html",
+    "title": "उज्यालो नेपाल पार्टीको एक वर्ष : रोजगारी सिर्जना र गरिबीको अन्त्य गर्ने कुलमानको प्रतिबद्धता",
+    "description": "उज्यालो नेपाल पार्टीका अध्यक्ष कुलमान घिसिङले सुशासन, उत्पादन, रोजगारी र आत्मनिर्भर अर्थतन्त्रलाई प्राथमिकतामा राख्दै नेपालको आर्थिक तथा सामाजिक रूपान्तरण गर्ने प्रतिबद्धता व्यक्त गरेका छन्।...",
+    "categories": [
+      "Political News"
+    ],
+    "pub_date": "2026-11-21T07:13:04+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1768380907_kulman_ghising.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://www.setopati.com/social/403046",
+    "title": "आज कति छ अमेरिकी डलर, युरो र अस्ट्रेलियन डलरको भाउ?",
+    "description": "नेपाल राष्ट्र बैङ्कले आजका लागि विदेशी मुद्राको विनिमयदर निर्धारण गरेको छ।",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-11-21T07:12:08+05:45",
+    "image_url": null,
+    "source_name": "SETOPATI.COM"
+  },
+  {
+    "link": "https://gorkhapatraonline.com/news/229749",
+    "title": "चेतनाको जागरण परिवर्तन आफैँबाट",
+    "description": "मानव सभ्यताले विज्ञान प्रविधिको विकास गरी सञ्चार, चिकित्सा, अन्तरिक्ष प्रविधि, आणविक विज्ञान र कृत्रिम बुद्धिमत्ता (एआई) लगायतका क्षेत्रमा अभूतपूर्व प्रगति हासिल गरेको छ । केही दशक...",
+    "categories": [],
+    "pub_date": "2026-11-21T07:08:20+05:45",
+    "image_url": "https://gorkhapatraonline.com/storage/media/392404/conversions/556-original.jpg",
+    "source_name": "GORKHAPATRAONLINE.COM"
+  },
+  {
+    "link": "https://www.ratopati.com/story/606625/goods-worth-7-million-seized-in-kartik",
+    "title": "कात्तिकमा ७० लाखको सामान बरामद",
+    "description": "पर्सा । प्रहरीले कात्तिक महिनामा रु ७० लाख ७० हजार बराबरका भन्सार छलीका सामान बरामद गरेको छ । भन्सार छली तथा राजस्व चुहावट नियन्त्रणका क्रममा उक्त सामान बरामद गरिएको हो ।\n\nत्यसैगरी, प्राकृतिक स्रोतको अवैध दोहन",
+    "categories": [],
+    "pub_date": "2026-11-21T07:06:52+05:45",
+    "image_url": "https://npcdn.ratopati.com/media/news/baramad_19xFqDrmLB.jpg",
+    "source_name": "RATOPATI.COM"
+  },
+  {
     "link": "https://www.sidhakura.com/detail/31345",
     "title": "मणिपुरमा विषाक्त मदिरा सेवनका कारण कम्तीमा ११ जनाको मृत्यु, १५० भन्दा बढी अस्पताल भर्ना",
     "description": "मणिपुरको चन्देल जिल्लामा बितेको तीन दिनमा कथित रूपमा विषाक्त मदिरा (रक्सी) सेवन गर्दा कम्तीमा ११ जनाको मृत्यु भएको छ।",
@@ -52,7 +103,9 @@
     "link": "https://www.ratopati.com/story/606624/sunrise-tea-festival-begins-in-ilam-today",
     "title": "इलाममा आजदेखि सूर्योदय चिया महोत्सव",
     "description": "इलाम । इलाममा आजदेखि दुई दिने ‘प्रथम सूर्योदय चिया महोत्सव–२०८३’ हुँदैछ । पर्यटन प्रवर्द्धन गर्ने उद्देश्यले सूर्योदय नगरपालिका, कोशी प्रदेश सरकार र पदमार्गमा आधारित पर्यटन विकास परियोजनाको साझेदारीमा सूर्योदय नगरपालिकास्थित कन्याममा महोत्सव सुरु हुँदैछ ।\n\nमहोत्सवको",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-11-21T06:59:36+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/O3bp6v5lL5.jpg",
     "source_name": "RATOPATI.COM"
@@ -1940,58 +1993,5 @@
     "pub_date": "2026-11-20T18:53:25+05:45",
     "image_url": "https://gorkhapatraonline.com/storage/media/392371/conversions/khaddy-bebastha-company-ma-rakhiyeko-chamal-original.jpg",
     "source_name": "GORKHAPATRAONLINE.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/606571/the-current-government-appears-to-be-lenient-towards-citizens-shankar-pokharel",
-    "title": "वर्तमान सरकार नागरिकप्रति अनुदार देखियो : शंकर पोखरेल",
-    "description": "काठमाडौँ । नेकपा (एमाले) का महासचिव शंकर पोखरेलले केन्द्र सरकारले स्थानीय तहलाई उपलब्ध गराउने बजेटमा गरेको कटौतीबारे नागरिकलाई प्रस्ट पार्न स्थानीय तहका जनप्रतिनिधिहरूलाई निर्देशन दिएका छन् ।\n\nललितपुरको च्यासलस्थित पार्टी केन्द्रीय कार्यालयमा शुक्रबार आयोजित राष्ट्रिय जनप्रतिनिधि भेलालाई",
-    "categories": [],
-    "pub_date": "2026-11-20T18:52:45+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/shankar-pokharel_gCzzztwgWn.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.onlinekhabar.com/2026/11/2062129/independent-drivers-association-provides-assistance-to-the-family-of-govinda-who-went-missing-in-the-bhotekoshi-flood",
-    "title": "भोटेकोशी बाढीमा बेपत्ता गोविन्दका परिवारलाई स्वतन्त्र चालक संघको सहयोग",
-    "description": "गत भदौ १० गते रसुवाको भोटेकोशी हुँदै त्रिशूली नदीमा आएको बाढीमा बेपत्ता गंगाजमुना गाउँपालिका-६ का गोविन्द विकको परिवारलाई खाद्यन्न सहयोग उपलब्ध गराइएको छ।",
-    "categories": [
-      "National News"
-    ],
-    "pub_date": "2026-11-20T18:52:05+05:45",
-    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2026/11/help.jpg",
-    "source_name": "ONLINEKHABAR.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/606570/240-indigenous-families-of-mahottari-receive-land-certificates-11-years-after-survey",
-    "title": "नापजाँच भएको ११ वर्षपछि महोत्तरीका २४० स्ववासी परिवारले पाए लालपुर्जा",
-    "description": "काठमाडौँ। महोत्तरीको सम्सी गाँउपालिका वडा नं ५ (साविक पोखरीभिन्दा संग्रमपुर वडा नं १,२,३,४,५,६,७,८ र ९) का  २४० स्ववासी परिवारले नापजाँच सम्पन्न भएको करिब ११ वर्षपछि जग्गाधनी प्रमाण पुर्जा (लालपुर्जा) प्राप्त गरेका छन्।\n\nलामो समयदेखि स्ववासीका रूपमा",
-    "categories": [
-      "Breaking News"
-    ],
-    "pub_date": "2026-11-20T18:50:36+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/lal_wp4fPZrG5X.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://rajdhanidaily.com/id/151787/",
-    "title": "दक्षिण ललितपुरमा फुटबलको नयाँ केन्द्र बन्दै खयरघारी",
-    "description": "ललितपुरको दक्षिणी भेगमा कुनै समय मोजाको बल बनाएर फुटबल खेल्ने युवाहरूले देखेको सपना अब रङ्गशालाको स्वरूप लिने चरणमा पुगेको छ। खेल्ने मैदानसमेत नभएको अवस्थामा आफ्नै पहलमा सुरु गरिएको अभियान १४ वर्षपछि करोडौँको पूर्वाधार निर्माणसम्म आइपुगेको हो। बागमती गाउँपालिका–४, प्युटारस्थित खयरघारीमा निर्माण हुन लागेको फुटबल रङ्गशालाले स्थानीय युवाको पुरानो सपना मात्र पूरा गर्ने छैन, दक्षिण ललितपुर",
-    "categories": [
-      "Sports News"
-    ],
-    "pub_date": "2026-11-20T18:50:23+05:45",
-    "image_url": "https://rajdhanidaily.com/wp-content/uploads/2026/11/918849583_1443327817402017_6816252627849731562_n.jpg",
-    "source_name": "RAJDHANIDAILY.COM"
-  },
-  {
-    "link": "https://clickmandu.com/2026/11/506626.html",
-    "title": "प्रधानमन्त्रीको भारत भ्रमण: आर्थिक कूटनीतिमा नतिजामुखी फड्कोको अपेक्षा",
-    "description": "काठमाडौं । आगामी मङ्सिर ६ र ७ गते प्रधानमन्त्री वालेन्द्र शाह ‘बालेन’को नेतृत्वमा हुने भारतको राजकीय भ्रमणमा नेपालको निजी क्षेत्रबाट ५२ सदस्यीय उच्चस्तरीय व्यावसायिक प्रतिनिधिमण्डल सहभागी हुँदैछ । परराष्ट्र मन्त्रालयका अनुसार ३४ सदस्यीय सरकारी प्रतिनिधिमण्डलबाहेक निजी क्षेत्रका ५२ जना उद्योगी–व्यवसायी आफ्नै खर्चमा भ्रमणमा सहभागी हुनेछन् । भ्रमण दलको सूचीमा नेपाल उद्योग वाणिज्य महासंघका अध्यक्ष अञ्जन",
-    "categories": [
-      "Business News"
-    ],
-    "pub_date": "2026-11-20T18:48:07+05:45",
-    "image_url": null,
-    "source_name": "CLICKMANDU.COM"
   }
 ]
