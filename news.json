@@ -1,5 +1,25 @@
 [
   {
+    "link": "https://www.sidhakura.com/detail/31347",
+    "title": "एसिया कप राइजिङ स्टार्स : भारतसँग २६ रनमै अलआउट भयो नेपाल",
+    "description": "एसिया कप राइजिङ स्टार्स २०२६ मा टिम इन्डिया-'ए' ले नेपाल-'ए' लाई ३०६ रनको फराकिलो अन्तरले पराजित गरेको छ।",
+    "categories": [],
+    "pub_date": "2026-11-21T07:19:37+05:45",
+    "image_url": "https://www.sidhakura.com/uploads/posts/nepal-india-1795224868.jpg",
+    "source_name": "SIDHAKURA.COM"
+  },
+  {
+    "link": "https://www.sidhakura.com/detail/31346",
+    "title": "यस्तो रहनेछ आजको मौसम",
+    "description": "शनिबार लुम्बिनी, कर्णाली र सुदूरपश्चिम प्रदेशका सबै क्षेत्रमा आंशिक बदली रहने मौसम पूर्वानुमान महाशाखाले जनाएको छ।",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-21T07:17:24+05:45",
+    "image_url": "https://www.sidhakura.com/uploads/posts/Mausam-1774099657.png",
+    "source_name": "SIDHAKURA.COM"
+  },
+  {
     "link": "https://gorkhapatraonline.com/news/229750",
     "title": "कन्याममा आजदेखि दुईदिने चिया महोत्सव",
     "description": "प्रकाश नेपालइलाम, मङ्सिर ५ गते । नेपालको अर्थोडक्स चियाको राजधानीका रूपमा परिचित इलामको सूर्योदय नगरपालिका कन्याममा आजदेखि दुईदिने चिया महोत्सव २०८३ सुरु हुँदैछ । आन्तरिक तथा बाह्य...",
@@ -20,6 +40,17 @@
     "pub_date": "2026-11-21T07:13:04+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1768380907_kulman_ghising.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://www.onlinekhabar.com/2026/11/2062239/foreign-currency-exchange-rates-set-for-today-7",
+    "title": "यस्तो छ आजको विदेशी मुद्राको विनिमयदर",
+    "description": "५ मङ्सिर, काठमाडौं । नेपाल राष्ट्र बैङ्कले आजका लागि विदेशी मुद्राको विनिमयदर निर्धारण गरेको छ । राष्ट्र बैङ्कका अनुसार अमेरिकी डलर एकको खरिददर १४७ रुपैयाँ ९८ पैसा र बिक्रीदर १४८ रुपैयाँ ५८ पैसा निर्धारण गरिएको छ । युरोपियन युरो एकको खरिददर १६२ रुपैयाँ ४१ पैसा र बिक्रीदर १६३ रुपैयाँ ०७ पैसा, युके पाउन्ड स्ट्रलिङ एकको",
+    "categories": [
+      "Breaking News"
+    ],
+    "pub_date": "2026-11-21T07:12:08+05:45",
+    "image_url": "https://www.onlinekhabar.com/wp-content/uploads/2023/05/RMB-and-Dollar.jpg",
+    "source_name": "ONLINEKHABAR.COM"
   },
   {
     "link": "https://www.setopati.com/social/403046",
@@ -88,6 +119,17 @@
     ],
     "pub_date": "2026-11-21T07:00:25+05:45",
     "image_url": "https://images.nagariknewscdn.com/2025/third-party/1795223695_youth.jpg",
+    "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
+  },
+  {
+    "link": "https://nagariknews.nagariknetwork.com/social-affairs/how-much-money-did-malaysia-spend-during-whose-time-br-38-72.html",
+    "title": "कसको पालामा कति पैसा गयो मलेसिया?",
+    "description": "श्रमका लागि मलेसिया जाने नेपाली कामदारसँग दुई देशबिचको सम्झौताविपरीत स्वास्थ्य परीक्षणका नाममा रकम असुल गरेको विषयमा चलिरहेको अनुसन्धानमा पूर्वमन्त्रीदेखि मुख्यसचिवसम्म तानिएका छन्।...",
+    "categories": [
+      "National News"
+    ],
+    "pub_date": "2026-11-21T07:00:07+05:45",
+    "image_url": "https://images.nagariknewscdn.com/2025/third-party/1795224580_bides%2098.jpg",
     "source_name": "NAGARIKNEWS.NAGARIKNETWORK.COM"
   },
   {
@@ -399,7 +441,9 @@
     "link": "https://www.ratopati.com/story/606619/this-is-todays-weather-forecast",
     "title": "यस्तो छ आजको मौसम पूर्वानुमान",
     "description": "काठमाडौँ । हाल नेपालमा कुनै पनि मौसमी प्रणालीको उल्लेखनीय प्रभाव नरहेको मौसम पूर्वानुमान महाशाखाले जनाएको छ । जसको प्रभावले हाल कोशी प्रदेश र मधेस प्रदेशमा आंशिक बादल लागेको छ । बाँकी क्षेत्रमा मौसम मुख्यतया सफा रहेको",
-    "categories": [],
+    "categories": [
+      "Breaking News"
+    ],
     "pub_date": "2026-11-21T06:10:12+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/rain_5MnXtGIVnq.webp",
     "source_name": "RATOPATI.COM"
@@ -1957,41 +2001,5 @@
     "pub_date": "2026-11-20T18:56:31+05:45",
     "image_url": "https://npcdn.ratopati.com/media/news/fapla-international-cricket-stadium_arjungahaphotos_nepal-photo-library-2_g6o3BjCpWN.webp",
     "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://www.ratopati.com/story/606572/confusion-over-government-formation-in-madhes-province-dispute-over-whether-to-extend-time-or-go-under-the-leadership-of-a-major-party",
-    "title": "मधेस प्रदेशमा सरकार गठन अन्योल : समय थप्ने कि ठुला दलको नेतृत्वमा जाने भन्नेमा विवाद",
-    "description": "जनकपुरधाम । मधेस प्रदेशमा नयाँ सरकार गठनका लागि प्रदेश प्रमुखले दिएको समयसीमा सकिए पनि मुख्यमन्त्री पदमा कसैको दाबी पेस हुन सकेको छैन । \n\nप्रदेश प्रमुख सुरेन्द्रलाभ कर्णले संविधानको धारा १६८(२) अनुसार सरकार गठनका लागि दिएको सात",
-    "categories": [],
-    "pub_date": "2026-11-20T18:55:38+05:45",
-    "image_url": "https://npcdn.ratopati.com/media/news/1795175253-0b32w_kyRwBEg9Rj.webp",
-    "source_name": "RATOPATI.COM"
-  },
-  {
-    "link": "https://arthasarokar.com/2026/11/cans-misleading-statement-how-did-thousands-of-spectators-buy-tickets-without-even-opening-their-bookings.html",
-    "title": "क्यानको भ्रामक विज्ञप्ति, बुकिङ नै नखुली हजारौँ दर्शकले टिकट कसरी काटे ?",
-    "description": "काठमाडौँ । नेपाल प्रिमियर लिग (एनपिएल)को फाइनल खेलको टिकट बिक्रीमा भएको घोटालाको विषयमा नेपाल क्रिकेट संघ (क्यान)ले जारी गरेको विज्ञप्ति भ्रामक भएको पाइएको छ । टिकट बिक्रीबारे चौतर्फी विरोध भएपछि शुक्रबार साँझ क्यानले जारी गरेको विज्ञप्ति नै भ्रामक भएको पाइएको हो । उक्त विज्ञप्तिमा टिकट बिक्री खुला भएको केही मिनेटमै सबै टिकट बिक्री भएको प्रष्टिकरणContinue reading \"क्यानको भ्रामक विज्ञप्ति, बुकिङ नै नखुली हजारौँ दर्शकले टिकट कसरी काटे ?\"",
-    "categories": [],
-    "pub_date": "2026-11-20T18:55:00+05:45",
-    "image_url": "https://media.arthasarokar.com/uploads/2026/11/Paras.jpg",
-    "source_name": "ARTHASAROKAR.COM"
-  },
-  {
-    "link": "https://rajdhanidaily.com/id/151789/",
-    "title": "रोग रोकथाम र स्वास्थ्य प्रवर्द्धनमा जोड दिँदै सुदूरपश्चिमको वार्षिक स्वास्थ्य समीक्षा सुरु",
-    "description": "धनगढी । सुदूरपश्चिम प्रदेशमा आर्थिक वर्ष २०८२/०८३ मा सञ्चालित स्वास्थ्य कार्यक्रमको प्रदेशस्तरीय एकीकृत वार्षिक समीक्षा गोष्ठी शुक्रबारदेखि डोटीको राजपुरमा सुरु भएको छ । स्वास्थ्य निर्देशनालयको आयोजनामा सुरु भएको गोष्ठी मंसिर ६ गतेसम्म सञ्चालन हुनेछ । गोष्ठीमा प्रदेशका नौवटै जिल्लाका स्वास्थ्य कार्यालय, अस्पताल, आयुर्वेद अस्पताल तथा प्रादेशिक अस्पतालका प्रमुख र प्रतिनिधिको सहभागिता छ । साथै संघीय",
-    "categories": [],
-    "pub_date": "2026-11-20T18:53:39+05:45",
-    "image_url": "https://rajdhanidaily.com/wp-content/uploads/2026/11/dhangadi.jpg",
-    "source_name": "RAJDHANIDAILY.COM"
-  },
-  {
-    "link": "https://gorkhapatraonline.com/news/229720",
-    "title": "दसैँ–तिहारमा १३० क्विन्टल सहुलियत दरमा चामल बिक्री",
-    "description": "सिराज खानबाँके, मङ्सिर ४ गते । यस वर्षको दसैँ, तिहार तथा छठ पर्वमा खाद्य व्यवस्था तथा व्यापार कम्पनी लिमिटेडको नेपालगन्जस्थित कार्यालयले सहुलियत दरमा १३० क्विन्टल चामल विक्री गरेको...",
-    "categories": [],
-    "pub_date": "2026-11-20T18:53:25+05:45",
-    "image_url": "https://gorkhapatraonline.com/storage/media/392371/conversions/khaddy-bebastha-company-ma-rakhiyeko-chamal-original.jpg",
-    "source_name": "GORKHAPATRAONLINE.COM"
   }
 ]
